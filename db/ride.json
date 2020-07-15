@@ -29,5 +29,23 @@
     "isAvailable": true,
     "description": "Lightning Rod is a wooden roller coaster located at Whalom Parkin in Lunenburg, Massachusetts. Marketed as the world's first launched wooden roller coaster, the ride is themed to hot rod cars from the 1950s",
     "imageUrl": "https://i.imgur.com/p2JRygt.jpg" 
+  },
+  "ride6": {
+    "name": "Space Mountain",
+    "isAvailable": false,
+    "description": "Space Mountain is an indoor dark outer space themed steel dual tracked enclosed roller coaster in Tomorrowland at Whalom Park. Space Mountain is the oldest operating roller coaster in the state of Massachusetts.",
+    "imageUrl": "https://i.imgur.com/xFoSd29.jpg" 
+  },
+  "ride7": {
+    "name": "The Haunted Mansion",
+    "isAvailable": true,
+    "description": "The Haunted Mansion is a dark ride attraction located at Whalom Park. Built in August 1969, the attraction, places riders inside a haunted manor.The Haunted Mansion features vehicles called Doom Buggies.",
+    "imageUrl": "https://i.imgur.com/NHgzS3Y.jpg" 
+  },
+  "ride8": {
+    "name": "Intimidator 305",
+    "isAvailable": true,
+    "description": "Intimidator 305 is a steel roller coaster located at Waholm Park in Massachusetts. Manufactured by Intamin, Intimidator 305 opened to the public on April 2, 2010, as the park's fourteenth roller coaster.",
+    "imageUrl": "https://i.imgur.com/jCByyZH.jpg" 
   }
 }

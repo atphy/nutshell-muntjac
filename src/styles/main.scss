@@ -1,10 +1,27 @@
 @import "~bootstrap/scss/bootstrap";
 @import "~@fortawesome/fontawesome-free/css/all.min.css";
 
-// body {
-//   // background-image: url("https://i.imgur.com/4Wp7m8P.jpg")
-// }
+body {
+  height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+h1 {
+  text-align: center;
+  color: darkgoldenrod;
+  margin-bottom: 0px;
+}
+
+.modules {
+  background-color: coral;
+}
 
 .hide {
   display: none;
+}
+
+.footer {
+  background-color: purple;
+  color: white;
 }

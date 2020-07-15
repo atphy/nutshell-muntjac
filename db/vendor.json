@@ -1,0 +1,9 @@
+{
+  "vendor1": {
+    "vendorId": "vendor1Id",
+    "name": "name_vendor1",
+    "address": "123 Vendor1 St",
+    "phoneNumber": "123-456-7890",
+    "product": "Ice Cream"
+  }
+}

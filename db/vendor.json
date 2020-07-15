@@ -1,9 +1,44 @@
 {
   "vendor1": {
-    "vendorId": "vendor1Id",
+    "vendorId": "id_vendor1",
     "name": "name_vendor1",
     "address": "123 Vendor1 St",
     "phoneNumber": "123-456-7890",
     "product": "Ice Cream"
+  },
+  "vendor2": {
+    "vendorId": "id_vendor2",
+    "name": "name_vendor2",
+    "address": "222 Vendor2 St",
+    "phoneNumber": "222-222-2222",
+    "product": "Refreshments"
+  },
+  "vendor3": {
+    "vendorId": "id_vendor3",
+    "name": "name_vendor3",
+    "address": "333 Vendor3 St",
+    "phoneNumber": "333-333-3333",
+    "product": "Cotton Candy"
+  },
+  "vendor4": {
+    "vendorId": "id_vendor4",
+    "name": "name_vendor4",
+    "address": "444 Vendor4 St",
+    "phoneNumber": "444-444-4444",
+    "product": "Arcade Games"
+  },
+  "vendor5": {
+    "vendorId": "id_vendor5",
+    "name": "name_vendor5",
+    "address": "5555 Vendor5 St",
+    "phoneNumber": "555-555-5555",
+    "product": "Baloon Animals"
+  },
+  "vendor6": {
+    "vendorId": "id_vendor6",
+    "name": "name_vendor6",
+    "address": "667 Vendor6 St",
+    "phoneNumber": "667-667-6677",
+    "product": "Crafts"
   }
 }

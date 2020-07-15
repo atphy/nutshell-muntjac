@@ -9,8 +9,6 @@ const checkLoginStatus = () => {
     if (user) {
       authDiv.addClass('hide');
       logoutButton.removeClass('hide');
-
-      console.error('Your user logged in: ', user);
     } else {
       logoutButton.addClass('hide');
       authDiv.removeClass('hide');

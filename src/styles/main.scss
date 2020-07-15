@@ -1,8 +1,10 @@
-body {
-  background-image: url("https://i.imgur.com/4Wp7m8P.jpg")
-}
+@import "~bootstrap/scss/bootstrap";
+@import "~@fortawesome/fontawesome-free/css/all.min.css";
 
-h1 {
-  text-align: center;
-  color: white;
+// body {
+//   // background-image: url("https://i.imgur.com/4Wp7m8P.jpg")
+// }
+
+.hide {
+  display: none;
 }

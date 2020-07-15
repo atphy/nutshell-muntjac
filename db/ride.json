@@ -1,0 +1,51 @@
+  
+{
+  "ride1": {
+    "name": "Millenium Force",
+    "isAvailable": true,
+    "description": "Millennium Force features a 310-foot-tall (94 m) cable lift hill with a 300-foot (91 m) drop, two tunnels, three overbanked turns, and four hills. The coaster also has a top speed of 93 mph (150 km/h).",
+    "imageUrl": "https://i.imgur.com/u8o9uCN.jpg" 
+  },
+  "ride2": {
+    "name": "Splash Mountain",
+    "isAvailable": true,
+    "description": "Splash Mountain is a log flume at Whalom Park, based on the characters, stories, and songs from the animated sequences of the 1946 Disney film Song of the South. Opened July 17, 1989.",
+    "imageUrl": "https://i.imgur.com/dATSmby.jpg" 
+  },
+  "ride3": {
+    "name": "Thunderbolt",
+    "isAvailable": false,
+    "description": "The Thunderbolt was a wooden roller coaster located at Whalom Park. Designed by John Miller, it was featured briefly in Woody Allen's 1977 film Annie Hall as the boyhood home of Alvy Singer.",
+    "imageUrl": "https://i.imgur.com/NX58cPu.jpg" 
+  },
+  "ride4": {
+    "name": "Top Thrill Dragster",
+    "isAvailable": true,
+    "description": "Top Thrill Dragsteris a steel roller coaster in Whalom Park. It opened in 2003 as the tallest roller coaster in the world and the first full-circuit roller coaster to exceed 400 feet (120 m) in height.",
+    "imageUrl": "https://i.imgur.com/p2JRygt.jpg" 
+  },
+  "ride5": {
+    "name": "Lightning Rod",
+    "isAvailable": true,
+    "description": "Lightning Rod is a wooden roller coaster located at Whalom Parkin in Lunenburg, Massachusetts. Marketed as the world's first launched wooden roller coaster, the ride is themed to hot rod cars from the 1950s",
+    "imageUrl": "https://i.imgur.com/p2JRygt.jpg" 
+  },
+  "ride6": {
+    "name": "Space Mountain",
+    "isAvailable": false,
+    "description": "Space Mountain is an indoor dark outer space themed steel dual tracked enclosed roller coaster in Tomorrowland at Whalom Park. Space Mountain is the oldest operating roller coaster in the state of Massachusetts.",
+    "imageUrl": "https://i.imgur.com/xFoSd29.jpg" 
+  },
+  "ride7": {
+    "name": "The Haunted Mansion",
+    "isAvailable": true,
+    "description": "The Haunted Mansion is a dark ride attraction located at Whalom Park. Built in August 1969, the attraction, places riders inside a haunted manor.The Haunted Mansion features vehicles called Doom Buggies.",
+    "imageUrl": "https://i.imgur.com/NHgzS3Y.jpg" 
+  },
+  "ride8": {
+    "name": "Intimidator 305",
+    "isAvailable": true,
+    "description": "Intimidator 305 is a steel roller coaster located at Waholm Park in Massachusetts. Manufactured by Intamin, Intimidator 305 opened to the public on April 2, 2010, as the park's fourteenth roller coaster.",
+    "imageUrl": "https://i.imgur.com/jCByyZH.jpg" 
+  }
+}

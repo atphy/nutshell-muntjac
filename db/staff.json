@@ -1,0 +1,50 @@
+{
+	"employee01": {
+		"employeeId": "001",
+		"firstName": "Ron",
+		"lastName": "Burgundy",
+		"position": "Social Media Liaison"
+  },
+  "employee02": {
+		"employeeId": "002",
+		"firstName": "Jeff",
+		"lastName": "Bridges",
+		"position": "Tour Guide"
+  },
+  "employee03": {
+		"employeeId": "003",
+		"firstName": "Johnny",
+		"lastName": "Knoxville",
+		"position": "Ride Maintenance"
+  },
+  "employee04": {
+		"employeeId": "004",
+		"firstName": "John",
+		"lastName": "Malkovich",
+		"position": "Petting Zoo"
+  },
+  "employee05": {
+		"employeeId": "005",
+		"firstName": "Giancarlo",
+		"lastName": "Esposito",
+		"position": "Park Manager"
+  },
+  "employee06": {
+		"employeeId": "006",
+		"firstName": "Amy",
+		"lastName": "Poehler",
+		"position": "Guest Relations"
+  },
+  "employee07": {
+		"employeeId": "007",
+		"firstName": "Forest",
+		"lastName": "Whitaker",
+		"position": "Park Security"
+  },
+  "employee08": {
+		"employeeId": "008",
+		"firstName": "Tilda",
+		"lastName": "Swinton",
+		"position": "Stunt Performer"
+  }
+}

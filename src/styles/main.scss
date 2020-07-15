@@ -1,8 +1,26 @@
+@import "~bootstrap/scss/bootstrap";
+
 body {
-  background-image: url("https://i.imgur.com/4Wp7m8P.jpg")
+  height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
 }
 
 h1 {
   text-align: center;
-  color: white;
+  color: darkgoldenrod;
+  margin-bottom: 0px;
+}
+
+.modules {
+  background-color: coral;
+}
+
+.footer{
+  background-color: purple;
+  color:white;
+}
+
+.logout-button {
+  margin-left: auto !important;
 }

@@ -1,0 +1,178 @@
+{
+  "Ride" : {
+    "ride1" : {
+      "description" : "Millennium Force features a 310-foot-tall (94 m) cable lift hill with a 300-foot (91 m) drop, two tunnels, three overbanked turns, and four hills. The coaster also has a top speed of 93 mph (150 km/h).",
+      "imageUrl" : "https://i.imgur.com/u8o9uCN.jpg",
+      "isAvailable" : true,
+      "name" : "Millenium Force"
+    },
+    "ride2" : {
+      "description" : "Splash Mountain is a log flume at Whalom Park, based on the characters, stories, and songs from the animated sequences of the 1946 Disney film Song of the South. Opened July 17, 1989.",
+      "imageUrl" : "https://i.imgur.com/dATSmby.jpg",
+      "isAvailable" : true,
+      "name" : "Splash Mountain"
+    },
+    "ride3" : {
+      "description" : "The Thunderbolt was a wooden roller coaster located at Whalom Park. Designed by John Miller, it was featured briefly in Woody Allen's 1977 film Annie Hall as the boyhood home of Alvy Singer.",
+      "imageUrl" : "https://i.imgur.com/NX58cPu.jpg",
+      "isAvailable" : false,
+      "name" : "Thunderbolt"
+    },
+    "ride4" : {
+      "description" : "Top Thrill Dragsteris a steel roller coaster in Whalom Park. It opened in 2003 as the tallest roller coaster in the world and the first full-circuit roller coaster to exceed 400 feet (120 m) in height.",
+      "imageUrl" : "https://i.imgur.com/p2JRygt.jpg",
+      "isAvailable" : true,
+      "name" : "Top Thrill Dragster"
+    },
+    "ride5" : {
+      "description" : "Lightning Rod is a wooden roller coaster located at Whalom Parkin in Lunenburg, Massachusetts. Marketed as the world's first launched wooden roller coaster, the ride is themed to hot rod cars from the 1950s",
+      "imageUrl" : "https://i.imgur.com/p2JRygt.jpg",
+      "isAvailable" : true,
+      "name" : "Lightning Rod"
+    },
+    "ride6" : {
+      "description" : "Space Mountain is an indoor dark outer space themed steel dual tracked enclosed roller coaster in Tomorrowland at Whalom Park. Space Mountain is the oldest operating roller coaster in the state of Massachusetts.",
+      "imageUrl" : "https://i.imgur.com/xFoSd29.jpg",
+      "isAvailable" : false,
+      "name" : "Space Mountain"
+    },
+    "ride7" : {
+      "description" : "The Haunted Mansion is a dark ride attraction located at Whalom Park. Built in August 1969, the attraction, places riders inside a haunted manor.The Haunted Mansion features vehicles called Doom Buggies.",
+      "imageUrl" : "https://i.imgur.com/NHgzS3Y.jpg",
+      "isAvailable" : true,
+      "name" : "The Haunted Mansion"
+    },
+    "ride8" : {
+      "description" : "Intimidator 305 is a steel roller coaster located at Waholm Park in Massachusetts. Manufactured by Intamin, Intimidator 305 opened to the public on April 2, 2010, as the park's fourteenth roller coaster.",
+      "imageUrl" : "https://i.imgur.com/jCByyZH.jpg",
+      "isAvailable" : true,
+      "name" : "Intimidator 305"
+    }
+  },
+  "Staff" : {
+    "employee01" : {
+      "employeeId" : "001",
+      "firstName" : "Ron",
+      "lastName" : "Burgundy",
+      "position" : "Social Media Liaison"
+    },
+    "employee02" : {
+      "employeeId" : "002",
+      "firstName" : "Jeff",
+      "lastName" : "Bridges",
+      "position" : "Tour Guide"
+    },
+    "employee03" : {
+      "employeeId" : "003",
+      "firstName" : "Johnny",
+      "lastName" : "Knoxville",
+      "position" : "Ride Maintenance"
+    },
+    "employee04" : {
+      "employeeId" : "004",
+      "firstName" : "John",
+      "lastName" : "Malkovich",
+      "position" : "Petting Zoo"
+    },
+    "employee05" : {
+      "employeeId" : "005",
+      "firstName" : "Giancarlo",
+      "lastName" : "Esposito",
+      "position" : "Park Manager"
+    },
+    "employee06" : {
+      "employeeId" : "006",
+      "firstName" : "Amy",
+      "lastName" : "Poehler",
+      "position" : "Guest Relations"
+    },
+    "employee07" : {
+      "employeeId" : "007",
+      "firstName" : "Forest",
+      "lastName" : "Whitaker",
+      "position" : "Park Security"
+    },
+    "employee08" : {
+      "employeeId" : "008",
+      "firstName" : "Tilda",
+      "lastName" : "Swinton",
+      "position" : "Stunt Performer"
+    }
+  },
+  "Vendor" : {
+    "vendor1" : {
+      "address" : "123 Vendor1 St",
+      "name" : "name_vendor1",
+      "phoneNumber" : "123-456-7890",
+      "product" : "Ice Cream",
+      "vendorId" : "id_vendor1"
+    },
+    "vendor2" : {
+      "address" : "222 Vendor2 St",
+      "name" : "name_vendor2",
+      "phoneNumber" : "222-222-2222",
+      "product" : "Refreshments",
+      "vendorId" : "id_vendor2"
+    },
+    "vendor3" : {
+      "address" : "333 Vendor3 St",
+      "name" : "name_vendor3",
+      "phoneNumber" : "333-333-3333",
+      "product" : "Cotton Candy",
+      "vendorId" : "id_vendor3"
+    },
+    "vendor4" : {
+      "address" : "444 Vendor4 St",
+      "name" : "name_vendor4",
+      "phoneNumber" : "444-444-4444",
+      "product" : "Arcade Games",
+      "vendorId" : "id_vendor4"
+    },
+    "vendor5" : {
+      "address" : "5555 Vendor5 St",
+      "name" : "name_vendor5",
+      "phoneNumber" : "555-555-5555",
+      "product" : "Baloon Animals",
+      "vendorId" : "id_vendor5"
+    },
+    "vendor6" : {
+      "address" : "667 Vendor6 St",
+      "name" : "name_vendor6",
+      "phoneNumber" : "667-667-6677",
+      "product" : "Crafts",
+      "vendorId" : "id_vendor6"
+    }
+  },
+  "Visitor" : {
+    "visitor 1" : {
+      "attendance" : "360",
+      "gender" : "m",
+      "id" : "000001",
+      "name" : "Dick Grayson"
+    },
+    "visitor 2" : {
+      "attendance" : "230",
+      "gender" : "m",
+      "id" : "000002",
+      "name" : "Tim Drake"
+    },
+    "visitor 3" : {
+      "attendance" : "25",
+      "gender" : "f",
+      "id" : "000003",
+      "name" : "Carrie Kelley"
+    },
+    "visitor 4" : {
+      "attendance" : "427",
+      "gender" : "m",
+      "id" : "000004",
+      "name" : "Jason Todd"
+    },
+    "visitor 5" : {
+      "attendance" : "9",
+      "gender" : "m",
+      "id" : "000005",
+      "name" : "Damian Wayne"
+    }
+  }
+}

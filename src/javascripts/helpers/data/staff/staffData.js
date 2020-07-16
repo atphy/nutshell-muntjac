@@ -4,7 +4,7 @@ import apiKeys from '../../apiKeys.json';
 const baseUrl = apiKeys.firebaseConfig.databaseURL;
 
 const getStaff = () => new Promise((resolve, reject) => {
-  axios.get(`${baseUrl}/staff.json`)
+  axios.get(`${baseUrl}/Staff.json`)
     .then((response) => {
       const staffObjects = response.data;
       const staff = [];

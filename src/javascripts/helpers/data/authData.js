@@ -16,6 +16,14 @@ const checkLoginStatus = () => {
   });
 };
 
+const isAuthenticated = () => {
+  if (firebase.auth().currentUser) {
+    return true;
+  }
+  return false;
+};
+
 export default {
   checkLoginStatus,
+  isAuthenticated,
 };

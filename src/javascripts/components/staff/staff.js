@@ -1,15 +1,17 @@
-const buildStaffModule = (staff) => {
+const staffCardMaker = (staff) => {
   const domString = `
-    <div class="card text-center staff-card" id="${staff.employeeId}">
-      <div class="card-body" id="${staff.employeeId}">
-        <h3 class="card-title">${staff.firstName} ${staff.lastName}</h3>
-        <h5 class="card-body">${staff.position}</h5>
-        <button class="btn btn-secondary" id="view-board">View Board</button>
-        <button class="btn btn-secondary" id="delete-board">Delete</button>
+    <div class="col-3">
+      <div class="card border-0 rounded-0 bg-light text-dark mb-3" id=${staff.id}>
+        <div class="card-header text-center">${staff.firstName} ${staff.lastName}</div>
+        <div class="card-body">
+          <h5 class="card-title">${staff.position}</h5>
+          <p class="card-text">${staff.employeeId}</p>
+        </div>
       </div>
-    </div>`;
+    </div>
+    `;
 
   return domString;
 };
 
-export default { buildStaffModule };
+export default { staffCardMaker };

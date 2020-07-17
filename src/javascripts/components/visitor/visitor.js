@@ -18,7 +18,7 @@ const printVisitor = () => {
               <p class="gender">Gender: ${visitor.gender}</p>
               <p class="attend">Attendance: ${visitor.attendance} visits</p>
               <a href="#" class="btn btn-primary" id="update-visitor"><i class="fas fa-edit"></i></a>
-              <a href="#" class="btn btn-danger" id="delete-visitor"><i class="fas fa-trash"></i></a>
+              <a href="#" class="btn btn-danger" id="remove-visitor"><i class="fas fa-trash"></i></a>
             </div>
           </div>`;
       });

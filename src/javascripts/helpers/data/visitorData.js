@@ -19,4 +19,9 @@ const getVisitorData = () => new Promise((resolve, reject) => {
     .catch((err) => reject(err));
 });
 
-export default { getVisitorData };
+const deleteVisitor = (visitorId) => axios.delete(`${baseUrl}/Visitor/${visitorId}.json`);
+
+export default {
+  getVisitorData,
+  deleteVisitor,
+};

@@ -4,7 +4,7 @@ import apiKeys from '../apiKeys.json';
 const baseUrl = apiKeys.firebaseConfig.databaseURL;
 
 const getVisitorData = () => new Promise((resolve, reject) => {
-  axios.get(`${baseUrl}/visitor.json`)
+  axios.get(`${baseUrl}/Visitor.json`)
     .then((response) => {
       const visitorObjects = response.data;
       const visitors = [];
@@ -14,9 +14,9 @@ const getVisitorData = () => new Promise((resolve, reject) => {
           visitors.push(visitorObjects[visitorId]);
         });
       }
-      resolve(boards);
+      resolve(visitors);
     })
     .catch((err) => reject(err));
 });
 
-export default { getVisitorData }
+export default { getVisitorData };

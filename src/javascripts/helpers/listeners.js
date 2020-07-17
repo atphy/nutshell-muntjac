@@ -1,3 +1,4 @@
+import buildStaff from '../components/staff/staffList';
 import buildVendors from '../components/vendor/vendorList';
 import displayRides from '../components/displayRides/displayRides';
 import vendorData from './data/vendor/vendorData';
@@ -15,6 +16,7 @@ const createListeners = () => {
   $('body').on('click', '#navbar-vendors', buildVendors.buildVendorList);
   $('body').on('click', '.rideLink', displayRides.buildRideModule);
   $('body').on('click', '.delete-vendor', deleteVendorEvent);
+  $('body').on('click', '#navbar-staff', buildStaff.buildStaffModule);
 };
 
 export default {

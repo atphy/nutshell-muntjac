@@ -1,5 +1,5 @@
-import rideData from '../../helpers/data/rideData';
-import utils from '../../helpers/utils';
+import rideData from '../../../helpers/data/rideData';
+import utils from '../../../helpers/utils';
 import './displayRides.scss';
 
 const buildRideModule = () => {
@@ -8,7 +8,7 @@ const buildRideModule = () => {
     .then((rides) => {
       rides.forEach((ride) => {
         domString += `
-        <div class="card rideCard" style="width: 18rem;">
+        <div id=${ride.id} class="card rideCard" style="width: 18rem;">
         <img src="${ride.imageUrl}" class="card-img-top" alt="...">
         <div class="card-img-overlay">
         <i class="fas fa-times deleteRideIcon"></i>

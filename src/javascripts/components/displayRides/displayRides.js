@@ -10,6 +10,9 @@ const buildRideModule = () => {
         domString += `
         <div class="card rideCard" style="width: 18rem;">
         <img src="${ride.imageUrl}" class="card-img-top" alt="...">
+        <div class="card-img-overlay">
+        <i class="fas fa-times deleteRideIcon"></i>
+        </div>
         <div class="card-title rideTitle">
         <h5>${ride.name}</h5>`;
         if (!ride.isAvailable) {

@@ -19,6 +19,9 @@ const getRides = () => new Promise((resolve, reject) => {
     .catch((err) => reject(err));
 });
 
+const deleteRide = (rideId) => axios.delete(`${baseUrl}/Ride/${rideId}.json`);
+
 export default {
   getRides,
+  deleteRide,
 };

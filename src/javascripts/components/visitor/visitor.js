@@ -14,11 +14,11 @@ const printVisitor = () => {
         domString += `
           <div id="${visitor.id}" class="card" style="width: 18rem;">
             <div class="card-body">
-              <h5 class="card-title">${visitor.name}</h5>
-              <p class="gender">${visitor.gender}</p>
-              <p class="attend">${visitor.attendance}</p>
-              <a href="#" class="btn btn-primary" id="add-visitor"><i class="fas fa-plus"></i></a>
-              <a href="#" class="btn btn-primary" id="delete-visitor"><i class="fas fa-trash"></i></a>
+              <h4 class="card-title">${visitor.name}</h4>
+              <p class="gender">Gender: ${visitor.gender}</p>
+              <p class="attend">Attendance: ${visitor.attendance} visits</p>
+              <a href="#" class="btn btn-primary" id="update-visitor"><i class="fas fa-edit"></i></a>
+              <a href="#" class="btn btn-danger" id="delete-visitor"><i class="fas fa-trash"></i></a>
             </div>
           </div>`;
       });

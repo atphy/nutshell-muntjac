@@ -1,5 +1,6 @@
-import rideData from '../../helpers/data/rideData';
-import utils from '../../helpers/utils';
+import authData from '../../../helpers/data/authData';
+import rideData from '../../../helpers/data/rideData';
+import utils from '../../../helpers/utils';
 import './displayRides.scss';
 
 const buildRideModule = () => {
@@ -8,9 +9,14 @@ const buildRideModule = () => {
     .then((rides) => {
       rides.forEach((ride) => {
         domString += `
-        <div class="card rideCard" style="width: 18rem;">
-        <img src="${ride.imageUrl}" class="card-img-top" alt="...">
-        <div class="card-title rideTitle">
+        <div id=${ride.id} class="card rideCard" style="width: 18rem;">
+        <img src="${ride.imageUrl}" class="card-img-top" alt="...">`;
+        if (authData.isAuthenticated()) {
+          domString += `<div class="card-img-overlay">
+        <i class="fas fa-times deleteRideIcon"></i>
+        </div>`;
+        }
+        domString += `<div class="card-title rideTitle">
         <h5>${ride.name}</h5>`;
         if (!ride.isAvailable) {
           domString += '<i class="fas fa-wrench"></i>';

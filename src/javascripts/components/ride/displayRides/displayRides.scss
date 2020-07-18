@@ -32,5 +32,15 @@
   .rideBody {
     padding: 0px 20px 10px 20px;
   }
+  
+  .card-img-overlay {
+    text-align: right;
+    padding: 5px 5px;
+  }
+
+  .deleteRideIcon {
+    color: red;
+    cursor: pointer;
+  }
 
 }

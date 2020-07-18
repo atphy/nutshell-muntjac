@@ -2,16 +2,6 @@ import staffData from '../../helpers/data/staff/staffData';
 import staffMaker from './staff';
 import utils from '../../helpers/utils';
 
-const deleteStaff = (e) => {
-  const employeeId = e.target.closest('.card').id;
-  staffData.deleteStaff(employeeId)
-    .then(() => {
-      // eslint-disable-next-line no-use-before-define
-      buildStaffModule();
-    })
-    .catch((err) => console.error(err));
-};
-
 const buildStaffModule = () => {
   staffData.getStaff()
     .then((staffMember) => {
@@ -29,6 +19,15 @@ const buildStaffModule = () => {
       utils.printToDom('#content', domString);
     })
     .catch((err) => console.error('buildStaffModule failed', err));
+};
+
+const deleteStaff = (e) => {
+  const employeeId = e.target.closest('.card').id;
+  staffData.deleteStaff(employeeId)
+    .then(() => {
+      buildStaffModule();
+    })
+    .catch((err) => console.error(err));
 };
 
 export default { buildStaffModule, deleteStaff };

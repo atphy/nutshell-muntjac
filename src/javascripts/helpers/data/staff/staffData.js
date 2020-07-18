@@ -8,9 +8,9 @@ const getStaff = () => new Promise((resolve, reject) => {
     .then((response) => {
       const staffObjects = response.data;
       const staff = [];
-      Object.keys(staffObjects).forEach((staffId) => {
-        staffObjects[staffId].id = staffId;
-        staff.push(staffObjects[staffId]);
+      Object.keys(staffObjects).forEach((employeeId) => {
+        staffObjects[employeeId].id = employeeId;
+        staff.push(staffObjects[employeeId]);
       });
       resolve(staff);
     })

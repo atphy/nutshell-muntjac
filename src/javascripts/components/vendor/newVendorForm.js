@@ -21,7 +21,7 @@ const newVendorForm = () => {
         <input type="text" class="form-control" id="inputProduct">
       </div>
     </div>
-    <button type="submit" class="btn btn-primary">Sign in</button>
+    <button type="submit" class="btn btn-primary" id="submit-new-vendor">Sign in</button>
   </form> 
   `;
 

@@ -30,4 +30,8 @@ const deleteStaff = (e) => {
     .catch((err) => console.error(err));
 };
 
-export default { buildStaffModule, deleteStaff };
+const addStaff = (e) => {
+  e.preventDefault();
+};
+
+export default { buildStaffModule, deleteStaff, addStaff };

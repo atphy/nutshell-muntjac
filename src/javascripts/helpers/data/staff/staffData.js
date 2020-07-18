@@ -21,8 +21,14 @@ const addStaff = (newStaffObj) => axios.post(`${baseUrl}/Staff.json`, newStaffOb
 
 const deleteStaff = (employeeId) => axios.delete(`${baseUrl}/Staff/${employeeId}.json`);
 
+const getStaffById = (id) => axios.get(`${baseUrl}/Staff/${id}.json`);
+
+const updateStaff = (id, updateStaffObj) => axios.put(`${baseUrl}/Staff/${id}.json`, updateStaffObj);
+
 export default {
   getStaff,
   deleteStaff,
   addStaff,
+  getStaffById,
+  updateStaff,
 };

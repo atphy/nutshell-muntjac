@@ -1,5 +1,6 @@
 import rideData from '../../../helpers/data/rideData';
 import displayRide from '../displayRides/displayRides';
+import utils from '../../../helpers/utils';
 
 const fixRide = (e) => {
   const rideId = e.target.dataset.brokenride;
@@ -18,6 +19,14 @@ const fixRide = (e) => {
     .catch((err) => err);
 };
 
+const updateRideForm = (e) => {
+  const rideId = e.target.closest('.card').id;
+  console.error(rideId);
+  const domString = 'hello';
+  utils.printToDom(`#${rideId}footer`, domString);
+};
+
 export default {
   fixRide,
+  updateRideForm,
 };

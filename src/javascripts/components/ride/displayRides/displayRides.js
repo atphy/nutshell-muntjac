@@ -30,8 +30,11 @@ const buildRideModule = () => {
         domString += `
         <p class="card-text descriptionP">${ride.description}</p>
         </div>
-        <div class="card-title rideTitle">
-        <h5>${ride.name}</h5>`;
+        <div class="card-title rideTitle">`;
+        if (authData.isAuthenticated()) {
+          domString += '<i class="far fa-edit rideEditBtn"></i>';
+        }
+        domString += ` <h5>${ride.name}</h5>`;
         if (!ride.isAvailable) {
           domString += '<i class="fas fa-wrench"></i>';
         } else {
@@ -39,7 +42,9 @@ const buildRideModule = () => {
         }
         domString += `
         </div>
+        <div id="${ride.id}footer" class="card-footer rideFooter"></div>
         </div>
+       
         `;
       });
       domString += '</div>';

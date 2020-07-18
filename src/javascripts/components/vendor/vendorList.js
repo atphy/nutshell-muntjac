@@ -29,12 +29,12 @@ const buildVendorList = () => {
       if (authData.isAuthenticated()) {
         domString += `
         <div class="text-center"><i class="fas fa-plus-circle fa-2x" id="add-vendor"></i></div>
-        <div id="add-vendor-form"></div>
+        <div id="vendor-form"></div>
         `;
       } else {
         domString += `
         <div class="text-center"><i class="fas fa-plus-circle fa-2x hide" id="add-vendor"></i></div>
-        <div id="add-vendor-form"></div>
+        <div id="vendor-form"></div>
         `;
       }
       domString += '<div class="d-flex flex-wrap">';

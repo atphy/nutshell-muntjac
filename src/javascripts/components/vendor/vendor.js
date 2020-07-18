@@ -4,7 +4,13 @@ const vendorCardMaker = (vendor) => {
   let domString = `
   <div class="col-3">
     <div class="card border-0 rounded-0 bg-light text-dark mb-3" id=${vendor.id}>
-      <div class="card-header text-center d-flex justify-content-between">
+      <div class="card-header text-center d-flex justify-content-between">`;
+  if (authData.isAuthenticated()) {
+    domString += '<button class="btn btn-warning edit-vendor"><i class="fas fa-edit"></i></button>';
+  } else {
+    domString += '<button class="btn btn-warning edit-vendor hide"><i class="fas fa-edit"></i></button>';
+  }
+  domString += `
         <span class="m-auto">${vendor.name}</span>`;
   if (authData.isAuthenticated()) {
     domString += '<button class="btn btn-danger delete-vendor"><i class="fas fa-trash-alt"></i></button>';

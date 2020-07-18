@@ -21,6 +21,9 @@ const getVendors = () => new Promise((resolve, reject) => {
     .catch((err) => reject(err));
 });
 
+const deleteVendor = (vendorId) => axios.delete(`${baseUrl}/Vendor/${vendorId}.json`);
+
 export default {
+  deleteVendor,
   getVendors,
 };

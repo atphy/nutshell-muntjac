@@ -1,7 +1,7 @@
 import buildVendors from '../components/vendor/vendorList';
 import displayRides from '../components/ride/displayRides/displayRides';
 import displayVisitors from '../components/visitor/visitor';
-import removeVisitor from '../components/deleteVisitor/deleteVisitor';
+import removeVisitor from '../components/visitor/deleteVisitor';
 import deleteRide from '../components/ride/deleteRide/deleteRide';
 import buildStaff from '../components/staff/staffList';
 

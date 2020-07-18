@@ -6,15 +6,18 @@ const printVisitor = () => {
   visitorData.getVisitorData()
     .then((visitors) => {
       let domString = `
-      <div id="visitorDiv">
+      <div id="visitor-div">
         <h2 class="text-center">Visitors<h2>
+          <div id="new-vis">
+            <a href="#" class="btn btn-primary" id="add-vis-form"><i class="fas fa-plus"></i> NEW VISITOR</a>
+          </div>  
         <div class="d-flex flex-wrap">`;
 
       visitors.forEach((visitor) => {
         domString += `
           <div id="${visitor.id}" class="card" style="width: 18rem;">
-            <div class="card-body">
-              <h4 class="card-title">${visitor.name}</h4>
+            <div class="vis-card-body">
+              <h4 class="vis-card-title">${visitor.name}</h4>
               <p class="gender">Gender: ${visitor.gender}</p>
               <p class="attend">Attendance: ${visitor.attendance} visits</p>
               <a href="#" class="btn btn-primary" id="update-visitor"><i class="fas fa-edit"></i></a>

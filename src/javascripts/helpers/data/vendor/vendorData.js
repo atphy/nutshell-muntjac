@@ -25,8 +25,11 @@ const addVendor = (newVendorObj) => axios.post(`${baseUrl}/Vendor.json`, newVend
 
 const deleteVendor = (vendorId) => axios.delete(`${baseUrl}/Vendor/${vendorId}.json`);
 
+const getVendorById = (vendorId) => axios.get(`${baseUrl}/Vendor/${vendorId}.json`);
+
 export default {
   addVendor,
   deleteVendor,
   getVendors,
+  getVendorById,
 };

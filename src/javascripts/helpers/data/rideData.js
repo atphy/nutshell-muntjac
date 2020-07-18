@@ -21,7 +21,10 @@ const getRides = () => new Promise((resolve, reject) => {
 
 const deleteRide = (rideId) => axios.delete(`${baseUrl}/Ride/${rideId}.json`);
 
+const updateRide = (rideId, updatedRide) => axios.put(`${baseUrl}/Ride/${rideId}.json`, updatedRide);
+
 export default {
   getRides,
   deleteRide,
+  updateRide,
 };

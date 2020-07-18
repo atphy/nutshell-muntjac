@@ -2,6 +2,10 @@
   font-weight: bolder;
 }
 
+.btnwrench {
+  pointer-events: none;
+}
+
 .rideContainer {
   display: flex;
   flex-wrap: wrap;

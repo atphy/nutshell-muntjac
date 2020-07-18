@@ -12,7 +12,7 @@ const buildRideModule = () => {
         if (!ride.isAvailable) {
           domString += `
         <div class="alert alert-danger mb-1" role="alert">
-        <span class=rideName>${ride.name}</span> is broken down!
+        <span class=rideName>${ride.name}</span> is broken down!<button class="btn btn-danger ml-2 fixridebtn" data-brokenride="${ride.id}">Fix it<i class="fas fa-wrench btnwrench ml-1"></i></button>
         </div>`;
         }
       });

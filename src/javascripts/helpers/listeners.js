@@ -1,9 +1,14 @@
+import authData from './data/authData';
 import buildStaff from '../components/staff/staffList';
 import buildVendors from '../components/vendor/vendorList';
 import displayRides from '../components/displayRides/displayRides';
 import vendorData from './data/vendor/vendorData';
 
 const deleteVendorEvent = (e) => {
+  if (!authData.isAuthenticated()) {
+    $('#myModal').modal('show');
+    return;
+  }
   const vendorId = e.target.closest('.card').id;
   vendorData.deleteVendor(vendorId)
     .then(() => {

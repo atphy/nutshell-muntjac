@@ -3,12 +3,13 @@ import staffList from '../components/staff/staffList';
 import buildVendors from '../components/vendor/vendorList';
 import displayRides from '../components/ride/displayRides/displayRides';
 import vendorData from './data/vendor/vendorData';
-import displayVisitors from '../components/visitor/visitor';
-import removeVisitor from '../components/deleteVisitor/deleteVisitor';
+import displayVisitors from '../components/visitor/displayVisitor/visitor';
+import removeVisitor from '../components/visitor/deleteVisitor';
 import deleteRide from '../components/ride/deleteRide/deleteRide';
 import newVendor from '../components/vendor/newVendorForm';
 import utils from './utils';
 import updateRide from '../components/ride/updateRide/updateRide';
+import addVisitor from '../components/visitor/addVisitor/addVisitor';
 
 const deleteVendorEvent = (e) => {
   if (!authData.isAuthenticated()) {
@@ -72,6 +73,8 @@ const createListeners = () => {
   $('body').on('click', '.delete-staff', staffList.deleteStaff);
   $('body').on('click', '#navbar-staff', staffList.buildStaffModule);
   $('body').on('click', '.fixridebtn', updateRide.fixRide);
+  $('body').on('click', '#add-vis-form', addVisitor.showVisForm);
+  $('body').on('click', '#addVisitor', addVisitor.addVisitorEvent);
 };
 
 export default {

@@ -1,3 +1,4 @@
+import authData from '../../helpers/data/authData';
 import staffData from '../../helpers/data/staff/staffData';
 import staffMaker from './staff';
 import utils from '../../helpers/utils';
@@ -7,8 +8,21 @@ const buildStaffModule = () => {
     .then((staffMember) => {
       let domString = `
         <h2 class="text-center">Staff Members</h2>
-        <div class="d-flex flex-wrap">
       `;
+
+      if (authData.isAuthenticated()) {
+        domString += `
+        <button type="submit" class="btn btn-primary show-staff-form">New Hire Form</button>
+        <div id="add-staff-form"></div>
+        `;
+      } else {
+        domString += `
+        <button type="submit" class="btn btn-primary show-staff-form hide">New Hire Form</button>
+        <div id="add-staff-form"></div>
+        `;
+      }
+
+      domString += '<div class="d-flex flex-wrap">';
 
       staffMember.forEach((staff) => {
         domString += staffMaker.staffCardMaker(staff);

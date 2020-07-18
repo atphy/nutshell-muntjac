@@ -9,8 +9,9 @@ const printVisitor = () => {
       <div id="visitor-div">
         <h2 class="text-center">Visitors<h2>
           <div id="new-vis">
-            <a href="#" class="btn btn-primary" id="add-vis-form"><i class="fas fa-plus"></i> NEW VISITOR</a>
-          </div>  
+            <button class="btn btn-primary" id="add-vis-form"><i class="fas fa-plus"></i> NEW VISITOR</button>
+          </div>
+          <div id="new-vis-form"><div>
         <div class="d-flex flex-wrap">`;
 
       visitors.forEach((visitor) => {

@@ -6,6 +6,7 @@ import vendorData from './data/vendor/vendorData';
 import displayVisitors from '../components/visitor/visitor';
 import removeVisitor from '../components/visitor/deleteVisitor';
 import deleteRide from '../components/ride/deleteRide/deleteRide';
+import newVisitor from '../components/visitor/addVisitor';
 
 const deleteVendorEvent = (e) => {
   if (!authData.isAuthenticated()) {
@@ -28,6 +29,8 @@ const createListeners = () => {
   $('body').on('click', '#remove-visitor', removeVisitor.deleteVisitor);
   $('body').on('click', '.deleteRideIcon', deleteRide.deleteRide);
   $('body').on('click', '#navbar-staff', buildStaff.buildStaffModule);
+  $('body').on('click', '#add-vis-form', newVisitor.showVisForm);
+  $('body').on('click', '#addVisitor', newVisitor.addVisitorEvent);
 };
 
 export default {

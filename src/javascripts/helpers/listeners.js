@@ -10,6 +10,7 @@ import newVendor from '../components/vendor/newVendorForm';
 import editVendor from '../components/vendor/editVendorForm';
 import utils from './utils';
 import updateRide from '../components/ride/updateRide/updateRide';
+import newStaff from '../components/staff/newStaff';
 import addVisitor from '../components/visitor/addVisitor/addVisitor';
 
 const editVendorEvent = (e) => {
@@ -122,6 +123,8 @@ const createListeners = () => {
   $('body').on('click', '.delete-staff', staffList.deleteStaff);
   $('body').on('click', '#navbar-staff', staffList.buildStaffModule);
   $('body').on('click', '.fixridebtn', updateRide.fixRide);
+  $('body').on('click', '.show-staff-form', newStaff.buildStaffForm);
+  $('body').on('click', '.submit-staff-form', staffList.addStaff);
   $('body').on('click', '#add-vis-form', addVisitor.showVisForm);
   $('body').on('click', '#addVisitor', addVisitor.addVisitorEvent);
 };

@@ -11,6 +11,7 @@ const checkLoginStatus = () => {
       authDiv.addClass('hide');
       logoutButton.removeClass('hide');
       $('.delete-vendor').removeClass('hide');
+      $('.edit-vendor').removeClass('hide');
       $('#add-vendor').removeClass('hide');
       $('#new-vendor-form').removeClass('hide');
       $('.delete-staff').removeClass('hide');
@@ -18,6 +19,7 @@ const checkLoginStatus = () => {
       logoutButton.addClass('hide');
       authDiv.removeClass('hide');
       $('.delete-vendor').addClass('hide');
+      $('.edit-vendor').addClass('hide');
       $('#add-vendor').addClass('hide');
       $('#new-vendor-form').addClass('hide');
       utils.printToDom('#new-vendor-form', '');

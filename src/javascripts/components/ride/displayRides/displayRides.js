@@ -7,7 +7,8 @@ const buildRideModule = () => {
   let domString = '';
   rideData.getRides()
     .then((rides) => {
-      domString += '<div class="alerts mt-2">';
+      domString += `
+      <div class="alerts mt-2">`;
       rides.forEach((ride) => {
         if (!ride.isAvailable) {
           domString += `
@@ -18,6 +19,8 @@ const buildRideModule = () => {
       });
       domString += `
       </div>
+      <h2 class="homeH3 mt-2">Rides</h2>
+      <div class="rideForm"></div>
       <div class="rideContainer mt-1">`;
       rides.forEach((ride) => {
         domString += `
@@ -42,7 +45,6 @@ const buildRideModule = () => {
         }
         domString += `
         </div>
-        <div id="${ride.id}footer" class="card-footer rideFooter"></div>
         </div>
        
         `;

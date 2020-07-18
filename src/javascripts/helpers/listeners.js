@@ -21,7 +21,7 @@ const deleteVendorEvent = (e) => {
     .catch((err) => console.error('Could not delete vendor', err));
 };
 
-const addVendorEvent = () => {
+const showNewVendorForm = () => {
   if (!authData.isAuthenticated()) {
     $('#myModal').modal('show');
     return;
@@ -38,7 +38,7 @@ const createListeners = () => {
   $('body').on('click', '#remove-visitor', removeVisitor.deleteVisitor);
   $('body').on('click', '.deleteRideIcon', deleteRide.deleteRide);
   $('body').on('click', '#navbar-staff', buildStaff.buildStaffModule);
-  $('body').on('click', '#add-vendor', addVendorEvent);
+  $('body').on('click', '#add-vendor', showNewVendorForm);
 };
 
 export default {

@@ -34,7 +34,28 @@ const showNewVendorForm = () => {
 
 const submitNewVendorForm = (e) => {
   e.preventDefault();
-  utils.printToDom('#add-vendor-form', '');
+
+  // get values from form
+  const inputAddress = $('#inputAddress').val();
+  const inputName = $('#inputName').val();
+  const inputPhone = $('#inputPhone').val();
+  const inputProduct = $('#inputProduct').val();
+  const vendorId = Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
+
+  const newVendorObj = {
+    address: inputAddress,
+    name: inputName,
+    phoneNumber: inputPhone,
+    product: inputProduct,
+    vendorId,
+  };
+
+  vendorData.addVendor(newVendorObj)
+    .then(() => {
+      utils.printToDom('#add-vendor-form', '');
+      buildVendors.buildVendorList();
+    })
+    .catch((err) => console.error('Add Vendor failed', err));
 };
 
 const createListeners = () => {

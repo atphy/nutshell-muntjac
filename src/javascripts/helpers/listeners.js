@@ -1,5 +1,5 @@
 import authData from './data/authData';
-import buildStaff from '../components/staff/staffList';
+import staffList from '../components/staff/staffList';
 import buildVendors from '../components/vendor/vendorList';
 import displayRides from '../components/ride/displayRides/displayRides';
 import vendorData from './data/vendor/vendorData';
@@ -65,9 +65,12 @@ const createListeners = () => {
   $('body').on('click', '.visitorLink', displayVisitors.printVisitor);
   $('body').on('click', '#remove-visitor', removeVisitor.deleteVisitor);
   $('body').on('click', '.deleteRideIcon', deleteRide.deleteRide);
-  $('body').on('click', '#navbar-staff', buildStaff.buildStaffModule);
+  $('body').on('click', '#navbar-staff', staffList.buildStaffModule);
   $('body').on('click', '#add-vendor', showNewVendorForm);
   $('body').on('click', '#submit-new-vendor', submitNewVendorForm);
+  $('body').on('click', '#navbar-staff', staffList.buildStaffModule);
+  $('body').on('click', '.delete-staff', staffList.deleteStaff);
+  $('body').on('click', '#navbar-staff', staffList.buildStaffModule);
   $('body').on('click', '.fixridebtn', updateRide.fixRide);
 };
 

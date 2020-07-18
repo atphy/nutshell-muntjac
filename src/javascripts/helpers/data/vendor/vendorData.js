@@ -21,9 +21,12 @@ const getVendors = () => new Promise((resolve, reject) => {
     .catch((err) => reject(err));
 });
 
+const addVendor = (newVendorObj) => axios.post(`${baseUrl}/Vendor.json`, newVendorObj);
+
 const deleteVendor = (vendorId) => axios.delete(`${baseUrl}/Vendor/${vendorId}.json`);
 
 export default {
+  addVendor,
   deleteVendor,
   getVendors,
 };

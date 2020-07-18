@@ -46,6 +46,25 @@ const deleteStaff = (e) => {
 
 const addStaff = (e) => {
   e.preventDefault();
+
+  const inputId = $('#employee-id').val();
+  const inputFirstName = $('#first-name').val();
+  const inputLastName = $('#last-name').val();
+  const inputPosition = $('#position').val();
+
+  const newStaffObj = {
+    employeeId: inputId,
+    firstName: inputFirstName,
+    lastName: inputLastName,
+    position: inputPosition,
+  };
+
+  staffData.addStaff(newStaffObj)
+    .then(() => {
+      utils.printToDom('#add-staff-form', '');
+      buildStaffModule();
+    })
+    .catch((err) => console.error('Add Staff failed', err));
 };
 
 export default { buildStaffModule, deleteStaff, addStaff };

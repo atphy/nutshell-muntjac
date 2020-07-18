@@ -74,6 +74,7 @@ const createListeners = () => {
   $('body').on('click', '#navbar-staff', staffList.buildStaffModule);
   $('body').on('click', '.fixridebtn', updateRide.fixRide);
   $('body').on('click', '.show-staff-form', newStaff.buildStaffForm);
+  $('body').on('click', '.submit-staff-form', staffList.addStaff);
 };
 
 export default {

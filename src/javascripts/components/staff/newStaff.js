@@ -19,7 +19,7 @@ const buildStaffForm = () => {
     <label for="employee-id">Employee ID</label>
     <input type="text" class="form-control" id="employee-id">
   </div>
-    <button type="submit" class="btn btn-primary" id="new-employee">Submit</button>
+    <button type="submit" class="btn btn-primary submit-staff-form" id="new-employee">Submit</button>
   </form>
   `;
 

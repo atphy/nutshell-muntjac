@@ -1,3 +1,4 @@
+import authData from '../../helpers/data/authData';
 import vendorData from '../../helpers/data/vendor/vendorData';
 import vendorCardMaker from './vendor';
 import utils from '../../helpers/utils';
@@ -24,11 +25,19 @@ const buildVendorList = () => {
           </div>
         </div>
       </div>
-      <h2 class="text-center">Whalom Park Vendors</h2>
-      <div class="text-center"><i class="fas fa-plus-circle fa-2x" id="add-vendor"></i></div>
-      <div id="add-vendor-form"></div>
-      <div class="d-flex flex-wrap">
-      `;
+      <h2 class="text-center">Whalom Park Vendors</h2>`;
+      if (authData.isAuthenticated()) {
+        domString += `
+        <div class="text-center"><i class="fas fa-plus-circle fa-2x" id="add-vendor"></i></div>
+        <div id="add-vendor-form"></div>
+        `;
+      } else {
+        domString += `
+        <div class="text-center"><i class="fas fa-plus-circle fa-2x hide" id="add-vendor"></i></div>
+        <div id="add-vendor-form"></div>
+        `;
+      }
+      domString += '<div class="d-flex flex-wrap">';
 
       vendors.forEach((vendor) => {
         domString += vendorCardMaker.vendorCardMaker(vendor);

@@ -6,6 +6,7 @@ import vendorData from './data/vendor/vendorData';
 import displayVisitors from '../components/visitor/visitor';
 import removeVisitor from '../components/deleteVisitor/deleteVisitor';
 import deleteRide from '../components/ride/deleteRide/deleteRide';
+import newVendor from '../components/vendor/newVendorForm';
 
 const deleteVendorEvent = (e) => {
   if (!authData.isAuthenticated()) {
@@ -20,6 +21,15 @@ const deleteVendorEvent = (e) => {
     .catch((err) => console.error('Could not delete vendor', err));
 };
 
+const addVendorEvent = () => {
+  if (!authData.isAuthenticated()) {
+    $('#myModal').modal('show');
+    return;
+  }
+  newVendor.newVendorForm();
+  authData.checkLoginStatus();
+};
+
 const createListeners = () => {
   $('body').on('click', '#navbar-vendors', buildVendors.buildVendorList);
   $('body').on('click', '.rideLink', displayRides.buildRideModule);
@@ -28,6 +38,7 @@ const createListeners = () => {
   $('body').on('click', '#remove-visitor', removeVisitor.deleteVisitor);
   $('body').on('click', '.deleteRideIcon', deleteRide.deleteRide);
   $('body').on('click', '#navbar-staff', buildStaff.buildStaffModule);
+  $('body').on('click', '#add-vendor', addVendorEvent);
 };
 
 export default {

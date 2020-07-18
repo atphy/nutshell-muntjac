@@ -25,6 +25,8 @@ const buildVendorList = () => {
         </div>
       </div>
       <h2 class="text-center">Whalom Park Vendors</h2>
+      <div class="text-center"><i class="fas fa-plus-circle fa-2x" id="add-vendor"></i></div>
+      <div id="add-vendor-form"></div>
       <div class="d-flex flex-wrap">
       `;
 

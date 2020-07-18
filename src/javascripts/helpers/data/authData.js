@@ -9,9 +9,11 @@ const checkLoginStatus = () => {
     if (user) {
       authDiv.addClass('hide');
       logoutButton.removeClass('hide');
+      $('.delete-vendor').removeClass('hide');
     } else {
       logoutButton.addClass('hide');
       authDiv.removeClass('hide');
+      $('.delete-vendor').addClass('hide');
     }
   });
 };

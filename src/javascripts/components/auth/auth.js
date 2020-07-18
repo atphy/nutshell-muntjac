@@ -1,5 +1,6 @@
 import firebase from 'firebase/app';
 import 'firebase/auth';
+import authData from '../../helpers/data/authData';
 import utils from '../../helpers/utils';
 
 import 'bootstrap';
@@ -7,6 +8,7 @@ import 'bootstrap';
 const signMeIn = () => {
   const googleProvider = new firebase.auth.GoogleAuthProvider();
   firebase.auth().signInWithPopup(googleProvider);
+  authData.checkLoginStatus();
 };
 
 const loginButton = () => {
@@ -19,6 +21,7 @@ const logoutEvent = () => {
   $('#navbar-logout-button').click((e) => {
     e.preventDefault();
     firebase.auth().signOut();
+    authData.checkLoginStatus();
   });
 };
 

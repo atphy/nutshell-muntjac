@@ -1,3 +1,11 @@
+.rideName {
+  font-weight: bolder;
+}
+
+.btnwrench {
+  pointer-events: none;
+}
+
 .rideContainer {
   display: flex;
   flex-wrap: wrap;
@@ -34,13 +42,23 @@
   }
   
   .card-img-overlay {
-    text-align: right;
-    padding: 5px 5px;
+    display:flex;
+    padding: 5px 15px 5px 5px;
+    align-items: flex-start;
+    text-align: center;
   }
 
   .deleteRideIcon {
     color: red;
     cursor: pointer;
+  }
+  
+  .descriptionP {
+    color:white;
+    align-self: flex-end;
+    margin-bottom: 42px !important;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px;
   }
 
 }

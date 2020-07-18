@@ -3,6 +3,7 @@ import apiKeys from './helpers/apiKeys.json';
 import auth from './components/auth/auth';
 import authData from './helpers/data/authData';
 import listeners from './helpers/listeners';
+import homescreen from './components/ride/homescreen/homescreen';
 
 import '../styles/main.scss';
 import 'bootstrap';
@@ -13,6 +14,7 @@ const init = () => {
   auth.loginButton();
   auth.logoutEvent();
   listeners.createListeners();
+  homescreen.buildHomeScreen();
 };
 
 init();

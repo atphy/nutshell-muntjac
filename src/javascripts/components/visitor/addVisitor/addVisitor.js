@@ -5,20 +5,19 @@ import buildVisitors from '../displayVisitor/visitor';
 
 const showVisForm = () => {
   const domString = `
-  <div id="add-vis-form">
     <form>
       <div class="form-group col-sm-8">
         <label for="name">Name</label>
         <input type="text" class="form-control" id="name-val" placeholder="First & Last Name">
       </div>
-      <div class="form-group col-sm-2">
+      <div class="col-sm-2">
       <label >Gender:</label>
       <select class="form-control" id="gender-val">
         <option>m</option>
         <option>f</option>
       </select>
       </div>
-      <div class="form-group col-sm-2">
+      <div class="col-sm-2">
       <label>Attendance:</label>
       <select class="form-control" id="atten-val">
         <option>1</option>
@@ -30,7 +29,6 @@ const showVisForm = () => {
       </div>
       <button class="btn btn-primary" id="addVisitor">Submit</button>
     </form>
-  </div>  
     `;
   utils.printToDom('#new-vis-form', domString);
 };

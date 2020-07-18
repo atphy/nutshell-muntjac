@@ -21,4 +21,13 @@ const buildStaffModule = () => {
     .catch((err) => console.error('buildStaffModule failed', err));
 };
 
-export default { buildStaffModule };
+const deleteStaff = (e) => {
+  const employeeId = e.target.closest('.card').id;
+  staffData.deleteStaff(employeeId)
+    .then(() => {
+      buildStaffModule();
+    })
+    .catch((err) => console.error(err));
+};
+
+export default { buildStaffModule, deleteStaff };

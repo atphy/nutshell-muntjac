@@ -25,7 +25,7 @@ const newVendorForm = () => {
   </form> 
   `;
 
-  utils.printToDom('#add-vendor-form', domString);
+  utils.printToDom('#vendor-form', domString);
 };
 
 export default {

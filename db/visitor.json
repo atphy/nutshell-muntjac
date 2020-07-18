@@ -1,30 +1,25 @@
 {
   "visitor 1": {
-    "id": "000001",
     "name": "Dick Grayson",
     "gender": "m",
     "attendance": "360"
   },
   "visitor 2": {
-    "id": "000002",
     "name": "Tim Drake",
     "gender": "m",
     "attendance": "230"
   },
   "visitor 3": {
-    "id": "000003",
     "name": "Carrie Kelley",
     "gender": "f",
     "attendance": "25"
   },  
   "visitor 4": {
-    "id": "000004",
     "name": "Jason Todd",
     "gender": "m",
     "attendance": "427"
   },
   "visitor 5": {
-    "id": "000005",
     "name": "Damian Wayne",
     "gender": "m",
     "attendance": "9"

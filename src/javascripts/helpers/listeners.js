@@ -12,6 +12,7 @@ import utils from './utils';
 import updateRide from '../components/ride/updateRide/updateRide';
 import newStaff from '../components/staff/newStaff';
 import addVisitor from '../components/visitor/addVisitor/addVisitor';
+import updateVisitor from '../components/visitor/updateVisitor/updateVisitor';
 
 const editVendorEvent = (e) => {
   if (!authData.isAuthenticated()) {
@@ -127,6 +128,7 @@ const createListeners = () => {
   $('body').on('click', '.submit-staff-form', staffList.addStaff);
   $('body').on('click', '#add-vis-form', addVisitor.showVisForm);
   $('body').on('click', '#addVisitor', addVisitor.addVisitorEvent);
+  $('body').on('click', '#update-visitor', updateVisitor.updateVisEvent);
 };
 
 export default {

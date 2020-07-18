@@ -1,6 +1,7 @@
 import rideData from '../../../helpers/data/rideData';
 import displayRide from '../displayRides/displayRides';
 import utils from '../../../helpers/utils';
+import './updateRide.scss';
 
 const fixRide = (e) => {
   const rideId = e.target.dataset.brokenride;
@@ -25,6 +26,9 @@ const updateRideForm = (e) => {
     .then((rides) => {
       const rideById = rides.find((singleRide) => singleRide.id === rideId);
       const domString = `
+      <div class="closeForm">
+      <i class="fas fa-window-close closeForm mb-1"></i>
+      </div>
   <form>
   <div class="form-group">
     <label for="coaster-name">Name:</label>
@@ -63,8 +67,14 @@ const updateRide = () => {
     .catch((err) => (err));
 };
 
+const clearForm = () => {
+  const domString = '';
+  utils.printToDom('.rideForm', domString);
+};
+
 export default {
   fixRide,
   updateRideForm,
   updateRide,
+  clearForm,
 };

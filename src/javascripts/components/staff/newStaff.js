@@ -23,7 +23,7 @@ const buildStaffForm = () => {
   </form>
   `;
 
-  utils.printToDom('#add-staff-form', domString);
+  utils.printToDom('#staff-form', domString);
 };
 
 export default { buildStaffForm };

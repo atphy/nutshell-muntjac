@@ -132,6 +132,9 @@ const createListeners = () => {
   $('body').on('click', '#addVisitor', addVisitor.addVisitorEvent);
   $('body').on('click', '.rideEditBtn', updateRide.updateRideForm);
   $('body').on('click', '.updateSubmit', updateRide.updateRide);
+  $('body').on('click', '.edit-staff', staffList.showEditStaffForm);
+  $('body').on('click', '#update-staff', staffList.editStaff);
+  $('body').on('click', '.closeForm', updateRide.clearForm);
 };
 
 export default {

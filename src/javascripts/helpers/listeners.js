@@ -9,6 +9,7 @@ import deleteRide from '../components/ride/deleteRide/deleteRide';
 import newVendor from '../components/vendor/newVendorForm';
 import utils from './utils';
 import updateRide from '../components/ride/updateRide/updateRide';
+import homescreen from '../components/ride/homescreen/homescreen';
 
 const deleteVendorEvent = (e) => {
   if (!authData.isAuthenticated()) {
@@ -72,6 +73,7 @@ const createListeners = () => {
   $('body').on('click', '.delete-staff', staffList.deleteStaff);
   $('body').on('click', '#navbar-staff', staffList.buildStaffModule);
   $('body').on('click', '.fixridebtn', updateRide.fixRide);
+  $('body').on('click', '.navwhale', homescreen.buildHomeScreen);
 };
 
 export default {

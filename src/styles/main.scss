@@ -1,10 +1,15 @@
 @import "~bootstrap/scss/bootstrap";
 @import "~@fortawesome/fontawesome-free/css/all.min.css";
+@import url('https://fonts.googleapis.com/css2?family=Khula&display=swap');
 
 body {
   height: 100vh;
   display: grid;
   grid-template-rows: auto 1fr auto;
+}
+
+.nav-link {
+  color:  #488fc3 !important;
 }
 
 h1 {
@@ -14,7 +19,7 @@ h1 {
 }
 
 .modules {
-  background-color: coral;
+  background-color: #488fc3;
 }
 
 .hide {
@@ -22,6 +27,13 @@ h1 {
 }
 
 .footer {
-  background-color: purple;
-  color: white;
+  background-color: #f9ea1a;
+}
+
+.footerText {
+  color: #488fc3;
+  font-family: 'Khula', sans-serif;
+  font-weight: bold;
+  padding-left: 10px;
+  margin: 8px 0px;
 }

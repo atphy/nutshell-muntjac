@@ -2,6 +2,8 @@ import utils from '../../helpers/utils';
 
 const newVendorForm = () => {
   const domString = `
+  <div class="container">
+  <h2>New Vendor</h2>
   <form class="hide" id="new-vendor-form">
     <div class="form-group">
       <label for="inputAddress">Address</label>
@@ -23,9 +25,10 @@ const newVendorForm = () => {
     </div>
     <button type="submit" class="btn btn-primary" id="submit-new-vendor">Submit New Vendor</button>
   </form> 
+  </div>
   `;
 
-  utils.printToDom('#add-vendor-form', domString);
+  utils.printToDom('#vendor-form', domString);
 };
 
 export default {

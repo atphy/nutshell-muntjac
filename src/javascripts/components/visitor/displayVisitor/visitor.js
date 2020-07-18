@@ -17,7 +17,7 @@ const printVisitor = () => {
           </div>
           <div id="new-vis-form"></div>`;
       }
-      domString += '<div class="d-flex flex-wrap">';
+      domString += '<div class="d-flex flex-wrap vis-container">';
 
       visitors.forEach((visitor) => {
         domString += `

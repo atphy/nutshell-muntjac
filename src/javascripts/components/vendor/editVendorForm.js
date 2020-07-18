@@ -1,6 +1,6 @@
 import utils from '../../helpers/utils';
 
-const showEditVendorForm = ({
+const showEditVendorForm = (fbVendorId, {
   address,
   name,
   phoneNumber,
@@ -27,7 +27,7 @@ const showEditVendorForm = ({
         <input type="text" class="form-control" id="inputProduct" value="${product}">
       </div>
     </div>
-    <button type="submit" class="btn btn-primary" id="submit-update-vendor" data-vendor-id="${vendorId}">Update Vendor</button>
+    <button type="submit" class="btn btn-primary" id="submit-update-vendor" data-firebase-vendor-id="${fbVendorId}" data-vendorId="${vendorId}">Update Vendor</button>
   </form> 
   `;
 

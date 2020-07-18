@@ -22,8 +22,11 @@ const editVendorEvent = (e) => {
   vendorData.getVendorById(vendorId)
     .then((response) => {
       const vendorObj = response.data;
-      console.error('Retrieved Vendor: ', vendorObj);
-      editVendor.showEditVendorForm(vendorObj);
+
+      // Create the edit form in the DOM
+      editVendor.showEditVendorForm(vendorId, vendorObj);
+
+      // Check if user is logged in and if so, remove 'hide' class
       authData.checkLoginStatus();
     })
     .catch((err) => console.error('Could not retrieve Vendor', err));
@@ -53,7 +56,28 @@ const showNewVendorForm = () => {
 
 const submitUpdateVendorForm = (e) => {
   e.preventDefault();
-  console.error('Submit Update Vendor Form Completed for VendorId: ', e.target.getAttribute('data-vendor-id'));
+  const fbVendorId = e.target.getAttribute('data-firebase-vendor-id');
+
+  const inputAddress = $('#inputAddress').val();
+  const inputName = $('#inputName').val();
+  const inputPhone = $('#inputPhone').val();
+  const inputProduct = $('#inputProduct').val();
+  const vendorId = e.target.getAttribute('data-vendorId');
+
+  const newVendorObj = {
+    address: inputAddress,
+    name: inputName,
+    phoneNumber: inputPhone,
+    product: inputProduct,
+    vendorId,
+  };
+
+  vendorData.updateVendor(fbVendorId, newVendorObj)
+    .then(() => {
+      utils.printToDom('#vendor-form', '');
+      buildVendors.buildVendorList();
+    })
+    .catch((err) => console.error('Could not update vendor', err));
 };
 
 const submitNewVendorForm = (e) => {

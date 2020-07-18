@@ -3,10 +3,10 @@ import buildStaff from '../components/staff/staffList';
 import buildVendors from '../components/vendor/vendorList';
 import displayRides from '../components/ride/displayRides/displayRides';
 import vendorData from './data/vendor/vendorData';
-import displayVisitors from '../components/visitor/visitor';
+import displayVisitors from '../components/visitor/displayVisitor/visitor';
 import removeVisitor from '../components/visitor/deleteVisitor';
 import deleteRide from '../components/ride/deleteRide/deleteRide';
-import newVisitor from '../components/visitor/addVisitor';
+import newVisitor from '../components/visitor/addVisitor/addVisitor';
 
 const deleteVendorEvent = (e) => {
   if (!authData.isAuthenticated()) {

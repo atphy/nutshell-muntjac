@@ -1,0 +1,18 @@
+.card{
+  margin: 15px;
+  padding: 10px;
+}
+
+.card p {
+  font-size: 14pt;
+  margin: 10pt;
+}
+
+.d-flex {
+  justify-content: space-evenly;
+}
+
+#new-vis {
+  display: flex;
+  justify-content: center;
+}

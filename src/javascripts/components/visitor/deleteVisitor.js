@@ -1,4 +1,4 @@
-import visitor from './visitor';
+import visitor from './displayVisitor/visitor';
 import visitorData from '../../helpers/data/visitorData';
 
 const deleteVisitor = (e) => {

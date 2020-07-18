@@ -9,6 +9,7 @@ const showEditVendorForm = (fbVendorId, {
 }) => {
   const domString = `
   <div class="container">
+  <h2>Update Vendor</h2>
   <form class="hide" id="edit-vendor-form">
     <div class="form-group">
       <label for="inputAddress">Address</label>

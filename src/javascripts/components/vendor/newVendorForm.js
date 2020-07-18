@@ -3,6 +3,7 @@ import utils from '../../helpers/utils';
 const newVendorForm = () => {
   const domString = `
   <div class="container">
+  <h2>New Vendor</h2>
   <form class="hide" id="new-vendor-form">
     <div class="form-group">
       <label for="inputAddress">Address</label>

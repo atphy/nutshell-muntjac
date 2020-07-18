@@ -8,6 +8,7 @@ const showEditVendorForm = (fbVendorId, {
   vendorId,
 }) => {
   const domString = `
+  <div class="container">
   <form class="hide" id="edit-vendor-form">
     <div class="form-group">
       <label for="inputAddress">Address</label>
@@ -29,6 +30,7 @@ const showEditVendorForm = (fbVendorId, {
     </div>
     <button type="submit" class="btn btn-primary" id="submit-update-vendor" data-firebase-vendor-id="${fbVendorId}" data-vendorId="${vendorId}">Update Vendor</button>
   </form> 
+  </div>
   `;
 
   utils.printToDom('#vendor-form', domString);

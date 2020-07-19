@@ -1,9 +1,11 @@
 import rideData from '../../../helpers/data/rideData';
 import displayRide from '../displayRides/displayRides';
 import utils from '../../../helpers/utils';
+import auth from '../../../helpers/data/authData';
 import './updateRide.scss';
 
 const fixRide = (e) => {
+  if (!auth.isAuthenticated()) return;
   const rideId = e.target.dataset.brokenride;
   rideData.getRides()
     .then((rides) => {
@@ -55,6 +57,7 @@ const updateRideForm = (e) => {
 };
 
 const updateRide = () => {
+  if (!auth.isAuthenticated()) return;
   const rideId = $('.updateSubmit').data('rideid');
   const updatedRideObj = {
     name: $('#coaster-name').val(),

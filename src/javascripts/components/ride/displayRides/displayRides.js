@@ -13,8 +13,13 @@ const buildRideModule = () => {
         if (!ride.isAvailable) {
           domString += `
         <div class="alert alert-danger mb-1" role="alert">
-        <span class=rideName>${ride.name}</span> is broken down!<button class="btn btn-danger ml-2 fixridebtn" data-brokenride="${ride.id}">Fix it<i class="fas fa-wrench btnwrench ml-1"></i></button>
-        </div>`;
+        <span class=rideName>${ride.name}</span> is broken down!`;
+          if (authData.isAuthenticated()) {
+            domString += `<button class="btn btn-danger ml-2 fixridebtn" data-brokenride="${ride.id}">Fix it<i class="fas fa-wrench btnwrench ml-1"></i></button>`;
+          } else {
+            domString += `<button class="btn btn-danger ml-2 fixridebtn hide" data-brokenride="${ride.id}">Fix it<i class="fas fa-wrench btnwrench ml-1"></i></button>`;
+          }
+          domString += '</div>';
         }
       });
       domString += `
@@ -29,6 +34,8 @@ const buildRideModule = () => {
         <div class="card-img-overlay">`;
         if (authData.isAuthenticated()) {
           domString += '<i class="fas fa-times deleteRideIcon"></i>';
+        } else {
+          domString += '<i class="fas fa-times deleteRideIcon hide"></i>';
         }
         domString += `
         <p class="card-text descriptionP">${ride.description}</p>
@@ -36,6 +43,8 @@ const buildRideModule = () => {
         <div class="card-title rideTitle">`;
         if (authData.isAuthenticated()) {
           domString += '<i class="far fa-edit rideEditBtn"></i>';
+        } else {
+          domString += '<i class="far fa-edit rideEditBtn hide"></i>';
         }
         domString += ` <h5>${ride.name}</h5>`;
         if (!ride.isAvailable) {

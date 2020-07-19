@@ -10,7 +10,7 @@ import newVendor from '../components/vendor/newVendorForm';
 import editVendor from '../components/vendor/editVendorForm';
 import utils from './utils';
 import updateRide from '../components/ride/updateRide/updateRide';
-import homescreen from '../components/ride/homescreen/homescreen';
+import homescreen from '../components/homescreen/homescreen';
 
 import newStaff from '../components/staff/newStaff';
 import addVisitor from '../components/visitor/addVisitor/addVisitor';

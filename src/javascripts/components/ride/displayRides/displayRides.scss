@@ -61,4 +61,27 @@
     padding: 5px;
   }
 
+
+}
+.card-title {
+  z-index: 1;
+}
+.rideEditBtn {
+  color: #488fc3;
+  cursor: pointer !important;
+}
+
+.rideForm {
+  width: 70%;
+  margin: 0 auto;
+  color:white;
+}
+.homeH3 {
+  text-align:center;
+  font-family: 'Luckiest Guy', cursive;
+  color: #f9ea1a;
+}
+
+.alert {
+  padding: 5px 15px !important;
 }

@@ -8,9 +8,15 @@ const staffCardMaker = (staff) => {
         <div class="card-body text-center">
           <h5 class="card-title">${staff.position}</h5>`;
   if (authData.isAuthenticated()) {
-    domString += '<button class="btn btn-danger delete-staff">Delete</button>';
+    domString += `
+    <button class="btn btn-warning edit-staff">Edit</button>
+    <button class="btn btn-danger delete-staff">Delete</button>
+    `;
   } else {
-    domString += '<button class="btn btn-danger delete-staff hide">Delete</button>';
+    domString += `
+    <button class="btn btn-warning edit-staff hide">Edit</button>
+    <button class="btn btn-danger delete-staff hide">Delete</button>
+    `;
   }
   domString += `
         </div>

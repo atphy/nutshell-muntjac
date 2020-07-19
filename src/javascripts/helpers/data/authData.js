@@ -36,6 +36,11 @@ const checkLoginStatus = () => {
       $('#new-vis').addClass('hide');
       $('.update-visitor').addClass('hide');
       $('.remove-visitor').addClass('hide');
+      $('#staff-form').addClass('hide');
+      $('.edit-staff').addClass('hide');
+      $('.rideEditBtn').addClass('hide');
+      $('.deleteRideIcon').addClass('hide');
+      $('.fixridebtn').addClass('hide');
     }
   });
 };

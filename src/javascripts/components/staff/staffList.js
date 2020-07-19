@@ -2,6 +2,7 @@ import authData from '../../helpers/data/authData';
 import staffData from '../../helpers/data/staff/staffData';
 import staffMaker from './staff';
 import utils from '../../helpers/utils';
+import editForm from './editStaffForm';
 
 const buildStaffModule = () => {
   staffData.getStaff()
@@ -13,12 +14,12 @@ const buildStaffModule = () => {
       if (authData.isAuthenticated()) {
         domString += `
         <button type="submit" class="btn btn-primary show-staff-form">New Hire Form</button>
-        <div id="add-staff-form"></div>
+        <div id="staff-form"></div>
         `;
       } else {
         domString += `
         <button type="submit" class="btn btn-primary show-staff-form hide">New Hire Form</button>
-        <div id="add-staff-form"></div>
+        <div id="staff-form"></div>
         `;
       }
 
@@ -47,24 +48,45 @@ const deleteStaff = (e) => {
 const addStaff = (e) => {
   e.preventDefault();
 
-  const inputId = $('#employee-id').val();
-  const inputFirstName = $('#first-name').val();
-  const inputLastName = $('#last-name').val();
-  const inputPosition = $('#position').val();
-
   const newStaffObj = {
-    employeeId: inputId,
-    firstName: inputFirstName,
-    lastName: inputLastName,
-    position: inputPosition,
+    employeeId: $('#employee-id').val(),
+    firstName: $('#first-name').val(),
+    lastName: $('#last-name').val(),
+    position: $('#position').val(),
   };
 
   staffData.addStaff(newStaffObj)
     .then(() => {
-      utils.printToDom('#add-staff-form', '');
+      utils.printToDom('#staff-form', '');
       buildStaffModule();
     })
     .catch((err) => console.error('Add Staff failed', err));
 };
 
-export default { buildStaffModule, deleteStaff, addStaff };
+const showEditStaffForm = (e) => {
+  const employeeId = e.target.closest('.card').id;
+  editForm.buildEditForm(employeeId);
+};
+
+const editStaff = (e) => {
+  e.preventDefault();
+  const employeeId = e.target.closest('.staff-updater').id;
+
+  const updateStaffObj = {
+    firstName: $('#edit-first-name').val(),
+    lastName: $('#edit-last-name').val(),
+    position: $('#edit-position').val(),
+  };
+
+  staffData.updateStaff(employeeId, updateStaffObj)
+    .then(() => buildStaffModule())
+    .catch((err) => console.error('could not update staff', err));
+};
+
+export default {
+  buildStaffModule,
+  deleteStaff,
+  addStaff,
+  showEditStaffForm,
+  editStaff,
+};

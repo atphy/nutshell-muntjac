@@ -1,5 +1,5 @@
 /* eslint-disable max-len */
-import utils from '../../../helpers/utils';
+import utils from '../../helpers/utils';
 import './homescreen.scss';
 
 const buildHomeScreen = () => {

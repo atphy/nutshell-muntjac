@@ -10,7 +10,7 @@ import newVendor from '../components/vendor/newVendorForm';
 import editVendor from '../components/vendor/editVendorForm';
 import utils from './utils';
 import updateRide from '../components/ride/updateRide/updateRide';
-import homescreen from '../components/ride/homescreen/homescreen';
+import homescreen from '../components/homescreen/homescreen';
 
 import newStaff from '../components/staff/newStaff';
 import addVisitor from '../components/visitor/addVisitor/addVisitor';
@@ -130,8 +130,11 @@ const createListeners = () => {
   $('body').on('click', '.submit-staff-form', staffList.addStaff);
   $('body').on('click', '#add-vis-form', addVisitor.showVisForm);
   $('body').on('click', '#addVisitor', addVisitor.addVisitorEvent);
+  $('body').on('click', '.rideEditBtn', updateRide.updateRideForm);
+  $('body').on('click', '.updateSubmit', updateRide.updateRide);
   $('body').on('click', '.edit-staff', staffList.showEditStaffForm);
   $('body').on('click', '#update-staff', staffList.editStaff);
+  $('body').on('click', '.closeForm', updateRide.clearForm);
 };
 
 export default {

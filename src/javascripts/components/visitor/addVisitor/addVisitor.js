@@ -2,8 +2,10 @@ import './addVisitor.scss';
 import utils from '../../../helpers/utils';
 import visitorData from '../../../helpers/data/visitorData';
 import buildVisitors from '../displayVisitor/visitor';
+import auth from '../../../helpers/data/authData';
 
 const showVisForm = () => {
+  if (!auth.isAuthenticated()) return;
   const domString = `
     <form>
       <div class="form-group col-sm-8">
@@ -34,6 +36,7 @@ const showVisForm = () => {
 };
 
 const addVisitorEvent = () => {
+  if (!auth.isAuthenticated()) return;
   const newVisitor = {
     name: $('#name-val').val(),
     gender: $('#gender-val').val(),

@@ -18,6 +18,9 @@ const checkLoginStatus = () => {
       $('.delete-staff').removeClass('hide');
       $('.show-staff-form').removeClass('hide');
       $('#add-staff-form').removeClass('hide');
+      $('#new-vis').removeClass('hide');
+      $('.update-visitor').removeClass('hide');
+      $('.remove-visitor').removeClass('hide');
     } else {
       logoutButton.addClass('hide');
       authDiv.removeClass('hide');
@@ -30,6 +33,9 @@ const checkLoginStatus = () => {
       $('.delete-staff').addClass('hide');
       $('.show-staff-form').addClass('hide');
       $('#add-staff-form').addClass('hide');
+      $('#new-vis').addClass('hide');
+      $('.update-visitor').addClass('hide');
+      $('.remove-visitor').addClass('hide');
     }
   });
 };

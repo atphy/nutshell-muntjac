@@ -132,6 +132,7 @@ const createListeners = () => {
   $('body').on('click', '#add-vis-form', addVisitor.showVisForm);
   $('body').on('click', '#addVisitor', addVisitor.addVisitorEvent);
   $('body').on('click', '#update-visitor', updateVisitor.updateVisEvent);
+  $('body').on('click', '#visitorUpdate', updateVisitor.updateVisitor);
 };
 
 export default {

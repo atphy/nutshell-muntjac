@@ -1,7 +1,9 @@
 import visitor from './displayVisitor/visitor';
 import visitorData from '../../helpers/data/visitorData';
+import auth from '../../helpers/data/authData';
 
 const deleteVisitor = (e) => {
+  if (!auth.isAuthenticated()) return;
   const visitorCardId = (e.target.closest('.card').id);
   visitorData.deleteVisitor(visitorCardId)
     .then(() => {

@@ -15,11 +15,19 @@ const printVisitor = () => {
           <div id="new-vis">
             <button class="btn btn-primary" id="add-vis-form"><i class="fas fa-plus"></i> NEW VISITOR</button>
           </div>
-          <div id="new-vis-form"></div>
-          <div id="update-visitor"></div>`;
+          `;
+      } else {
+        domString += `
+          <div class="hide" id="new-vis">
+            <button class="btn btn-primary" id="add-vis-form"><i class="fas fa-plus"></i> NEW VISITOR</button>
+          </div>
+          `;
       }
-      domString += '<div class="d-flex flex-wrap vis-container">';
-
+      domString += `
+          <div id="new-vis-form"></div>
+          <div id="update-visitor"></div>
+          <div class="d-flex flex-wrap vis-container">
+          `;
       visitors.forEach((visitor) => {
         domString += `
           <div id="${visitor.id}" class="card visitor" style="width: 18rem;">
@@ -30,9 +38,14 @@ const printVisitor = () => {
 
         if (authData.isAuthenticated()) {
           domString += `
-              <a href="#" class="btn btn-primary" id="update-visitor"><i class="fas fa-edit"></i></a>
-              <a href="#" class="btn btn-danger" id="remove-visitor"><i class="fas fa-trash"></i></a>
+              <a href="#" class="btn btn-primary update-visitor" id="update-visitor"><i class="fas fa-edit"></i></a>
+              <a href="#" class="btn btn-danger remove-visitor" id="remove-visitor"><i class="fas fa-trash"></i></a>
               `;
+        } else {
+          domString += `
+        <a href="#" class="btn btn-primary hide" id="update-visitor"><i class="fas fa-edit"></i></a>
+        <a href="#" class="btn btn-danger hide" id="remove-visitor"><i class="fas fa-trash"></i></a>
+        `;
         }
         domString += `
             </div>

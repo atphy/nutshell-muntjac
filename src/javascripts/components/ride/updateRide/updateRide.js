@@ -24,32 +24,34 @@ const fixRide = (e) => {
 
 const updateRideForm = (e) => {
   const rideId = e.target.closest('.card').id;
+  $('.createRideBtn').addClass('hide');
   rideData.getRides()
     .then((rides) => {
       const rideById = rides.find((singleRide) => singleRide.id === rideId);
       const domString = `
-      <div class="closeForm">
-      <i class="fas fa-window-close closeForm mb-1"></i>
-      </div>
-  <form>
-  <div class="form-group">
-    <label for="coaster-name">Name:</label>
-    <input type="text" class="form-control" id="coaster-name" value="${rideById.name}">
-  </div>
-  <div class="form-group">
-    <label for="coaster-image">Image URL:</label>
-    <input type="text" class="form-control" id="coaster-image" value="${rideById.imageUrl}">
-  </div>
-  <div class="form-group">
-  <label for="coaster-description">Description:</label>
-  <input type="text" class="form-control" id="coaster-description" value="${rideById.description}">
-</div>
-  <div class="form-check">
-    <input type="checkbox" class="form-check-input" id="operationalCheck">
-    <label class="form-check-label" for="operationalCheck">Operational</label>
-  </div>
-  <button type="button" class="btn btn-primary updateSubmit" data-rideid="${rideById.id}">Update</button>
-</form>
+        <div class="closeForm">
+        <i class="fas fa-window-close closeForm mb-1"></i>
+        </div>
+        <h5 class="homeH3 mb-0 text-left">Update Ride</h5>
+        <form>
+        <div class="form-group mb-0">
+        <label for="coaster-name" class="mb-0">Name:</label>
+        <input type="text" class="form-control" id="coaster-name" value="${rideById.name}">
+        </div>
+        <div class="form-group mb-0">
+        <label for="coaster-image" class="mb-0 mt-1">Image URL:</label>
+        <input type="text" class="form-control" id="coaster-image" value="${rideById.imageUrl}">
+        </div>
+        <div class="form-group mb-0">
+        <label for="coaster-description" class="mb-0 mt-1">Description:</label>
+        <input type="text" class="form-control" id="coaster-description" value="${rideById.description}">
+        </div>
+        <div class="form-check mb-1 mt-1">
+        <input type="checkbox" class="form-check-input" id="operationalCheck">
+        <label class="form-check-label" for="operationalCheck">Operational</label>
+        </div>
+        <button type="button" class="btn btn-primary updateSubmit mt-2" data-rideid="${rideById.id}">Update</button>
+        </form>
   `;
       utils.printToDom('.rideForm', domString);
     })
@@ -71,6 +73,7 @@ const updateRide = () => {
 };
 
 const clearForm = () => {
+  $('.createRideBtn').removeClass('hide');
   const domString = '';
   utils.printToDom('.rideForm', domString);
 };

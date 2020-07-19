@@ -33,10 +33,12 @@ function imageInputWatcher() {
 
 const showRideForm = () => {
   if (!auth.isAuthenticated()) return;
+  $('.createRideBtn').addClass('hide');
   const domString = `
   <div class="closeForm">
   <i class="fas fa-window-close closeForm mb-1"></i>
   </div>
+  <h5 class="homeH3 mb-0 text-left">Create Ride</h5>
   <form id="new-coaster-form">
   <div class="form-group">
   <label for="new-coaster-name" class="mb-0">Name:</label>

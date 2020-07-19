@@ -25,6 +25,14 @@ const buildRideModule = () => {
       domString += `
       </div>
       <h2 class="homeH3 mt-2">Rides</h2>
+      <div class=rideCreate>`;
+      if (authData.isAuthenticated()) {
+        domString += '<button class="btn btn-primary createRideBtn">Create A Ride<i class="fas fa-plus ml-1"></i></button>';
+      } else {
+        domString += '<button class="btn btn-primary createRideBtn hide">Create A Ride<i class="fas fa-plus ml-1"></i></button>';
+      }
+      domString += `
+      </div>
       <div class="rideForm"></div>
       <div class="rideContainer mt-1">`;
       rides.forEach((ride) => {

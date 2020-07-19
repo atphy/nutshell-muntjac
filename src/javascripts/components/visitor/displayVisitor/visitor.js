@@ -25,7 +25,6 @@ const printVisitor = () => {
       }
       domString += `
           <div id="new-vis-form"></div>
-          <div id="update-visitor"></div>
           <div class="d-flex flex-wrap vis-container">
           `;
       visitors.forEach((visitor) => {

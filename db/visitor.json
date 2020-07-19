@@ -1,27 +1,27 @@
 {
   "visitor 1": {
     "name": "Dick Grayson",
-    "gender": "m",
+    "gender": "he/him",
     "attendance": "360"
   },
   "visitor 2": {
     "name": "Tim Drake",
-    "gender": "m",
+    "gender": "he/him",
     "attendance": "230"
   },
   "visitor 3": {
     "name": "Carrie Kelley",
-    "gender": "f",
+    "gender": "she/her",
     "attendance": "25"
   },  
   "visitor 4": {
     "name": "Jason Todd",
-    "gender": "m",
+    "gender": "he/him",
     "attendance": "427"
   },
   "visitor 5": {
     "name": "Damian Wayne",
-    "gender": "m",
+    "gender": "he/him",
     "attendance": "9"
   }
 }

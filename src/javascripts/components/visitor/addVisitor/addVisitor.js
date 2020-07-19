@@ -15,8 +15,13 @@ const showVisForm = () => {
       <div class="col-sm-2">
       <label >Gender:</label>
       <select class="form-control" id="gender-val">
-        <option>m</option>
-        <option>f</option>
+        <option>he/him</option>
+        <option>she/her</option>
+        <option>per/per</option>
+        <option>they/them</option>
+        <option>ve/ver</option>
+        <option>xe/xem</option>
+        <option>ze/hir</option>
       </select>
       </div>
       <div class="col-sm-2">

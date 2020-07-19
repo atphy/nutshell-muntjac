@@ -131,7 +131,7 @@ const createListeners = () => {
   $('body').on('click', '.submit-staff-form', staffList.addStaff);
   $('body').on('click', '#add-vis-form', addVisitor.showVisForm);
   $('body').on('click', '#addVisitor', addVisitor.addVisitorEvent);
-  $('body').on('click', '#update-visitor', updateVisitor.updateVisEvent);
+  $('body').on('click', '.update-visitor', updateVisitor.updateVisEvent);
   $('body').on('click', '#visitorUpdate', updateVisitor.updateVisitor);
   $('body').on('click', '.rideEditBtn', updateRide.updateRideForm);
   $('body').on('click', '.updateSubmit', updateRide.updateRide);

@@ -139,6 +139,7 @@ const createListeners = () => {
   $('body').on('click', '#update-staff', staffList.editStaff);
   $('body').on('click', '.closeForm', updateRide.clearForm);
   $('body').on('click', '.createRideBtn', createRide.showRideForm);
+  $('body').on('change', '#coaster-image', createRide.imageInputWatcher);
 };
 
 export default {

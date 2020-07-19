@@ -23,8 +23,11 @@ const deleteRide = (rideId) => axios.delete(`${baseUrl}/Ride/${rideId}.json`);
 
 const updateRide = (rideId, updatedRide) => axios.put(`${baseUrl}/Ride/${rideId}.json`, updatedRide);
 
+const addNewRide = (newRideObj) => axios.post(`${baseUrl}/Ride.json`, newRideObj);
+
 export default {
   getRides,
   deleteRide,
   updateRide,
+  addNewRide,
 };

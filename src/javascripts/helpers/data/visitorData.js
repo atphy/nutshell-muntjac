@@ -23,8 +23,14 @@ const deleteVisitor = (visitorId) => axios.delete(`${baseUrl}/Visitor/${visitorI
 
 const addVisitor = (newVisitorObj) => axios.post(`${baseUrl}/Visitor.json`, newVisitorObj);
 
+const getVisitorById = (visitorId) => axios.get(`${baseUrl}/Visitor/${visitorId}.json`);
+
+const updateVis = (visitorId, editedVisitor) => axios.put(`${baseUrl}/Visitor/${visitorId}.json`, editedVisitor);
+
 export default {
   getVisitorData,
   deleteVisitor,
   addVisitor,
+  getVisitorById,
+  updateVis,
 };

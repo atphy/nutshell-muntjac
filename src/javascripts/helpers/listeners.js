@@ -11,10 +11,10 @@ import editVendor from '../components/vendor/editVendorForm';
 import utils from './utils';
 import updateRide from '../components/ride/updateRide/updateRide';
 import homescreen from '../components/homescreen/homescreen';
-
 import newStaff from '../components/staff/newStaff';
 import addVisitor from '../components/visitor/addVisitor/addVisitor';
 import updateVisitor from '../components/visitor/updateVisitor/updateVisitor';
+import createRide from '../components/ride/createRide/createRide';
 
 const editVendorEvent = (e) => {
   if (!authData.isAuthenticated()) {
@@ -138,6 +138,8 @@ const createListeners = () => {
   $('body').on('click', '.edit-staff', staffList.showEditStaffForm);
   $('body').on('click', '#update-staff', staffList.editStaff);
   $('body').on('click', '.closeForm', updateRide.clearForm);
+  $('body').on('click', '.createRideBtn', createRide.showRideForm);
+  $('body').on('change', '#coaster-image', createRide.imageInputWatcher);
 };
 
 export default {

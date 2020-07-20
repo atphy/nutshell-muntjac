@@ -21,6 +21,10 @@ const checkLoginStatus = () => {
       $('#new-vis').removeClass('hide');
       $('.update-visitor').removeClass('hide');
       $('.remove-visitor').removeClass('hide');
+      $('.createRideBtn').removeClass('hide');
+      $('.rideEditBtn').removeClass('hide');
+      $('.deleteRideIcon').removeClass('hide');
+      $('.fixridebtn').removeClass('hide');
     } else {
       logoutButton.addClass('hide');
       authDiv.removeClass('hide');
@@ -41,6 +45,7 @@ const checkLoginStatus = () => {
       $('.rideEditBtn').addClass('hide');
       $('.deleteRideIcon').addClass('hide');
       $('.fixridebtn').addClass('hide');
+      $('.createRideBtn').addClass('hide');
     }
   });
 };

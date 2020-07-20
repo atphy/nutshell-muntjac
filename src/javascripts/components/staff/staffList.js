@@ -8,17 +8,17 @@ const buildStaffModule = () => {
   staffData.getStaff()
     .then((staffMember) => {
       let domString = `
-        <h2 class="text-center">Staff Members</h2>
+        <h2 class="text-center homeH3 mt-2">Staff Members</h2>
       `;
 
       if (authData.isAuthenticated()) {
         domString += `
-        <button type="submit" class="btn btn-primary show-staff-form">New Hire Form</button>
+        <div class="text-center mb-3"><button type="submit" class="btn btn-primary show-staff-form">New Hire Form</button></div>
         <div id="staff-form"></div>
         `;
       } else {
         domString += `
-        <button type="submit" class="btn btn-primary show-staff-form hide">New Hire Form</button>
+        <div class="text-center mb-3"><button type="submit" class="btn btn-primary show-staff-form">New Hire Form</button></div>
         <div id="staff-form"></div>
         `;
       }

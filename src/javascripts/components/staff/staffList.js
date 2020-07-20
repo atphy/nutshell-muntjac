@@ -8,7 +8,7 @@ const buildStaffModule = () => {
   staffData.getStaff()
     .then((staffMember) => {
       let domString = `
-        <h2 class="text-center homeH3">Staff Members</h2>
+        <h2 class="text-center homeH3 mt-2">Staff Members</h2>
       `;
 
       if (authData.isAuthenticated()) {

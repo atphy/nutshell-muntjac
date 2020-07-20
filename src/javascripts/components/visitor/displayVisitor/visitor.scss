@@ -21,3 +21,17 @@
   padding: 0;
   margin: 0;
 }
+
+.vis-card-buttons {
+  display: flex;
+  justify-content: center;
+}
+.vis-card-buttons a {
+  margin: 2px;
+}
+
+#vis-heading {
+font-family: 'Luckiest Guy', cursive;
+color: #f9ea1a;
+margin-top: 5px;
+}

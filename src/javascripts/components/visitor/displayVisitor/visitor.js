@@ -38,8 +38,8 @@ const printVisitor = () => {
         if (authData.isAuthenticated()) {
           domString += `
             <div class="vis-card-buttons">
-              <a href="#" class="btn btn-warning update-visitor" id="update-visitor">EDIT</a>
-              <a href="#" class="btn btn-danger remove-visitor" id="remove-visitor">DELETE</a>
+              <a href="#" class="btn btn-warning update-visitor" id="update-visitor">Edit</a>
+              <a href="#" class="btn btn-danger remove-visitor" id="remove-visitor">Delete</a>
             </div>  
               `;
         } else {

@@ -25,10 +25,12 @@ const buildVendorList = () => {
           </div>
         </div>
       </div>
-      <h2 class="text-center">Whalom Park Vendors</h2>`;
+      <h2 class="text-center homeH3 mt-3">Whalom Park Vendors</h2>`;
       if (authData.isAuthenticated()) {
         domString += `
-        <div class="text-center"><i class="fas fa-plus-circle fa-2x" id="add-vendor"></i></div>
+        <div class="text-center">
+          <button class="btn btn-primary" id="add-vendor">Add/Create a Vendor<i class="fas fa-plus ml-1"></i></button>
+        </div>
         <div id="vendor-form"></div>
         `;
       } else {
@@ -37,7 +39,7 @@ const buildVendorList = () => {
         <div id="vendor-form"></div>
         `;
       }
-      domString += '<div class="d-flex flex-wrap">';
+      domString += '<div class="d-flex flex-wrap mt-2">';
 
       vendors.forEach((vendor) => {
         domString += vendorCardMaker.vendorCardMaker(vendor);

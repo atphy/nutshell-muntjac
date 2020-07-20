@@ -8,7 +8,7 @@ const printVisitor = () => {
     .then((visitors) => {
       let domString = `
       <div id="visitor-div">
-        <h2 class="text-center">Visitors<h2>`;
+        <h2 class="text-center" id="vis-heading">Visitors<h2>`;
 
       if (authData.isAuthenticated()) {
         domString += `
@@ -37,8 +37,10 @@ const printVisitor = () => {
 
         if (authData.isAuthenticated()) {
           domString += `
-              <a href="#" class="btn btn-primary update-visitor" id="update-visitor"><i class="fas fa-edit"></i></a>
-              <a href="#" class="btn btn-danger remove-visitor" id="remove-visitor"><i class="fas fa-trash"></i></a>
+            <div class="vis-card-buttons">
+              <a href="#" class="btn btn-warning update-visitor" id="update-visitor">EDIT</a>
+              <a href="#" class="btn btn-danger remove-visitor" id="remove-visitor">DELETE</a>
+            </div>  
               `;
         } else {
           domString += `

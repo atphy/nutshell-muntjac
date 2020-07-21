@@ -19,7 +19,7 @@ const printVisitor = () => {
       } else {
         domString += `
           <div class="hide" id="new-vis">
-            <button class="btn btn-primary" id="add-vis-form"><i class="fas fa-plus"></i> NEW VISITOR</button>
+            <button class="btn btn-primary hide" id="add-vis-form"><i class="fas fa-plus"></i> NEW VISITOR</button>
           </div>
           `;
       }

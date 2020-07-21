@@ -25,6 +25,7 @@ const checkLoginStatus = () => {
       $('.rideEditBtn').removeClass('hide');
       $('.deleteRideIcon').removeClass('hide');
       $('.fixridebtn').removeClass('hide');
+      $('#add-vis-form').removeClass('hide');
     } else {
       logoutButton.addClass('hide');
       authDiv.removeClass('hide');
@@ -46,6 +47,7 @@ const checkLoginStatus = () => {
       $('.deleteRideIcon').addClass('hide');
       $('.fixridebtn').addClass('hide');
       $('.createRideBtn').addClass('hide');
+      $('#add-vis-form').addClass('hide');
     }
   });
 };

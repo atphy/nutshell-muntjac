@@ -18,7 +18,7 @@ const buildStaffModule = () => {
         `;
       } else {
         domString += `
-        <div class="text-center mb-3"><button type="submit" class="btn btn-primary show-staff-form">New Hire Form</button></div>
+        <div class="text-center mb-3"><button type="submit" class="btn btn-primary show-staff-form hide">New Hire Form</button></div>
         <div id="staff-form"></div>
         `;
       }

@@ -1,7 +1,6 @@
 import authData from '../../helpers/data/authData';
 
 const staffCardMaker = (staff) => {
-//  let domString = `
   const domString = `
     <div class="col-3">
       <div class="staff-card card border-0 rounded-1 bg-light text-dark mb-3" id=${staff.id}>

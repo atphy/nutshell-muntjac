@@ -10,11 +10,11 @@ import 'bootstrap';
 
 const init = () => {
   firebase.initializeApp(apiKeys.firebaseConfig);
-  authData.checkLoginStatus();
   auth.loginButton();
   auth.logoutEvent();
   listeners.createListeners();
   homescreen.buildHomeScreen();
+  authData.checkLoginStatus();
 };
 
 init();

@@ -2,6 +2,9 @@ import firebase from 'firebase/app';
 import 'firebase/auth';
 import utils from '../utils';
 
+import addButton from '../../components/addButton/addButton';
+import modButtons from '../../components/modButtons/modButtons';
+
 const authDiv = $('#auth');
 const logoutButton = $('#navbar-logout-button');
 
@@ -26,6 +29,8 @@ const checkLoginStatus = () => {
       $('.deleteRideIcon').removeClass('hide');
       $('.fixridebtn').removeClass('hide');
       $('#add-vis-form').removeClass('hide');
+      addButton.printAddButton();
+      modButtons.printModButtons();
     } else {
       logoutButton.addClass('hide');
       authDiv.removeClass('hide');
@@ -48,6 +53,7 @@ const checkLoginStatus = () => {
       $('.fixridebtn').addClass('hide');
       $('.createRideBtn').addClass('hide');
       $('#add-vis-form').addClass('hide');
+      utils.signedOut();
     }
   });
 };

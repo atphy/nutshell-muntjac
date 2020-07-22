@@ -22,8 +22,11 @@ const buildStaffForm = () => {
     <button type="submit" class="btn btn-primary submit-staff-form" id="new-employee">Submit</button>
   </form>
   `;
-
-  utils.printToDom('#staff-form', domString);
+  if (!$('#new-hire-form').length) {
+    utils.printToDom('#staff-form', domString);
+  } else {
+    $('#staff-form').toggleClass('hide');
+  }
 };
 
 export default { buildStaffForm };

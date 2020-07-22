@@ -1,4 +1,3 @@
-// import authData from '../../helpers/data/authData';
 import staffData from '../../helpers/data/staff/staffData';
 import staffMaker from './staff';
 import utils from '../../helpers/utils';

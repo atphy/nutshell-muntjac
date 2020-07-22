@@ -54,6 +54,12 @@ const showNewVendorForm = () => {
     $('#myModal').modal('show');
     return;
   }
+  if (!$('#new-vendor-form').length) {
+    newVendor.newVendorForm();
+    authData.checkLoginStatus();
+  } else {
+    $('#vendor-form').toggleClass('hide');
+  }
   newVendor.newVendorForm();
   authData.checkLoginStatus();
 };

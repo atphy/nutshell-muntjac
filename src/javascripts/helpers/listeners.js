@@ -1,9 +1,7 @@
 import authData from './data/authData';
 import staffList from '../components/staff/staffList';
 import buildVendors from '../components/vendor/vendorList';
-import displayRides from '../components/ride/displayRides/displayRides';
 import vendorData from './data/vendor/vendorData';
-import displayVisitors from '../components/visitor/displayVisitor/visitor';
 import removeVisitor from '../components/visitor/deleteVisitor';
 import deleteRide from '../components/ride/deleteRide/deleteRide';
 import newVendor from '../components/vendor/newVendorForm';
@@ -117,20 +115,14 @@ const submitNewVendorForm = (e) => {
 };
 
 const createListeners = () => {
-  $('body').on('click', '#navbar-vendors', buildVendors.buildVendorList);
-  $('body').on('click', '.rideLink', displayRides.buildRideModule);
   $('body').on('click', '.delete-vendor', deleteVendorEvent);
   $('body').on('click', '.edit-vendor', editVendorEvent);
-  $('body').on('click', '.visitorLink', displayVisitors.printVisitor);
   $('body').on('click', '#remove-visitor', removeVisitor.deleteVisitor);
   $('body').on('click', '.deleteRideIcon', deleteRide.deleteRide);
-  $('body').on('click', '#navbar-staff', staffList.buildStaffModule);
   $('body').on('click', '#add-vendor', showNewVendorForm);
   $('body').on('click', '#submit-new-vendor', submitNewVendorForm);
   $('body').on('click', '#submit-update-vendor', submitUpdateVendorForm);
-  $('body').on('click', '#navbar-staff', staffList.buildStaffModule);
   $('body').on('click', '.delete-staff', staffList.deleteStaff);
-  $('body').on('click', '#navbar-staff', staffList.buildStaffModule);
   $('body').on('click', '.fixridebtn', updateRide.fixRide);
   $('body').on('click', '.navwhale', homescreen.buildHomeScreen);
   $('body').on('click', '.show-staff-form', newStaff.buildStaffForm);

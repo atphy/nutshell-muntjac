@@ -1,13 +1,34 @@
 import staffList from '../staff/staffList';
 import displayRides from '../ride/displayRides/displayRides';
-import displayVisitors from '../visitor/displayVisitor/visitor';
-import buildVendors from '../vendor/vendorList';
+import visitor from '../visitor/displayVisitor/visitor';
+import vendorList from '../vendor/vendorList';
+import utils from '../../helpers/utils';
+
+const staffClick = () => {
+  staffList.buildStaffModule();
+  utils.selector('staff');
+};
+
+const rideClick = () => {
+  displayRides.buildRideModule();
+  utils.selector('rides');
+};
+
+const visitorClick = () => {
+  visitor.printVisitor();
+  utils.selector('visitors');
+};
+
+const vendorClick = () => {
+  vendorList.buildVendorList();
+  utils.selector('vendors');
+};
 
 const navListeners = () => {
-  $('body').on('click', '#navbar-staff', staffList.buildStaffModule);
-  $('body').on('click', '#navbar-rides', displayRides.buildRideModule);
-  $('body').on('click', '#navbar-visitors', displayVisitors.printVisitor);
-  $('body').on('click', '#navbar-vendors', buildVendors.buildVendorList);
+  $('body').on('click', '#navbar-staff', staffClick);
+  $('body').on('click', '#navbar-rides', rideClick);
+  $('body').on('click', '#navbar-visitors', visitorClick);
+  $('body').on('click', '#navbar-vendors', vendorClick);
 };
 
 export default { navListeners };

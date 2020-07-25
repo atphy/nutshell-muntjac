@@ -13,18 +13,6 @@ const showVisForm = () => {
         <input type="text" class="form-control" id="name-val" placeholder="First & Last Name">
       </div>
       <div class="col-sm-2">
-      <label >Gender:</label>
-      <select class="form-control" id="gender-val">
-        <option>he/him</option>
-        <option>she/her</option>
-        <option>per/per</option>
-        <option>they/them</option>
-        <option>ve/ver</option>
-        <option>xe/xem</option>
-        <option>ze/hir</option>
-      </select>
-      </div>
-      <div class="col-sm-2">
       <label>Attendance:</label>
       <select class="form-control" id="atten-val">
         <option>1</option>
@@ -48,7 +36,6 @@ const addVisitorEvent = () => {
   if (!auth.isAuthenticated()) return;
   const newVisitor = {
     name: $('#name-val').val(),
-    gender: $('#gender-val').val(),
     attendance: $('#atten-val').val() * 1,
   };
   visitorData.addVisitor(newVisitor)

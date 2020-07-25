@@ -4,21 +4,6 @@ import visitorData from '../../../helpers/data/visitorData';
 import auth from '../../../helpers/data/authData';
 import buildVisitors from '../displayVisitor/visitor';
 
-const makeGenderSelectForm = (visitor) => {
-  const domString = `
-    <select class="form-control" id="edit-gender-val" value="${visitor.gender}">
-      <option ${(visitor.gender === 'he/him') ? 'selected' : ''}>he/him</option>
-      <option ${(visitor.gender === 'she/her') ? 'selected' : ''}>she/her</option>
-      <option ${(visitor.gender === 'per/per') ? 'selected' : ''}>per/per</option>
-      <option ${(visitor.gender === 'they/them') ? 'selected' : ''}>they/them</option>
-      <option ${(visitor.gender === 've/ver') ? 'selected' : ''}>ve/ver</option>
-      <option ${(visitor.gender === 'xe/xem') ? 'selected' : ''}>xe/xem</option>
-      <option ${(visitor.gender === 'ze/hir') ? 'selected' : ''}>ze/hir</option>
-    </select>
-  `;
-  return domString;
-};
-
 const updateVisForm = (visitorId) => {
   if (!auth.isAuthenticated()) return;
   visitorData.getVisitorById(visitorId)
@@ -32,9 +17,7 @@ const updateVisForm = (visitorId) => {
             <label for="name">Name</label>
             <input type="text" class="form-control" id="edit-name-val" placeholder="First & Last Name" value="${visitor.name}">
           </div>
-          <div class="col-sm-2">
-          <label >Gender:</label>`;
-      domString += makeGenderSelectForm(visitor);
+          <div class="col-sm-2">`;
       domString += `
           </div>
           <div class="col-sm-2">
@@ -60,7 +43,6 @@ const updateVisitor = (e) => {
   const updateVisitorId = e.target.closest('#visitorUpdate').form.id;
   const editedVisitor = {
     name: $('#edit-name-val').val(),
-    gender: $('#edit-gender-val').val(),
     attendance: $('#edit-atten-val').val() * 1,
   };
   visitorData.updateVis(updateVisitorId, editedVisitor)

@@ -1,50 +1,98 @@
 {
 	"employee01": {
-		"employeeId": "001",
 		"firstName": "Ron",
 		"lastName": "Burgundy",
-		"position": "Social Media Liaison"
+		"staffLevel": "Senior",
+		"jobAssignment": "id_vendor1"
   },
   "employee02": {
-		"employeeId": "002",
 		"firstName": "Jeff",
 		"lastName": "Bridges",
-		"position": "Tour Guide"
+		"staffLevel": "Intern",
+		"jobAssignment": "id_vendor2"
   },
   "employee03": {
-		"employeeId": "003",
 		"firstName": "Johnny",
 		"lastName": "Knoxville",
-		"position": "Ride Maintenance"
+		"staffLevel": "Senior",
+		"jobAssignment": "id_vendor3"
   },
   "employee04": {
-		"employeeId": "004",
 		"firstName": "John",
 		"lastName": "Malkovich",
-		"position": "Petting Zoo"
+		"staffLevel": "Intern",
+		"jobAssignment": "id_vendor4"
   },
   "employee05": {
-		"employeeId": "005",
 		"firstName": "Giancarlo",
 		"lastName": "Esposito",
-		"position": "Park Manager"
+		"staffLevel": "Senior",
+		"jobAssignment": "id_vendor5"
   },
   "employee06": {
-		"employeeId": "006",
 		"firstName": "Amy",
 		"lastName": "Poehler",
-		"position": "Guest Relations"
+		"staffLevel": "Intern",
+		"jobAssignment": "id_vendor6"
   },
   "employee07": {
-		"employeeId": "007",
 		"firstName": "Forest",
 		"lastName": "Whitaker",
-		"position": "Park Security"
+		"staffLevel": "Senior",
+		"jobAssignment": "id_vendor1"
   },
   "employee08": {
-		"employeeId": "008",
 		"firstName": "Tilda",
 		"lastName": "Swinton",
-		"position": "Stunt Performer"
+		"staffLevel": "Intern",
+		"jobAssignment": "id_vendor2"
+	},
+	"employee09": {
+		"firstName": "Tilda",
+		"lastName": "Swinton",
+		"staffLevel": "Senior",
+		"jobAssignment": "id_vendor3"
+	},
+	"employee10": {
+		"firstName": "Tilda",
+		"lastName": "Swinton",
+		"staffLevel": "Intern",
+		"jobAssignment": "id_vendor4"
+	},
+	"employee11": {
+		"firstName": "Tilda",
+		"lastName": "Swinton",
+		"staffLevel": "Senior",
+		"jobAssignment": "id_vendor5"
+	},
+	"employee12": {
+		"firstName": "Tilda",
+		"lastName": "Swinton",
+		"staffLevel": "Intern",
+		"jobAssignment": "id_vendor6"
+	},
+	"employee13": {
+		"firstName": "Tilda",
+		"lastName": "Swinton",
+		"staffLevel": "Senior",
+		"jobAssignment": "id_vendor1"
+	},
+	"employee14": {
+		"firstName": "Tilda",
+		"lastName": "Swinton",
+		"staffLevel": "Intern",
+		"jobAssignment": "id_vendor2"
+	},
+	"employee15": {
+		"firstName": "Olivia",
+		"lastName": "Munn",
+		"staffLevel": "Senior",
+		"jobAssignment": "id_vendor3"
+	},
+	"employee16": {
+		"firstName": "Richie",
+		"lastName": "Spice",
+		"staffLevel": "Intern",
+		"jobAssignment": "id_vendor4"
   }
 }

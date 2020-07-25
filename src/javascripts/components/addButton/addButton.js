@@ -3,8 +3,12 @@ import utils from '../../helpers/utils';
 const addSelector = () => {
   if (utils.dataSelector() === 'staff') {
     $('#add-button').addClass('show-staff-form');
-  } else {
+  } else if (utils.dataSelector() === 'rides') {
     $('#add-button').addClass('createRideBtn');
+  } else if (utils.dataSelector() === 'visitors') {
+    $('#add-button').addClass('add-vis-form');
+  } else if (utils.dataSelector() === 'vendors') {
+    $('#add-button').addClass('add-vendor');
   }
 };
 

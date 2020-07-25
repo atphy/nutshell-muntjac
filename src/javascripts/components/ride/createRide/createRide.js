@@ -14,8 +14,10 @@ const addARide = () => {
   const newRideObj = {
     name: $('#new-coaster-name').val(),
     description: $('#new-coaster-description').val(),
-    isAvailable: $('#newOperationalCheck').prop('checked'),
     imageUrl: '',
+    price: $('#new-coaster-price').val(),
+    staffAssigned: $('#new-coaster-staff').val(),
+    isAvailable: $('#new-coaster-staff').val() > 1,
   };
   ref.put(file).then(() => {
     ref.getDownloadURL().then((url) => {
@@ -51,6 +53,13 @@ const showRideForm = () => {
   <div class="form-group mb-0">
   <label for="new-coaster-description" class="mb-0 mt-1">Description:</label>
   <input type="text" class="form-control" id="new-coaster-description" placeholder="Description" required>
+  </div>
+  <div class="form-group mb-0">
+  <label for="new-coaster-price" class="mb-0 mt-1">Price:</label>
+  <input type="float" class="form-control" id="new-coaster-price" placeholder="$" required>
+  </div>
+  <label for="new-coaster-staff" class="mb-0 mt-1">Staff Count:</label>
+  <input type="float" class="form-control" id="new-coaster-staff" placeholder="# of assigned staff" required>
   </div>
   <button type="submit" class="btn btn-primary mt-2">Create</button>
   </form>

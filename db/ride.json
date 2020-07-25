@@ -6,47 +6,47 @@
     "imageUrl": "https://i.imgur.com/u8o9uCN.jpg", 
     "price": 1.00,
     "staffAssigned": 2,
-    "isAvailable": "sta"
+    "isAvailable": true
 
   },
   "ride2": {
     "name": "Splash Mountain",
-    "isAvailable": true,
     "description": "Splash Mountain is a log flume, opened in 1989, at Whalom Park.",
     "imageUrl": "https://i.imgur.com/dATSmby.jpg",
     "price": 1.50,
-    "staffAssigned": "2" 
+    "staffAssigned": 2, 
+    "isAvailable": true
   },
   "ride3": {
     "name": "Thunderbolt",
-    "isAvailable": false,
     "description": "The Thunderbolt was a wooden roller coaster located at Whalom Park.",
     "imageUrl": "https://i.imgur.com/NX58cPu.jpg",
     "price": 3.00,
-    "staffAssigned": "2" 
+    "staffAssigned": 0,
+    "isAvailable": false 
   },
   "ride4": {
     "name": "Top Thrill Dragster",
-    "isAvailable": true,
     "description": "Top Thrill Dragster is a 400-foot-tall steel coaster in Whalom Park.",
     "imageUrl": "https://i.imgur.com/p2JRygt.jpg",
     "price": 4.00,
-    "staffAssigned": "2" 
+    "staffAssigned": 2, 
+    "isAvailable": true
   },
   "ride5": {
     "name": "Lightning Rod",
-    "isAvailable": true,
     "description": "Lightning Rod is a wooden roller coaster located at Whalom Parkin.",
     "imageUrl": "https://i.imgur.com/B73Uq3D.jpg",
     "price": 2.50,
-    "staffAssigned": "2" 
+    "staffAssigned": 1,
+    "isAvailable": false
   },
   "ride6": {
     "name": "Space Mountain",
-    "isAvailable": false,
     "description": "Space Mountain is an indoor outer space themed coaster at Whalom Park.",
     "imageUrl": "https://i.imgur.com/xFoSd29.jpg",
     "price": 5.00,
-    "staffAssigned": "2" 
+    "staffAssigned": 2,
+    "isAvailable": true
   }
 }

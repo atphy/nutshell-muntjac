@@ -28,6 +28,14 @@ const updateRideForm = (e) => {
         <label for="coaster-description" class="mb-0 mt-1">Description:</label>
         <input type="text" class="form-control" id="coaster-description" value="${rideById.description}">
         </div>
+        <div class="form-group mb-0">
+        <label for="coaster-price" class="mb-0 mt-1">Price:</label>
+        <input type="text" class="form-control" id="coaster-price" value="${rideById.price}">
+        </div>
+        <div class="form-group mb-0">
+        <label for="coaster-staff" class="mb-0 mt-1">Staff Count:</label>
+        <input type="text" class="form-control" id="coaster-staff" value="${rideById.staffAssigned}">
+        </div>
         </div>
         <button type="button" class="btn btn-primary updateSubmit mt-2" data-rideid="${rideById.id}">Update</button>
         </form>
@@ -43,8 +51,10 @@ const updateRide = () => {
   const updatedRideObj = {
     name: $('#coaster-name').val(),
     description: $('#coaster-description').val(),
-    imageUrl: $('#coaster-image').val(),
-    isAvailable: $('#operationalCheck').prop('checked'),
+    imageUrl: '#coaster-image',
+    price: $('#coaster-price').val(),
+    staffAssigned: $('#coaster-staff').val(),
+    isAvailable: $('#coaster-staff').val() > 1,
   };
   rideData.updateRide(rideId, updatedRideObj)
     .then(() => displayRide.buildRideModule())

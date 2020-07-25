@@ -4,24 +4,6 @@ import utils from '../../../helpers/utils';
 import auth from '../../../helpers/data/authData';
 import './updateRide.scss';
 
-const fixRide = (e) => {
-  if (!auth.isAuthenticated()) return;
-  const rideId = e.target.dataset.brokenride;
-  rideData.getRides()
-    .then((rides) => {
-      const rideById = rides.find((singleRide) => singleRide.id === rideId);
-      const fixedRideObj = {
-        name: rideById.name,
-        description: rideById.description,
-        imageUrl: rideById.imageUrl,
-        isAvailable: true,
-      };
-      rideData.updateRide(rideId, fixedRideObj)
-        .then(() => displayRide.buildRideModule());
-    })
-    .catch((err) => err);
-};
-
 const updateRideForm = (e) => {
   const rideId = e.target.closest('.card').id;
   $('.createRideBtn').addClass('hide');
@@ -46,9 +28,6 @@ const updateRideForm = (e) => {
         <label for="coaster-description" class="mb-0 mt-1">Description:</label>
         <input type="text" class="form-control" id="coaster-description" value="${rideById.description}">
         </div>
-        <div class="form-check mb-1 mt-1">
-        <input type="checkbox" class="form-check-input" id="operationalCheck">
-        <label class="form-check-label" for="operationalCheck">Operational</label>
         </div>
         <button type="button" class="btn btn-primary updateSubmit mt-2" data-rideid="${rideById.id}">Update</button>
         </form>
@@ -79,7 +58,6 @@ const clearForm = () => {
 };
 
 export default {
-  fixRide,
   updateRideForm,
   updateRide,
   clearForm,

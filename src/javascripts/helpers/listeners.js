@@ -123,7 +123,6 @@ const createListeners = () => {
   $('body').on('click', '#submit-new-vendor', submitNewVendorForm);
   $('body').on('click', '#submit-update-vendor', submitUpdateVendorForm);
   $('body').on('click', '.delete-staff', staffList.deleteStaff);
-  $('body').on('click', '.fixridebtn', updateRide.fixRide);
   $('body').on('click', '.navwhale', homescreen.buildHomeScreen);
   $('body').on('click', '.show-staff-form', newStaff.buildStaffForm);
   $('body').on('click', '.submit-staff-form', staffList.addStaff);

@@ -52,10 +52,6 @@ const showRideForm = () => {
   <label for="new-coaster-description" class="mb-0 mt-1">Description:</label>
   <input type="text" class="form-control" id="new-coaster-description" placeholder="Description" required>
   </div>
-  <div class="form-check mb-1 mt-1">
-  <input type="checkbox" class="form-check-input" id="newOperationalCheck">
-  <label class="form-check-label" for="newOperationalCheck">Operational</label>
-  </div>
   <button type="submit" class="btn btn-primary mt-2">Create</button>
   </form>
 `;

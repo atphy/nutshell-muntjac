@@ -2,11 +2,11 @@
 {
   "ride1": {
     "name": "Millenium Force",
-    "isAvailable": true,
     "description": "Millennium Force features a 310-foot-tall coaster at Whalom Park.",
     "imageUrl": "https://i.imgur.com/u8o9uCN.jpg", 
     "price": 1.00,
-    "staffAssigned": "2"
+    "staffAssigned": 2,
+    "isAvailable": "sta"
 
   },
   "ride2": {

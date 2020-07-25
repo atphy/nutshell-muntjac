@@ -44,7 +44,7 @@ const showRideForm = () => {
   <h5 class="homeH3 mb-0 text-left">Create Ride</h5>
   <div class="form-group">
   <label for="new-coaster-name" class="mb-0">Name:</label>
-  <input type="text" class="form-control" id="new-coaster-name" placeholder="Name" required>
+  <input type="text" class="form-control" id="new-coaster-name" placeholder="Name" maxlength="20" required>
   </div>
   <div class="custom-file">
   <input type="file" class="custom-file-input" id="coaster-image" required>
@@ -52,14 +52,14 @@ const showRideForm = () => {
   </div>
   <div class="form-group mb-0">
   <label for="new-coaster-description" class="mb-0 mt-1">Description:</label>
-  <input type="text" class="form-control" id="new-coaster-description" placeholder="Description" required>
+  <input type="text" class="form-control" id="new-coaster-description" placeholder="Brief description of the ride" maxlength="80" required>
   </div>
   <div class="form-group mb-0">
   <label for="new-coaster-price" class="mb-0 mt-1">Price:</label>
-  <input type="float" class="form-control" id="new-coaster-price" placeholder="$" required>
+  <input type="number" class="form-control" id="new-coaster-price" placeholder="in USD" min=".5" max="10" step=".5" required>
   </div>
   <label for="new-coaster-staff" class="mb-0 mt-1">Staff Count:</label>
-  <input type="float" class="form-control" id="new-coaster-staff" placeholder="# of assigned staff" required>
+  <input type="number" class="form-control" id="new-coaster-staff" placeholder="# of assigned staff" max="5" required>
   </div>
   <button type="submit" class="btn btn-primary mt-2">Create</button>
   </form>

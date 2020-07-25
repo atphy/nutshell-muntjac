@@ -51,7 +51,7 @@ const updateRide = () => {
   const updatedRideObj = {
     name: $('#coaster-name').val(),
     description: $('#coaster-description').val(),
-    imageUrl: '#coaster-image',
+    imageUrl: $('#coaster-image').val(),
     price: $('#coaster-price').val(),
     staffAssigned: $('#coaster-staff').val(),
     isAvailable: $('#coaster-staff').val() > 1,

@@ -4,7 +4,7 @@ const newVendorForm = () => {
   const domString = `
   <div class="container">
   <h2>New Vendor</h2>
-  <form class="hide" id="new-vendor-form">
+  <form id="new-vendor-form">
     <div class="form-group">
       <label for="inputAddress">Address</label>
       <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">

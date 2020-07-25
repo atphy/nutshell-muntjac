@@ -6,25 +6,21 @@
   },
   "visitor 2": {
     "name": "Tim Drake",
-    "attendance": "230",
     "numberOfVisits":2 ,
     "amtSpent": 40.00
   },
   "visitor 3": {
     "name": "Carrie Kelley",
-    "attendance": "25",
     "numberOfVisits": 7,
     "amtSpent": 115.00
   },  
   "visitor 4": {
     "name": "Jason Todd",
-    "attendance": "427",
     "numberOfVisits": 10 ,
     "amtSpent": 20.00
   },
   "visitor 5": {
     "name": "Damian Wayne",
-    "attendance": "9",
     "numberOfVisits": 6,
     "amtSpent": 55.00
   }

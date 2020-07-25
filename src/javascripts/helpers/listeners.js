@@ -47,21 +47,6 @@ const deleteVendorEvent = (e) => {
     .catch((err) => console.error('Could not delete vendor', err));
 };
 
-const showNewVendorForm = () => {
-  if (!authData.isAuthenticated()) {
-    $('#myModal').modal('show');
-    return;
-  }
-  if (!$('#new-vendor-form').length) {
-    newVendor.newVendorForm();
-    authData.checkLoginStatus();
-  } else {
-    $('#vendor-form').toggleClass('hide');
-  }
-  newVendor.newVendorForm();
-  authData.checkLoginStatus();
-};
-
 const submitUpdateVendorForm = (e) => {
   e.preventDefault();
   const fbVendorId = e.target.getAttribute('data-firebase-vendor-id');
@@ -119,14 +104,14 @@ const createListeners = () => {
   $('body').on('click', '.edit-vendor', editVendorEvent);
   $('body').on('click', '#remove-visitor', removeVisitor.deleteVisitor);
   $('body').on('click', '.deleteRideIcon', deleteRide.deleteRide);
-  $('body').on('click', '#add-vendor', showNewVendorForm);
+  $('body').on('click', '.add-vendor', newVendor.newVendorForm);
   $('body').on('click', '#submit-new-vendor', submitNewVendorForm);
   $('body').on('click', '#submit-update-vendor', submitUpdateVendorForm);
   $('body').on('click', '.delete-staff', staffList.deleteStaff);
   $('body').on('click', '.navwhale', homescreen.buildHomeScreen);
   $('body').on('click', '.show-staff-form', newStaff.buildStaffForm);
   $('body').on('click', '.submit-staff-form', staffList.addStaff);
-  $('body').on('click', '#add-vis-form', addVisitor.showVisForm);
+  $('body').on('click', '.add-vis-form', addVisitor.showVisForm);
   $('body').on('click', '#addVisitor', addVisitor.addVisitorEvent);
   $('body').on('click', '.update-visitor', updateVisitor.updateVisEvent);
   $('body').on('click', '#visitorUpdate', updateVisitor.updateVisitor);

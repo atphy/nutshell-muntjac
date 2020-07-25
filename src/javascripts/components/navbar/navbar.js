@@ -29,6 +29,7 @@ const navListeners = () => {
   $('body').on('click', '#navbar-rides', rideClick);
   $('body').on('click', '#navbar-visitors', visitorClick);
   $('body').on('click', '#navbar-vendors', vendorClick);
+  $('body').on('click', '.fixridebtn', staffClick);
 };
 
 export default { navListeners };

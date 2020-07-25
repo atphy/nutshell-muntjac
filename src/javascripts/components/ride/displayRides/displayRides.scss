@@ -13,13 +13,19 @@
   justify-content: center;
   margin: 0 auto;
 
-  .rideTitle {
-    display: flex;
-    justify-content: space-between;
-    padding: 10px 20px;
-    align-items: center;
-    margin-bottom: 0px !important;
+.rideTitle {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  align-items: center;
+  margin-bottom: 0px !important;
   }
+
+.ride-price-container {
+  position: absolute;
+  float: right;
+  margin-left: auto;
+}
 
   h5 {
     margin-bottom: 0px;

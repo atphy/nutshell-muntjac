@@ -13,11 +13,11 @@ const buildRideModule = () => {
         if (!ride.isAvailable) {
           domString += `
         <div class="alert alert-danger mb-1" role="alert">
-        <span class=rideName>${ride.name}</span> is broken down!`;
+        <span class=rideName>${ride.name}</span> needs staff!`;
           if (authData.isAuthenticated()) {
-            domString += `<button class="btn btn-danger ml-2 fixridebtn" data-brokenride="${ride.id}">Fix it<i class="fas fa-wrench btnwrench ml-1"></i></button>`;
+            domString += `<button class="btn btn-danger ml-2 fixridebtn" data-brokenride="${ride.id}">Assign Staff<i class="fas fa-wrench btnwrench ml-1"></i></button>`;
           } else {
-            domString += `<button class="btn btn-danger ml-2 fixridebtn hide" data-brokenride="${ride.id}">Fix it<i class="fas fa-wrench btnwrench ml-1"></i></button>`;
+            domString += `<button class="btn btn-danger ml-2 fixridebtn hide" data-brokenride="${ride.id}">Assign Staff<i class="fas fa-wrench btnwrench ml-1"></i></button>`;
           }
           domString += '</div>';
         }
@@ -25,13 +25,7 @@ const buildRideModule = () => {
       domString += `
       </div>
       <h2 class="homeH3 mt-2">Rides</h2>
-      <div class=rideCreate>`;
-      if (authData.isAuthenticated()) {
-        domString += '<button class="btn btn-primary createRideBtn">Create A Ride<i class="fas fa-plus ml-1"></i></button>';
-      } else {
-        domString += '<button class="btn btn-primary createRideBtn hide">Create A Ride<i class="fas fa-plus ml-1"></i></button>';
-      }
-      domString += `
+      <div class="text-center mb-3" id="add-button"></div>
       </div>
       <div class="rideForm"></div>
       <div class="rideContainer mt-1">`;
@@ -46,6 +40,7 @@ const buildRideModule = () => {
           domString += '<i class="fas fa-times deleteRideIcon hide"></i>';
         }
         domString += `
+        <div class="card-header ride-price-container">$${ride.price}</div>
         <p class="card-text descriptionP">${ride.description}</p>
         </div>
         <div class="card-title rideTitle">`;
@@ -68,6 +63,7 @@ const buildRideModule = () => {
       });
       domString += '</div>';
       utils.printToDom('#content', domString);
+      authData.checkLoginStatus();
     })
     .catch((err) => console.error('bork', err));
 };

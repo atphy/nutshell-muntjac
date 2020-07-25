@@ -1,7 +1,6 @@
 import utils from '../../helpers/utils';
 
 const newVendorForm = () => {
-  console.warn(utils.dataSelector());
   const domString = `
   <div class="container">
   <h2>New Vendor</h2>

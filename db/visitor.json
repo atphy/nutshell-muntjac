@@ -1,27 +1,31 @@
 {
   "visitor 1": {
     "name": "Dick Grayson",
-    "gender": "he/him",
-    "attendance": "360"
+    "numberOfVisits": 3,
+    "amtSpent": 50.00
   },
   "visitor 2": {
     "name": "Tim Drake",
-    "gender": "he/him",
-    "attendance": "230"
+    "attendance": "230",
+    "numberOfVisits":2 ,
+    "amtSpent": 40.00
   },
   "visitor 3": {
     "name": "Carrie Kelley",
-    "gender": "she/her",
-    "attendance": "25"
+    "attendance": "25",
+    "numberOfVisits": 7,
+    "amtSpent": 115.00
   },  
   "visitor 4": {
     "name": "Jason Todd",
-    "gender": "he/him",
-    "attendance": "427"
+    "attendance": "427",
+    "numberOfVisits": 10 ,
+    "amtSpent": 20.00
   },
   "visitor 5": {
     "name": "Damian Wayne",
-    "gender": "he/him",
-    "attendance": "9"
+    "attendance": "9",
+    "numberOfVisits": 6,
+    "amtSpent": 55.00
   }
 }

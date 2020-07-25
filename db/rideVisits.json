@@ -1,0 +1,20 @@
+{
+	"vistorId01": {
+		"rideId": "ride1"
+  },
+  "vistorId02": {
+		"rideId":  "ride2"
+  },
+  "vistorId03": {
+		"rideId":  "ride3"
+  },
+  "vistorId04": {
+    "rideId": "ride4"
+  },
+  "vistorId05": {
+    "rideId": "ride5"
+  },
+  "vistorId06": {
+		"rideId": "ride6"
+  }
+}

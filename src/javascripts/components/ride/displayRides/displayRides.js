@@ -40,8 +40,8 @@ const buildRideModule = () => {
           domString += '<i class="fas fa-times deleteRideIcon hide"></i>';
         }
         domString += `
-        <div class="card-header ride-price-container">$${ride.price}</div>
         <p class="card-text descriptionP">${ride.description}</p>
+        <div class="card-header ride-price-container">$${ride.price}</div>
         </div>
         <div class="card-title rideTitle">`;
         if (authData.isAuthenticated()) {

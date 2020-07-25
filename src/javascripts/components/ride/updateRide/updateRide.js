@@ -18,7 +18,7 @@ const updateRideForm = (e) => {
         <form>
         <div class="form-group mb-0">
         <label for="coaster-name" class="mb-0">Name:</label>
-        <input type="text" class="form-control" id="coaster-name" value="${rideById.name}">
+        <input type="text" class="form-control" id="coaster-name" maxlength="20" value="${rideById.name}">
         </div>
         <div class="form-group mb-0">
         <label for="coaster-image" class="mb-0 mt-1">Image URL:</label>
@@ -26,15 +26,15 @@ const updateRideForm = (e) => {
         </div>
         <div class="form-group mb-0">
         <label for="coaster-description" class="mb-0 mt-1">Description:</label>
-        <input type="text" class="form-control" id="coaster-description" value="${rideById.description}">
+        <input type="text" class="form-control" id="coaster-description" maxlength="80" value="${rideById.description}">
         </div>
         <div class="form-group mb-0">
         <label for="coaster-price" class="mb-0 mt-1">Price:</label>
-        <input type="text" class="form-control" id="coaster-price" value="${rideById.price}">
+        <input type="number" class="form-control" id="coaster-price" min=".5" max="10" step=".5" value="${rideById.price}">
         </div>
         <div class="form-group mb-0">
         <label for="coaster-staff" class="mb-0 mt-1">Staff Count:</label>
-        <input type="text" class="form-control" id="coaster-staff" value="${rideById.staffAssigned}">
+        <input type="number" class="form-control" id="coaster-staff" max="5" value="${rideById.staffAssigned}">
         </div>
         </div>
         <button type="button" class="btn btn-primary updateSubmit mt-2" data-rideid="${rideById.id}">Update</button>

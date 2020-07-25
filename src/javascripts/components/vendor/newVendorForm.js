@@ -2,9 +2,9 @@ import utils from '../../helpers/utils';
 
 const newVendorForm = () => {
   const domString = `
-  <div class="container">
-  <h2>New Vendor</h2>
+  <div class="container check-auth">
   <form id="new-vendor-form">
+  <h2>New Vendor</h2>
     <div class="form-group">
       <label for="inputAddress">Address</label>
       <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">

@@ -15,17 +15,12 @@ const checkLoginStatus = () => {
       logoutButton.removeClass('hide');
       $('.delete-vendor').removeClass('hide');
       $('.edit-vendor').removeClass('hide');
-      $('#add-vendor').removeClass('hide');
-      $('#new-vendor-form').removeClass('hide');
       $('#edit-vendor-form').removeClass('hide');
-      $('#new-vis').removeClass('hide');
       $('.update-visitor').removeClass('hide');
       $('.remove-visitor').removeClass('hide');
-      $('.createRideBtn').removeClass('hide');
       $('.rideEditBtn').removeClass('hide');
       $('.deleteRideIcon').removeClass('hide');
       $('.fixridebtn').removeClass('hide');
-      $('#add-vis-form').removeClass('hide');
       addButton.printAddButton();
       modButtons.printModButtons();
     } else {
@@ -33,19 +28,12 @@ const checkLoginStatus = () => {
       authDiv.removeClass('hide');
       $('.delete-vendor').addClass('hide');
       $('.edit-vendor').addClass('hide');
-      $('#add-vendor').addClass('hide');
-      $('#new-vendor-form').addClass('hide');
       $('#edit-vendor-form').addClass('hide');
-      utils.printToDom('#new-vendor-form', '');
-      $('#new-vis').addClass('hide');
       $('.update-visitor').addClass('hide');
       $('.remove-visitor').addClass('hide');
-      $('#staff-form').addClass('hide');
       $('.rideEditBtn').addClass('hide');
       $('.deleteRideIcon').addClass('hide');
       $('.fixridebtn').addClass('hide');
-      $('.createRideBtn').addClass('hide');
-      $('#add-vis-form').addClass('hide');
       utils.signedOut();
     }
   });

@@ -1,30 +1,18 @@
-import authData from '../../helpers/data/authData';
 import staffData from '../../helpers/data/staff/staffData';
 import staffMaker from './staff';
 import utils from '../../helpers/utils';
 import editForm from './editStaffForm';
+import authData from '../../helpers/data/authData';
 
 const buildStaffModule = () => {
   staffData.getStaff()
     .then((staffMember) => {
       let domString = `
         <h2 class="text-center homeH3 mt-2">Staff Members</h2>
+        <div class="text-center mb-3" id="add-button"></div>
+        <div id="staff-form"></div>
+        <div class="d-flex flex-wrap">
       `;
-
-      if (authData.isAuthenticated()) {
-        domString += `
-        <div class="text-center mb-3"><button type="submit" class="btn btn-primary show-staff-form">New Hire Form</button></div>
-        <div id="staff-form"></div>
-        `;
-      } else {
-        domString += `
-        <div class="text-center mb-3"><button type="submit" class="btn btn-primary show-staff-form hide">New Hire Form</button></div>
-        <div id="staff-form"></div>
-        `;
-      }
-
-      domString += '<div class="d-flex flex-wrap">';
-
       staffMember.forEach((staff) => {
         domString += staffMaker.staffCardMaker(staff);
       });
@@ -32,6 +20,7 @@ const buildStaffModule = () => {
       domString += '</div>';
 
       utils.printToDom('#content', domString);
+      authData.checkLoginStatus();
     })
     .catch((err) => console.error('buildStaffModule failed', err));
 };

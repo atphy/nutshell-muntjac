@@ -59,7 +59,7 @@ const showRideForm = () => {
   <input type="number" class="form-control" id="new-coaster-price" placeholder="in USD" min=".5" max="10" step=".5" required>
   </div>
   <label for="new-coaster-staff" class="mb-0 mt-1">Staff Count:</label>
-  <input type="number" class="form-control" id="new-coaster-staff" placeholder="# of assigned staff" max="5" required>
+  <input type="number" class="form-control" id="new-coaster-staff" placeholder="# of assigned staff" min="0" max="5" required>
   </div>
   <button type="submit" class="btn btn-primary mt-2">Create</button>
   </form>

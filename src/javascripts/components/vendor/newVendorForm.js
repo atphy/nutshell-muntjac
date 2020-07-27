@@ -22,6 +22,15 @@ const newVendorForm = () => {
         <label for="inputProduct">Product</label>
         <input type="text" class="form-control" id="inputProduct">
       </div>
+      <div class="form-group col-md-2">
+        <label for="inputPrice">Price</label>
+        <input type="integer" class="form-control" id="inputPrice">
+      </div>
+      <div class="form-group col-md-2">
+        <label for="inputAssignedStaff">Assigned Staff</label>
+        <input type="integer" class="form-control" id="inputAssignedStaff">
+      </div>
+      </div>
     </div>
     <button type="submit" class="btn btn-primary" id="submit-new-vendor">Submit New Vendor</button>
   </form> 

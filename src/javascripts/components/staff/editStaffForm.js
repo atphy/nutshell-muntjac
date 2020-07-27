@@ -1,5 +1,6 @@
 import staffData from '../../helpers/data/staff/staffData';
 import utils from '../../helpers/utils';
+import addStaffToRide from './addStaffToRide';
 
 const buildEditForm = (employeeId) => {
   staffData.getStaffById(employeeId)
@@ -19,11 +20,17 @@ const buildEditForm = (employeeId) => {
           <label for="edit-position">Position</label>
           <input type="text" class="form-control" id="edit-position" value="${staff.position}">
         </div>
+        <div class="form-group">
+          <label for="staffRides">Assign to a ride:</label>
+          <select name="staffRides" id="staffRides">
+          </select>
+        </div>
           <button type="submit" class="btn btn-primary" id="update-staff">Submit</button>
       </form>
       `;
 
       utils.printToDom('#staff-form', domString);
+      addStaffToRide.rideList();
     })
     .catch((err) => console.error(err));
 };

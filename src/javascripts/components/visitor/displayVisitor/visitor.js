@@ -10,6 +10,7 @@ const printVisitor = () => {
       <div id="visitor-div">
         <h2 class="text-center" id="vis-heading">Visitors<h2>
         <div class="text-center mb-3" id="add-button"></div>
+        <button type="button" class="btn btn-warning" id="visitor-log-btn"><i class="fas fa-clipboard-list"></i>Visitor Activity</button>
           <div id="new-vis-form"></div>
           <div class="d-flex flex-wrap vis-container">
           `;
@@ -39,6 +40,7 @@ const printVisitor = () => {
           </div>`;
       });
       domString += `
+          <div id="visitor-log" class=""></div>
         </div>
       </div>
        `;

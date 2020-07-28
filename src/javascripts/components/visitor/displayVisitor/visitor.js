@@ -8,22 +8,8 @@ const printVisitor = () => {
     .then((visitors) => {
       let domString = `
       <div id="visitor-div">
-        <h2 class="text-center" id="vis-heading">Visitors<h2>`;
-
-      if (authData.isAuthenticated()) {
-        domString += `
-          <div id="new-vis">
-            <button class="btn btn-primary" id="add-vis-form"><i class="fas fa-plus"></i> NEW VISITOR</button>
-          </div>
-          `;
-      } else {
-        domString += `
-          <div class="hide" id="new-vis">
-            <button class="btn btn-primary hide" id="add-vis-form"><i class="fas fa-plus"></i> NEW VISITOR</button>
-          </div>
-          `;
-      }
-      domString += `
+        <h2 class="text-center" id="vis-heading">Visitors<h2>
+        <div class="text-center mb-3" id="add-button"></div>
           <div id="new-vis-form"></div>
           <div class="d-flex flex-wrap vis-container">
           `;
@@ -32,7 +18,8 @@ const printVisitor = () => {
           <div id="${visitor.id}" class="card visitor" style="width: 18rem;">
             <div class="vis-card-body">
               <h4 class="vis-card-title">${visitor.name}</h4>
-              <p class="attend">Attendance: ${visitor.attendance} visits</p>`;
+              <p class="attend">Attendance: ${visitor.numberOfVisits} visits</p>
+              <p class="attend">Total amount spent: $${visitor.amtSpent}</p>`;
 
         if (authData.isAuthenticated()) {
           domString += `
@@ -56,6 +43,7 @@ const printVisitor = () => {
       </div>
        `;
       utils.printToDom('#content', domString);
+      authData.checkLoginStatus();
     })
     .catch((err) => console.error('visitors broke', err));
 };

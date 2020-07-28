@@ -7,7 +7,7 @@ import auth from '../../../helpers/data/authData';
 const showVisForm = () => {
   if (!auth.isAuthenticated()) return;
   const domString = `
-    <form id="vis-form">
+    <form class="check-auth" id="vis-form">
       <div class="form-group col-sm-8">
         <label for="name">Name</label>
         <input type="text" class="form-control" id="name-val" placeholder="First & Last Name">

@@ -38,12 +38,10 @@ const addStaff = (e) => {
   e.preventDefault();
 
   const newStaffObj = {
-    employeeId: $('#employee-id').val(),
     firstName: $('#first-name').val(),
     lastName: $('#last-name').val(),
-    position: $('#position').val(),
-    staffLevel: $('#staffLevel').val(),
-    jobAssignment: $('#jobAssignment').val(),
+    staffLevel: $('#staff-level').val(),
+    jobAssignment: $('#staff-rides').val(),
   };
 
   staffData.addStaff(newStaffObj)
@@ -66,9 +64,8 @@ const editStaff = (e) => {
   const updateStaffObj = {
     firstName: $('#edit-first-name').val(),
     lastName: $('#edit-last-name').val(),
-    position: $('#edit-position').val(),
-    staffLevel: $('#edit-staffLevel').val(),
-    jobAssignment: $('#edit-jobAssignment').val(),
+    staffLevel: $('#edit-level').val(),
+    jobAssignment: $('#staff-rides').val(),
   };
 
   staffData.updateStaff(employeeId, updateStaffObj)

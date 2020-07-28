@@ -19,6 +19,15 @@ const buildEditForm = (employeeId) => {
           <label for="edit-position">Position</label>
           <input type="text" class="form-control" id="edit-position" value="${staff.position}">
         </div>
+        <div class="form-group">
+          <label for="edit-staffLevel">Staff Level</label>
+          <input type="text" class="form-control" id="edit-staffLevel" value="${staff.staffLevel}">
+        </div>
+        <div class="form-group">
+          <label for="edit-jobAssignment">Job Assignment</label>
+          <input type="text" class="form-control" id="edit-jobAssignment" value="${staff.jobAssignment}">
+        </div>
+
           <button type="submit" class="btn btn-primary" id="update-staff">Submit</button>
       </form>
       `;

@@ -58,6 +58,14 @@ const showRideForm = () => {
   <label for="new-coaster-price" class="mb-0 mt-1">Price:</label>
   <input type="float" class="form-control" id="new-coaster-price" placeholder="$" required>
   </div>
+  <div class="form-group mb-0">
+  <label for="staffAssigned" class="mb-0 mt-1">Staff Assigned:</label>
+  <input type="float" class="form-control" id="staffAssigned" placeholder="# staff assigned" required>
+  </div>
+  <div class="form-group mb-0">
+  <label for="isAvailable" class="mb-0 mt-1">Is Available:</label>
+  <input type="boolean" class="form-control" id="isAvailable" placeholder="false" required>
+  </div>
   <label for="new-coaster-staff" class="mb-0 mt-1">Staff Count:</label>
   <input type="float" class="form-control" id="new-coaster-staff" placeholder="# of assigned staff" required>
   </div>

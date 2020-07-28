@@ -25,6 +25,16 @@ const updateVisForm = (visitorId) => {
           <input type="text" class="form-control" id="edit-atten-val" value="${visitor.attendance}">
           </input>
           </div>
+          <div class="col-sm-2">
+          <label>Amount Spent:</label>
+          <input type="integer" class="form-control" id="edit-amountSpent-val" value="${visitor.amtSpent}">
+          </input>
+          </div>
+          <div class="col-sm-2">
+          <label>Number of Visits:</label>
+          <input type="integer" class="form-control" id="edit-numberOfVisits-val" value="${visitor.numberOfVisits}">
+          </input>
+          </div>
           <button class="btn btn-primary" id="visitorUpdate">Submit</button>
         </form>
     `;
@@ -44,6 +54,8 @@ const updateVisitor = (e) => {
   const editedVisitor = {
     name: $('#edit-name-val').val(),
     attendance: $('#edit-atten-val').val() * 1,
+    amtSpent: $('#edit-amountSpent-val').val() * 1,
+    numberOfVisits: $('edit-numberOfVisits-val').val() * 1,
   };
   visitorData.updateVis(updateVisitorId, editedVisitor)
     .then(() => {

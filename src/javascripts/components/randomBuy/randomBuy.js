@@ -28,27 +28,22 @@ const addRandom = () => {
     })
     .catch((err) => console.error('could not add vendor', err));
 };
-console.error(vendorsAndRides);
-const randomNum = () => [Math.floor(Math.random() * vendorsAndRides.length)];
-const randomActivity = (tempRandom) => vendorsAndRides[tempRandom];
+
+const randomActivity = () => vendorsAndRides[Math.floor(Math.random() * vendorsAndRides.length)];
+
 const buySomething = () => {
-  console.error('is this working');
   getVisitors()
     .then((visitors) => {
-      addRandom();
       visitors.forEach((visitor) => {
-        console.error(visitor.name);
-        const tempRandom = randomActivity(randomNum());
-        console.error(vendorsAndRides[randomNum()]);
         const newActivity = {
           name: visitor.name,
-          activity: tempRandom.name,
-          cost: tempRandom.price,
+          activity: randomActivity().name,
+          cost: randomActivity().price,
         };
         randomThing.push(newActivity);
         // updateActivity(newActivity);
       });
-      console.error(randomThing);
+      console.warn(randomThing);
     })
     .catch((err) => console.error('we broke fam', err));
 };
@@ -57,4 +52,4 @@ const buyEvent = () => {
   $('body').on('click', '#buy-something', buySomething);
 };
 
-export default { buyEvent };
+export default { buyEvent, addRandom };

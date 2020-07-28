@@ -7,7 +7,7 @@ import utils from '../../helpers/utils';
 const getVisitors = () => utils.readData('Visitor');
 const getRides = () => utils.readData('Ride');
 const getVendors = () => utils.readData('Vendor');
-// const updateActivity = (newActivity) => axios.post(`${baseUrl}/visitorLog/.json`, newActivity);
+const updateActivity = (newActivity) => axios.post(`${baseUrl}/visitorLog/.json`, newActivity);
 const vendorsAndRides = [];
 const randomThing = [];
 
@@ -41,9 +41,8 @@ const buySomething = () => {
           cost: randomActivity().price,
         };
         randomThing.push(newActivity);
-        // updateActivity(newActivity);
+        updateActivity(newActivity);
       });
-      console.warn(randomThing);
     })
     .catch((err) => console.error('we broke fam', err));
 };

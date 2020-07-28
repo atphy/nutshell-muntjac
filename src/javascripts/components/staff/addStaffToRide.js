@@ -8,7 +8,7 @@ const rideList = () => {
       rides.forEach((ride) => {
         domString += `<option value="${ride.id}">${ride.name}</option>`;
       });
-      utils.printToDom('#staffRides', domString);
+      utils.printToDom('#staff-rides', domString);
     })
     .catch((err) => console.error('bork', err));
 };

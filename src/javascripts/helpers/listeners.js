@@ -51,18 +51,22 @@ const submitUpdateVendorForm = (e) => {
   e.preventDefault();
   const fbVendorId = e.target.getAttribute('data-firebase-vendor-id');
 
-  const inputAddress = $('#inputAddress').val();
-  const inputName = $('#inputName').val();
-  const inputPhone = $('#inputPhone').val();
-  const inputProduct = $('#inputProduct').val();
+  const editAddress = $('#editAddress').val();
+  const editName = $('#editName').val();
+  const editPhone = $('#editPhone').val();
+  const editProduct = $('#editProduct').val();
+  const editPrice = $('#editPrice');
+  const editAssignedStaff = $('#editAssignedStaff');
   const vendorId = e.target.getAttribute('data-vendorId');
 
   const newVendorObj = {
-    address: inputAddress,
-    name: inputName,
-    phoneNumber: inputPhone,
-    product: inputProduct,
+    address: editAddress,
+    name: editName,
+    phoneNumber: editPhone,
+    product: editProduct,
     vendorId,
+    price: editPrice,
+    assignedStaff: editAssignedStaff,
   };
 
   vendorData.updateVendor(fbVendorId, newVendorObj)
@@ -81,6 +85,8 @@ const submitNewVendorForm = (e) => {
   const inputName = $('#inputName').val();
   const inputPhone = $('#inputPhone').val();
   const inputProduct = $('#inputProduct').val();
+  const inputPrice = $('#inputPrice').val();
+  const inputAssignedStaff = $('#inputAssignedStaff');
   const vendorId = Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
 
   const newVendorObj = {
@@ -89,6 +95,8 @@ const submitNewVendorForm = (e) => {
     phoneNumber: inputPhone,
     product: inputProduct,
     vendorId,
+    price: inputPrice,
+    assignedStaff: inputAssignedStaff,
   };
 
   vendorData.addVendor(newVendorObj)

@@ -18,11 +18,17 @@ const buildEditForm = (employeeId) => {
         </div>
         <div class="form-group">
           <label for="edit-position">Position</label>
-          <input type="text" class="form-control" id="edit-position" value="${staff.position}">
+          <select class="form-control" id="edit-level" value="${staff.staffLevel}">
+            <option value="${staff.staffLevel}" selected="selected">${staff.staffLevel} (selected)</option>
+            <option value="Intern">Intern</option>
+            <option value="Senior">Senior</option>
+          </select>
         </div>
         <div class="form-group">
-          <label for="staffRides">Assign to a ride:</label>
-          <select name="staffRides" id="staffRides">
+          <label for="staff-rides">Assign to a ride:</label>
+          <option value="${staff.jobAssignment}" selected>${staff.jobAssignment} (selected)</option>
+          <select name="staff-rides" id="staff-rides" value="${staff.jobAssignment}">
+          <option value="${staff.jobAssignment}" selected>${staff.jobAssignment} (selected)</option>
           </select>
         </div>
           <button type="submit" class="btn btn-primary" id="update-staff">Submit</button>

@@ -14,12 +14,24 @@ const buildStaffForm = () => {
     </div>
     <div class="form-group">
       <label for="position">Position</label>
-      <input type="text" class="form-control" id="position">
+      <select class="form-control" id="staff-level">
+        <option value="Intern">Intern</option>
+        <option value="Senior">Senior</option>
+      </select>
     </div>
   <div class="form-group">
-  <label for="staffRides">Assign to a ride:</label>
-  <select name="staffRides" id="staffRides"></select>
+  <label for="staff-rides">Assign to a ride:</label>
+  <select name="staff-rides" id="staff-rides"></select>
   </div>
+  <div class="form-group">
+    <label for="staffLevel">Staff Level</label>
+    <input type="text" class="form-control" id="staffLevel">
+  </div>
+  <div class="form-group">
+    <label for="jobAssignment">Job Assignment</label>
+    <input type="text" class="form-control" id="jobAssignment">
+  </div>
+
     <button type="submit" class="btn btn-primary submit-staff-form" id="new-employee">Submit</button>
   </form>
   `;

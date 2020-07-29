@@ -14,10 +14,20 @@ const updateRide = (rideId, updatedRide) => axios.put(`${baseUrl}/Ride/${rideId}
 
 const addNewRide = (newRideObj) => axios.post(`${baseUrl}/Ride.json`, newRideObj);
 
+const addNewStaffRide = (rideId, newRideObj) => axios.post(`${baseUrl}/Ride/${rideId}.json`, newRideObj);
+
+const getRideStaffByRideId = (rideId) => new Promise((resolve, reject) => {
+  axios.get(`${baseUrl}/Staff.json?orderBy="jobAssigned"&equalTo="${rideId}"`)
+    .then(({ data }) => resolve(utils.convertFirebaseCollection(data)))
+    .catch((err) => reject(err));
+});
+
 export default {
   getRides,
   deleteRide,
   updateRide,
   addNewRide,
   getRideById,
+  addNewStaffRide,
+  getRideStaffByRideId,
 };

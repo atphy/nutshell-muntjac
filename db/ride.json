@@ -1,52 +1,35 @@
   
 {
-  "ride1": {
-    "name": "Millenium Force",
-    "description": "Millennium Force features a 310-foot-tall coaster at Whalom Park.",
-    "imageUrl": "https://i.imgur.com/u8o9uCN.jpg", 
-    "price": 1.00,
-    "staffAssigned": 2,
-    "isAvailable": true
-
+  "-MD6GgsJYZrLN1C-vDuM" : {
+    "description" : "Learn exactly how much g-force your bones can take!",
+    "imageUrl" : "https://firebasestorage.googleapis.com/v0/b/e12-whalom-park.appspot.com/o/Ride%2Fbd6.jpg?alt=media&token=4e39e67a-9749-4698-8811-ab5d9ca49e68",
+    "isAvailable" : true,
+    "name" : "The Destructolator",
+    "price" : "4.5",
+    "staffAssigned" : [""]
   },
-  "ride2": {
-    "name": "Splash Mountain",
-    "description": "Splash Mountain is a log flume, opened in 1989, at Whalom Park.",
-    "imageUrl": "https://i.imgur.com/dATSmby.jpg",
-    "price": 1.50,
-    "staffAssigned": 2, 
-    "isAvailable": true
+  "-MD7TN05TE2DUQ_gsmq2" : {
+    "description" : "The ride never stops",
+    "imageUrl" : "https://firebasestorage.googleapis.com/v0/b/e12-whalom-park.appspot.com/o/Ride%2FMrbones.png?alt=media&token=043bfe72-d3df-4d61-a188-5817e2311f43",
+    "isAvailable" : false,
+    "name" : "Mr. Bones' Wild Ride",
+    "price" : "0.5",
+    "staffAssigned" : [""]
   },
-  "ride3": {
-    "name": "Thunderbolt",
-    "description": "The Thunderbolt was a wooden roller coaster located at Whalom Park.",
-    "imageUrl": "https://i.imgur.com/NX58cPu.jpg",
-    "price": 3.00,
-    "staffAssigned": 0,
-    "isAvailable": false 
+  "-MD7TwDJbACSC65EXYgD" : {
+    "description" : "A blistering ride sure to give you a case of the goosebumps",
+    "imageUrl" : "https://firebasestorage.googleapis.com/v0/b/e12-whalom-park.appspot.com/o/Ride%2FOne_Day_at_HorrorLand_-_artwork.jpg?alt=media&token=4c33cc6f-1e2d-4401-8fc6-9aba48f7dab9",
+    "isAvailable" : true,
+    "name" : "Horror Land Express",
+    "price" : "2.5",
+    "staffAssigned" : [""]
   },
-  "ride4": {
-    "name": "Top Thrill Dragster",
-    "description": "Top Thrill Dragster is a 400-foot-tall steel coaster in Whalom Park.",
-    "imageUrl": "https://i.imgur.com/p2JRygt.jpg",
-    "price": 4.00,
-    "staffAssigned": 2, 
-    "isAvailable": true
-  },
-  "ride5": {
-    "name": "Lightning Rod",
-    "description": "Lightning Rod is a wooden roller coaster located at Whalom Parkin.",
-    "imageUrl": "https://i.imgur.com/B73Uq3D.jpg",
-    "price": 2.50,
-    "staffAssigned": 1,
-    "isAvailable": false
-  },
-  "ride6": {
-    "name": "Space Mountain",
-    "description": "Space Mountain is an indoor outer space themed coaster at Whalom Park.",
-    "imageUrl": "https://i.imgur.com/xFoSd29.jpg",
-    "price": 5.00,
-    "staffAssigned": 2,
-    "isAvailable": true
+  "ride4" : {
+    "description" : "Top Thrill Dragster is a 400-foot-tall steel coaster in Whalom Park.",
+    "imageUrl" : "https://i.imgur.com/p2JRygt.jpg",
+    "isAvailable" : true,
+    "name" : "Top Thrill Dragster",
+    "price" : 4.0,
+    "staffAssigned" : [""]
   }
 }

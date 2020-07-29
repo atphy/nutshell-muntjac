@@ -19,7 +19,6 @@ const staffCardMaker = (staff) => {
         </div>
         `;
   i += 1;
-  console.warn(i);
   getRideData.rideNameById(staff.jobAssignment);
   authData.checkLoginStatus();
   return domString;

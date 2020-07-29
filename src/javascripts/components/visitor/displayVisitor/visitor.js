@@ -3,6 +3,7 @@ import authData from '../../../helpers/data/authData';
 import visitorData from '../../../helpers/data/visitorData';
 import utils from '../../../helpers/utils';
 
+const getVisitorLog = () => utils.readData('visitorLog');
 const printVisitor = () => {
   visitorData.getVisitorData()
     .then((visitors) => {
@@ -41,14 +42,24 @@ const printVisitor = () => {
           </div>`;
       });
       domString += `
-          <div id="visitor-log" class=""></div>
         </div>
       </div>
+      <div id="visitor-activity"></div>
        `;
       utils.printToDom('#content', domString);
       authData.checkLoginStatus();
     })
     .catch((err) => console.error('visitors broke', err));
+
+  let domString = '';
+  getVisitorLog()
+    .then((visitorActivity) => {
+      visitorActivity.forEach((activity) => {
+        domString += `<p>${activity.name}: ${activity.activity} - ${activity.cost}</p>`;
+      });
+      utils.printToDom('#visitor-activity', domString);
+    })
+    .catch((err) => console.error('could not print log', err));
 };
 
 export default { printVisitor };

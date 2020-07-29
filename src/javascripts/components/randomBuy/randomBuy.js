@@ -1,8 +1,9 @@
-// import axios from 'axios';
-// import apiKeys from '../../helpers/apiKeys.json';
+import axios from 'axios';
+import apiKeys from '../../helpers/apiKeys.json';
 import utils from '../../helpers/utils';
+import domVisitors from '../visitor/displayVisitor/visitor';
 
-// const baseUrl = apiKeys.firebaseConfig.databaseURL;
+const baseUrl = apiKeys.firebaseConfig.databaseURL;
 
 const getVisitors = () => utils.readData('Visitor');
 const getRides = () => utils.readData('Ride');
@@ -42,6 +43,7 @@ const buySomething = () => {
         };
         randomThing.push(newActivity);
         updateActivity(newActivity);
+        domVisitors.printVisitor();
       });
     })
     .catch((err) => console.error('we broke fam', err));

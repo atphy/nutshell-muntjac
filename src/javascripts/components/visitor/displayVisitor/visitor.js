@@ -4,6 +4,32 @@ import visitorData from '../../../helpers/data/visitorData';
 import utils from '../../../helpers/utils';
 
 const getVisitorLog = () => utils.readData('visitorLog');
+const allCost = [];
+
+const getExpenses = () => {
+  let totalCost = 0;
+  getVisitorLog()
+    .then((expenses) => {
+      expenses.forEach((expense) => {
+        const expenseNum = expense.cost;
+        allCost.push(expenseNum);
+        const sumExpenses = allCost.reduce;
+        totalCost += sumExpenses;
+      });
+    })
+    .catch((err) => console.error('could not add total cost', err));
+
+  console.error(totalCost);
+};
+
+// const sumOfExpenses = () => {
+//   const addExpenses = (total, num) => total + num;
+//   const reduceExpense = totalCost.reduce(addExpenses);
+//   const totalExpense = reduceExpense();
+//   console.error(totalExpense);
+//   console.error(totalCost);
+// };
+
 const printVisitor = () => {
   visitorData.getVisitorData()
     .then((visitors) => {
@@ -60,6 +86,7 @@ const printVisitor = () => {
       utils.printToDom('#visitor-activity', domString);
     })
     .catch((err) => console.error('could not print log', err));
+  getExpenses();
 };
 
 export default { printVisitor };

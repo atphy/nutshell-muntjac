@@ -3,7 +3,7 @@ import utils from '../../helpers/utils';
 
 const vendorList = () => {
   let domString = '<option value="">No assignment</option>';
-  vendorData.getVendors()
+  vendorData.getVendorsTest()
     .then((vendors) => {
       vendors.forEach((vendor) => {
         domString += `<option value="${vendor.id}>${vendor.name}</option>`;

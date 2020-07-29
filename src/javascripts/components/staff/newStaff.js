@@ -28,15 +28,6 @@ const buildStaffForm = () => {
   <label for="staff-vendors">Assign to a vendor:</label>
   <select name="staff-vendors" id="staff-vendors"></select>
   </div>
-  <div class="form-group">
-    <label for="staffLevel">Staff Level</label>
-    <input type="text" class="form-control" id="staffLevel">
-  </div>
-  <div class="form-group">
-    <label for="jobAssignment">Job Assignment</label>
-    <input type="text" class="form-control" id="jobAssignment">
-  </div>
-
     <button type="submit" class="btn btn-primary submit-staff-form" id="new-employee">Submit</button>
   </form>
   `;

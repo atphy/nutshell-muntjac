@@ -1,8 +1,8 @@
-// import axios from 'axios';
-// import apiKeys from '../../helpers/apiKeys.json';
+import axios from 'axios';
+import apiKeys from '../../helpers/apiKeys.json';
 import utils from '../../helpers/utils';
 
-// const baseUrl = apiKeys.firebaseConfig.databaseURL;
+const baseUrl = apiKeys.firebaseConfig.databaseURL;
 
 const getVisitors = () => utils.readData('Visitor');
 const getRides = () => utils.readData('Ride');

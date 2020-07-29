@@ -1,5 +1,6 @@
 import utils from '../../helpers/utils';
 import addStaffToRide from './addStaffToRide';
+import addStaffToVendors from './addStafftoVendor';
 
 const buildStaffForm = () => {
   const domString = `
@@ -24,6 +25,10 @@ const buildStaffForm = () => {
   <select name="staff-rides" id="staff-rides"></select>
   </div>
   <div class="form-group">
+  <label for="staff-vendors">Assign to a vendor:</label>
+  <select name="staff-vendors" id="staff-vendors"></select>
+  </div>
+  <div class="form-group">
     <label for="staffLevel">Staff Level</label>
     <input type="text" class="form-control" id="staffLevel">
   </div>
@@ -37,6 +42,7 @@ const buildStaffForm = () => {
   `;
   utils.printToDom('#staff-form', domString);
   addStaffToRide.rideList();
+  addStaffToVendors.vendorList();
 };
 
 export default { buildStaffForm };

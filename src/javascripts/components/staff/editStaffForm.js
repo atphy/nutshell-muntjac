@@ -1,6 +1,7 @@
 import staffData from '../../helpers/data/staff/staffData';
 import utils from '../../helpers/utils';
 import addStaffToRide from './addStaffToRide';
+import addStaffToVendor from './addStafftoVendor';
 
 const buildEditForm = (employeeId) => {
   staffData.getStaffById(employeeId)
@@ -31,12 +32,20 @@ const buildEditForm = (employeeId) => {
           <option value="${staff.jobAssignment}" selected>${staff.jobAssignment} (selected)</option>
           </select>
         </div>
+        <div class="form-group">
+          <label for="staff-vendors">Assign to a vendor:</label>
+          <option value="${staff.jobAssignment}" selected>${staff.jobAssignment} (selected)</option>
+          <select name="staff-vendors" id="staff-vendors" value="${staff.jobAssignment}">
+          <option value="${staff.jobAssignment}" selected>${staff.jobAssignment} (selected)</option>
+          </select>
+        </div>
           <button type="submit" class="btn btn-primary" id="update-staff">Submit</button>
       </form>
       `;
 
       utils.printToDom('#staff-form', domString);
       addStaffToRide.rideList();
+      addStaffToVendor.vendorList();
     })
     .catch((err) => console.error(err));
 };

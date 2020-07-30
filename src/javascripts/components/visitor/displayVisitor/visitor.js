@@ -18,10 +18,11 @@ const getExpenses = () => {
       });
     })
     .catch((err) => console.error('could not add total cost', err));
-
+  console.error(allCost);
   console.error(totalCost);
 };
 
+const showLog = () => $('#visitor-activity').toggleClass('hide');
 // const sumOfExpenses = () => {
 //   const addExpenses = (total, num) => total + num;
 //   const reduceExpense = totalCost.reduce(addExpenses);
@@ -70,7 +71,7 @@ const printVisitor = () => {
       domString += `
         </div>
       </div>
-      <div id="visitor-activity"></div>
+      <div id="visitor-activity" class="hide"></div>
        `;
       utils.printToDom('#content', domString);
       authData.checkLoginStatus();
@@ -86,6 +87,7 @@ const printVisitor = () => {
       utils.printToDom('#visitor-activity', domString);
     })
     .catch((err) => console.error('could not print log', err));
+  $('body').on('click', '#visitor-log-btn', showLog);
   getExpenses();
 };
 

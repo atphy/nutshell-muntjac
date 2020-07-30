@@ -1,16 +1,12 @@
 import rideData from '../../helpers/data/rideData';
 import utils from '../../helpers/utils';
 
-let i = 0;
-
-const rideNameById = (jobAssignment) => {
+const rideNameById = (staffCard, jobAssignment) => {
   rideData.getRideById(jobAssignment)
     .then((response) => {
       const ride = response.data;
       const domString = ride.name;
-      console.warn(domString);
-      utils.printToDom(`#ride-assign${i}`, domString);
-      i += 1;
+      utils.printToDom(staffCard, domString);
     })
     .catch((err) => console.error(err));
 };

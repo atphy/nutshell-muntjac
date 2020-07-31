@@ -16,8 +16,8 @@ const addARide = () => {
     description: $('#new-coaster-description').val(),
     imageUrl: '',
     price: $('#new-coaster-price').val(),
-    staffAssigned: $('#new-coaster-staff').val(),
-    isAvailable: $('#new-coaster-staff').val() > 1,
+    staffAssigned: '',
+    isAvailable: false,
   };
   ref.put(file).then(() => {
     ref.getDownloadURL().then((url) => {
@@ -58,8 +58,6 @@ const showRideForm = () => {
   <label for="new-coaster-price" class="mb-0 mt-1">Price:</label>
   <input type="number" class="form-control" id="new-coaster-price" placeholder="in USD" min=".5" max="10" step=".5" required>
   </div>
-  <label for="new-coaster-staff" class="mb-0 mt-1">Staff Count:</label>
-  <input type="number" class="form-control" id="new-coaster-staff" placeholder="# of assigned staff" min="0" max="5" required>
   </div>
   <button type="submit" class="btn btn-primary mt-2">Create</button>
   </form>

@@ -8,6 +8,7 @@ const addStaffToRide = (rideId) => {
       const rideToAddStaff = Array.from(response.data.staffAssigned);
       rideToAddStaff.push(staffData.getNewStaffId());
       rideData.updateRideStaff(rideId, rideToAddStaff);
+      rideData.updateRideAvailable(rideId, rideToAddStaff.length > 1);
     });
 };
 

@@ -6,7 +6,6 @@ const addStaffToRide = (rideId) => {
   rideData.getRideById(rideId)
     .then((response) => {
       const rideToAddStaff = Array.from(response.data.staffAssigned);
-      // rideToAddStaff.from(response.data.staffAssigned.data);
       rideToAddStaff.push(staffData.getNewStaffId());
       rideData.updateRideStaff(rideId, rideToAddStaff);
     });

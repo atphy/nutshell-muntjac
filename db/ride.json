@@ -5,24 +5,24 @@
     "imageUrl" : "https://firebasestorage.googleapis.com/v0/b/e12-whalom-park.appspot.com/o/Ride%2Fbd6.jpg?alt=media&token=4e39e67a-9749-4698-8811-ab5d9ca49e68",
     "isAvailable" : true,
     "name" : "The Destructolator",
-    "price" : "4.5",
-    "staffAssigned" : [""]
+    "price" : 4.5,
+    "staffAssigned" : ""
   },
   "-MD7TN05TE2DUQ_gsmq2" : {
     "description" : "The ride never stops",
     "imageUrl" : "https://firebasestorage.googleapis.com/v0/b/e12-whalom-park.appspot.com/o/Ride%2FMrbones.png?alt=media&token=043bfe72-d3df-4d61-a188-5817e2311f43",
     "isAvailable" : false,
     "name" : "Mr. Bones' Wild Ride",
-    "price" : "0.5",
-    "staffAssigned" : [""]
+    "price" : 0.5,
+    "staffAssigned" : ""
   },
   "-MD7TwDJbACSC65EXYgD" : {
     "description" : "A blistering ride sure to give you a case of the goosebumps",
     "imageUrl" : "https://firebasestorage.googleapis.com/v0/b/e12-whalom-park.appspot.com/o/Ride%2FOne_Day_at_HorrorLand_-_artwork.jpg?alt=media&token=4c33cc6f-1e2d-4401-8fc6-9aba48f7dab9",
     "isAvailable" : true,
     "name" : "Horror Land Express",
-    "price" : "2.5",
-    "staffAssigned" : [""]
+    "price" : 2.5,
+    "staffAssigned" : []
   },
   "ride4" : {
     "description" : "Top Thrill Dragster is a 400-foot-tall steel coaster in Whalom Park.",
@@ -30,6 +30,6 @@
     "isAvailable" : true,
     "name" : "Top Thrill Dragster",
     "price" : 4.0,
-    "staffAssigned" : [""]
+    "staffAssigned" : []
   }
 }

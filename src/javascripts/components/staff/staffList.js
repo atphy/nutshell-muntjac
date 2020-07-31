@@ -3,6 +3,7 @@ import staffMaker from './staff';
 import utils from '../../helpers/utils';
 import editForm from './editStaffForm';
 import authData from '../../helpers/data/authData';
+import addStaffToRide from './addStaffToRide';
 
 const buildStaffModule = () => {
   staffData.getStaff()
@@ -43,10 +44,9 @@ const addStaff = (e) => {
     staffLevel: $('#staff-level').val(),
     jobAssignment: $('#staff-rides').val(),
   };
-  console.warn(staffData.addStaff(newStaffObj));
   staffData.addStaff(newStaffObj)
     .then(() => {
-      console.warn(staffData.addStaff(newStaffObj));
+      addStaffToRide.addStaffToRide($('#staff-rides').val());
       utils.printToDom('#staff-form', '');
       buildStaffModule();
     })

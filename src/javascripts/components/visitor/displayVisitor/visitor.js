@@ -7,29 +7,18 @@ const getVisitorLog = () => utils.readData('visitorLog');
 const allCost = [];
 
 const getExpenses = () => {
-  let totalCost = 0;
   getVisitorLog()
     .then((expenses) => {
       expenses.forEach((expense) => {
         const expenseNum = expense.cost;
         allCost.push(expenseNum);
-        const sumExpenses = allCost.reduce;
-        totalCost += sumExpenses;
       });
+      // const sum = allCost.reduce(addCosts);
     })
     .catch((err) => console.error('could not add total cost', err));
-  console.error(allCost);
-  console.error(totalCost);
 };
 
 const showLog = () => $('#visitor-activity').toggleClass('hide');
-// const sumOfExpenses = () => {
-//   const addExpenses = (total, num) => total + num;
-//   const reduceExpense = totalCost.reduce(addExpenses);
-//   const totalExpense = reduceExpense();
-//   console.error(totalExpense);
-//   console.error(totalCost);
-// };
 
 const printVisitor = () => {
   visitorData.getVisitorData()
@@ -78,9 +67,9 @@ const printVisitor = () => {
     })
     .catch((err) => console.error('visitors broke', err));
 
-  let domString = '';
   getVisitorLog()
     .then((visitorActivity) => {
+      let domString = '<div id="sum-counter"></div>';
       visitorActivity.forEach((activity) => {
         domString += `<p>${activity.name}: ${activity.activity} - ${activity.cost}</p>`;
       });
@@ -89,6 +78,22 @@ const printVisitor = () => {
     .catch((err) => console.error('could not print log', err));
   $('body').on('click', '#visitor-log-btn', showLog);
   getExpenses();
+
+  getVisitorLog()
+    .then((expenses) => {
+      let domString = '';
+      expenses.forEach((expense) => {
+        const expenseNum = expense.cost;
+        allCost.push(expenseNum);
+      });
+      const addStuff = (accumulator, currentVal) => accumulator + currentVal;
+      const sum = allCost.reduce(addStuff);
+      domString += `<h5>Total Spent at the Park: ${sum}</h5>`;
+      utils.printToDom('#sum-counter', domString);
+      console.error(sum);
+      console.error(allCost);
+    })
+    .catch((err) => console.error('could not add total cost', err));
 };
 
 export default { printVisitor };

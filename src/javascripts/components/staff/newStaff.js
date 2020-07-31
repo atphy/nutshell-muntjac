@@ -7,11 +7,11 @@ const buildStaffForm = () => {
   <form class="check-auth" id="new-hire-form">
     <div class="form-group">
       <label for="first-name">First Name</label>
-      <input type="text" class="form-control" id="first-name">
+      <input type="text" class="form-control" id="first-name" required>
     </div>
     <div class="form-group">
       <label for="last-name">Last Name</label>
-      <input type="text" class="form-control" id="last-name">
+      <input type="text" class="form-control" id="last-name" required>
     </div>
     <div class="form-group">
       <label for="position">Position</label>
@@ -28,15 +28,6 @@ const buildStaffForm = () => {
   <label for="staff-vendors">Assign to a vendor:</label>
   <select name="staff-vendors" id="staff-vendors"></select>
   </div>
-  <div class="form-group">
-    <label for="staffLevel">Staff Level</label>
-    <input type="text" class="form-control" id="staffLevel">
-  </div>
-  <div class="form-group">
-    <label for="jobAssignment">Job Assignment</label>
-    <input type="text" class="form-control" id="jobAssignment">
-  </div>
-
     <button type="submit" class="btn btn-primary submit-staff-form" id="new-employee">Submit</button>
   </form>
   `;

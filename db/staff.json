@@ -1,98 +1,50 @@
 {
-	"employee01": {
-		"firstName": "Ron",
-		"lastName": "Burgundy",
-		"staffLevel": "Senior",
-		"jobAssignment": "id_vendor1"
-  },
-  "employee02": {
-		"firstName": "Jeff",
-		"lastName": "Bridges",
-		"staffLevel": "Intern",
-		"jobAssignment": "id_vendor2"
-  },
-  "employee03": {
-		"firstName": "Johnny",
-		"lastName": "Knoxville",
-		"staffLevel": "Senior",
-		"jobAssignment": "id_vendor3"
-  },
-  "employee04": {
-		"firstName": "John",
-		"lastName": "Malkovich",
-		"staffLevel": "Intern",
-		"jobAssignment": "id_vendor4"
-  },
-  "employee05": {
-		"firstName": "Giancarlo",
-		"lastName": "Esposito",
-		"staffLevel": "Senior",
-		"jobAssignment": "id_vendor5"
-  },
-  "employee06": {
-		"firstName": "Amy",
-		"lastName": "Poehler",
-		"staffLevel": "Intern",
-		"jobAssignment": "id_vendor6"
-  },
-  "employee07": {
-		"firstName": "Forest",
-		"lastName": "Whitaker",
-		"staffLevel": "Senior",
-		"jobAssignment": "id_vendor1"
-  },
-  "employee08": {
-		"firstName": "Tilda",
-		"lastName": "Swinton",
-		"staffLevel": "Intern",
-		"jobAssignment": "id_vendor2"
+	"-MDQFDHE4X9DrjnqieDU" : {
+	  "firstName" : "Jack",
+	  "jobAssignment" : "",
+	  "lastName" : "Torrance",
+	  "staffLevel" : "Intern"
 	},
-	"employee09": {
-		"firstName": "Tilda",
-		"lastName": "Swinton",
-		"staffLevel": "Senior",
-		"jobAssignment": "id_vendor3"
+	"employee01" : {
+	  "firstName" : "Ron",
+	  "jobAssignment" : "",
+	  "lastName" : "Burgundy",
+	  "staffLevel" : "Intern"
 	},
-	"employee10": {
-		"firstName": "Tilda",
-		"lastName": "Swinton",
-		"staffLevel": "Intern",
-		"jobAssignment": "id_vendor4"
+	"employee02" : {
+	  "firstName" : "Jeff",
+	  "jobAssignment" : "",
+	  "lastName" : "Bridges",
+	  "staffLevel" : "Intern"
 	},
-	"employee11": {
-		"firstName": "Tilda",
-		"lastName": "Swinton",
-		"staffLevel": "Senior",
-		"jobAssignment": "id_vendor5"
+	"employee04" : {
+	  "firstName" : "John",
+	  "jobAssignment" : "",
+	  "lastName" : "Malkovich",
+	  "staffLevel" : "Intern"
 	},
-	"employee12": {
-		"firstName": "Tilda",
-		"lastName": "Swinton",
-		"staffLevel": "Intern",
-		"jobAssignment": "id_vendor6"
+	"employee05" : {
+	  "firstName" : "Giancarlo",
+	  "jobAssignment" : "",
+	  "lastName" : "Esposito",
+	  "staffLevel" : "Senior"
 	},
-	"employee13": {
-		"firstName": "Tilda",
-		"lastName": "Swinton",
-		"staffLevel": "Senior",
-		"jobAssignment": "id_vendor1"
+	"employee06" : {
+	  "firstName" : "Amy",
+	  "jobAssignment" : "",
+	  "lastName" : "Poehler",
+	  "staffLevel" : "Intern"
 	},
-	"employee14": {
-		"firstName": "Tilda",
-		"lastName": "Swinton",
-		"staffLevel": "Intern",
-		"jobAssignment": "id_vendor2"
+	"employee07" : {
+	  "firstName" : "Forest",
+	  "jobAssignment" : "",
+	  "lastName" : "Whitaker",
+	  "staffLevel" : "Senior"
 	},
-	"employee15": {
-		"firstName": "Olivia",
-		"lastName": "Munn",
-		"staffLevel": "Senior",
-		"jobAssignment": "id_vendor3"
-	},
-	"employee16": {
-		"firstName": "Richie",
-		"lastName": "Spice",
-		"staffLevel": "Intern",
-		"jobAssignment": "id_vendor4"
+	"employee10" : {
+	  "firstName" : "Tilda",
+	  "jobAssignment" : "",
+	  "lastName" : "Swinton",
+	  "staffLevel" : "Intern"
+	}
   }
-}

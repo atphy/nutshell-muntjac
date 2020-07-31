@@ -34,11 +34,7 @@ const updateRideForm = (e) => {
         </div>
         <div class="form-group mb-0">
         <label for="coaster-staff" class="mb-0 mt-1">Staff Count:</label>
-        <input type="integer" class="form-control" id="coaster-staff" value="${rideById.staffAssigned}">
-        </div>
-        <div class="form-group mb-0">
-        <label for="isAvailable" class="mb-0 mt-1">Is Available:</label>
-        <input type="boolean" class="form-control" id=isAvailable" value="${rideById.isAvailable}">
+        <input type="number" class="form-control" id="coaster-staff" min="0" max="5" value="${rideById.staffAssigned}">
         </div>
         </div>
         <button type="button" class="btn btn-primary updateSubmit mt-2" data-rideid="${rideById.id}">Update</button>
@@ -57,8 +53,8 @@ const updateRide = () => {
     description: $('#coaster-description').val(),
     imageUrl: $('#coaster-image').val(),
     price: $('#coaster-price').val(),
-    staffAssigned: $('#coaster-staff').val() * 1,
-    isAvailable: $('#isAvailable').val(),
+    staffAssigned: $('#coaster-staff').val(),
+    isAvailable: $('#coaster-staff').val() > 1,
   };
   rideData.updateRide(rideId, updatedRideObj)
     .then(() => displayRide.buildRideModule())

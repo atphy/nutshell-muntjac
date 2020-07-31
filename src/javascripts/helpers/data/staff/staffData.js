@@ -6,7 +6,23 @@ const baseUrl = apiKeys.firebaseConfig.databaseURL;
 
 const getStaff = () => utils.readData('Staff');
 
-const addStaff = (newStaffObj) => axios.post(`${baseUrl}/Staff.json`, newStaffObj);
+// const addStaff = (newStaffObj) => axios.post(`${baseUrl}/Staff.json`, newStaffObj);
+
+let newStaffId = '';
+
+const getNewStaffId = () => {
+  console.warn(newStaffId);
+  return newStaffId;
+};
+
+const addStaff = (newStaffObj) => new Promise((resolve, reject) => {
+  axios.post(`${baseUrl}/Staff.json`, newStaffObj)
+    .then((response) => {
+      newStaffId = response.data.name;
+      resolve(newStaffObj);
+    })
+    .catch((err) => reject(err));
+});
 
 const deleteStaff = (employeeId) => axios.delete(`${baseUrl}/Staff/${employeeId}.json`);
 
@@ -20,4 +36,5 @@ export default {
   addStaff,
   getStaffById,
   updateStaff,
+  getNewStaffId,
 };

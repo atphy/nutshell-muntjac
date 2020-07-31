@@ -3,7 +3,7 @@
   "-MD6GgsJYZrLN1C-vDuM" : {
     "description" : "Learn exactly how much g-force your bones can take!",
     "imageUrl" : "https://firebasestorage.googleapis.com/v0/b/e12-whalom-park.appspot.com/o/Ride%2Fbd6.jpg?alt=media&token=4e39e67a-9749-4698-8811-ab5d9ca49e68",
-    "isAvailable" : true,
+    "isAvailable" : false,
     "name" : "The Destructolator",
     "price" : 4.5,
     "staffAssigned" : ""
@@ -19,17 +19,17 @@
   "-MD7TwDJbACSC65EXYgD" : {
     "description" : "A blistering ride sure to give you a case of the goosebumps",
     "imageUrl" : "https://firebasestorage.googleapis.com/v0/b/e12-whalom-park.appspot.com/o/Ride%2FOne_Day_at_HorrorLand_-_artwork.jpg?alt=media&token=4c33cc6f-1e2d-4401-8fc6-9aba48f7dab9",
-    "isAvailable" : true,
+    "isAvailable" : false,
     "name" : "Horror Land Express",
     "price" : 2.5,
-    "staffAssigned" : []
+    "staffAssigned" : ""
   },
   "ride4" : {
     "description" : "Top Thrill Dragster is a 400-foot-tall steel coaster in Whalom Park.",
     "imageUrl" : "https://i.imgur.com/p2JRygt.jpg",
-    "isAvailable" : true,
+    "isAvailable" : false,
     "name" : "Top Thrill Dragster",
     "price" : 4.0,
-    "staffAssigned" : []
+    "staffAssigned" : ""
   }
 }

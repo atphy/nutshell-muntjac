@@ -32,10 +32,6 @@ const updateRideForm = (e) => {
         <label for="coaster-price" class="mb-0 mt-1">Price:</label>
         <input type="number" class="form-control" id="coaster-price" min=".5" max="10" step=".5" value="${rideById.price}">
         </div>
-        <div class="form-group mb-0">
-        <label for="coaster-staff" class="mb-0 mt-1">Staff Count:</label>
-        <input type="number" class="form-control" id="coaster-staff" min="0" max="5" value="${rideById.staffAssigned}">
-        </div>
         </div>
         <button type="button" class="btn btn-primary updateSubmit mt-2" data-rideid="${rideById.id}">Update</button>
         </form>

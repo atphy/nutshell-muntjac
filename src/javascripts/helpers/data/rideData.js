@@ -14,6 +14,8 @@ const updateRide = (rideId, updatedRide) => axios.put(`${baseUrl}/Ride/${rideId}
 
 const updateRideStaff = (rideId, updatedRide) => axios.put(`${baseUrl}/Ride/${rideId}/staffAssigned.json`, updatedRide);
 
+const updateRideAvailable = (rideId, updatedRide) => axios.put(`${baseUrl}/Ride/${rideId}/isAvailable.json`, updatedRide);
+
 const addNewRide = (newRideObj) => axios.post(`${baseUrl}/Ride.json`, newRideObj);
 
 export default {
@@ -23,4 +25,5 @@ export default {
   addNewRide,
   getRideById,
   updateRideStaff,
+  updateRideAvailable,
 };

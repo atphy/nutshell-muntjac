@@ -3,13 +3,15 @@ import utils from '../../helpers/utils';
 import staffData from '../../helpers/data/staff/staffData';
 
 const addStaffToRide = (rideId) => {
-  rideData.getRideById(rideId)
-    .then((response) => {
-      const rideToAddStaff = Array.from(response.data.staffAssigned);
-      rideToAddStaff.push(staffData.getNewStaffId());
-      rideData.updateRideStaff(rideId, rideToAddStaff);
-      rideData.updateRideAvailable(rideId, rideToAddStaff.length > 2);
-    });
+  if (rideId) {
+    rideData.getRideById(rideId)
+      .then((response) => {
+        const rideToAddStaff = Array.from(response.data.staffAssigned);
+        rideToAddStaff.push(staffData.getNewStaffId());
+        rideData.updateRideStaff(rideId, rideToAddStaff);
+        rideData.updateRideAvailable(rideId, rideToAddStaff.length > 2);
+      });
+  }
 };
 
 const addEditedStaffToRide = (rideId, staffId) => {

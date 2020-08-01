@@ -5,7 +5,6 @@ import authData from '../../helpers/data/authData';
 const getVisitors = () => utils.readData('Visitor');
 const getVisitorLog = () => utils.readData('visitorLog');
 const allCost = [];
-const showLog = () => $('#visitor-activity').toggleClass('hide');
 
 const printVisitor = () => {
   getVisitors()
@@ -61,6 +60,7 @@ const getExpenses = () => {
 };
 
 const visitorLog = () => {
+  $('#visitor-activity').toggleClass('hide');
   getVisitorLog()
     .then((visitorActivity) => {
       let domString = '<div id="sum-counter"></div>';
@@ -71,7 +71,6 @@ const visitorLog = () => {
       authData.checkLoginStatus();
     })
     .catch((err) => console.error('could not print log', err));
-  $('body').on('click', '#visitor-log-btn', showLog);
   getExpenses();
   // eslint-disable-next-line no-use-before-define
   totalExpense();
@@ -86,7 +85,7 @@ const totalExpense = () => {
         allCost.push(expenseNum);
       });
       const addStuff = (accumulator, currentVal) => accumulator + currentVal;
-      const sum = allCost.reduce(addStuff);
+      const sum = allCost.reduce(addStuff, 0);
       domString += `<h5>Total Spent at the Park: ${sum}</h5>`;
       utils.printToDom('#sum-counter', domString);
       authData.checkLoginStatus();
@@ -94,8 +93,4 @@ const totalExpense = () => {
     .catch((err) => console.error('could not add total cost', err));
 };
 
-const callVisitors = () => {
-  visitorLog();
-};
-
-export default { printVisitor, callVisitors };
+export default { printVisitor, visitorLog };

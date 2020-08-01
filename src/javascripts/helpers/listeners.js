@@ -14,6 +14,7 @@ import addVisitor from '../components/visitor/addVisitor/addVisitor';
 import updateVisitor from '../components/visitor/updateVisitor/updateVisitor';
 import createRide from '../components/ride/createRide/createRide';
 import random from '../components/randomBuy/randomBuy';
+import visitor from '../components/visitor/visitor';
 
 const editVendorEvent = (e) => {
   if (!authData.isAuthenticated()) {
@@ -131,6 +132,7 @@ const createListeners = () => {
   $('body').on('click', '.closeForm', updateRide.clearForm);
   $('body').on('click', '.createRideBtn', createRide.showRideForm);
   $('body').on('change', '#coaster-image', createRide.imageInputWatcher);
+  $('body').on('click', '#visitor-log-btn', visitor.visitorLog);
   random.buyEvent();
 };
 

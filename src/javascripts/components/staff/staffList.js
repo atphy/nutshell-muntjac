@@ -28,6 +28,7 @@ const buildStaffModule = () => {
 
 const deleteStaff = (e) => {
   const employeeId = e.target.closest('.card').id;
+  addStaffToRide.deleteStaffFromRide(employeeId);
   staffData.deleteStaff(employeeId)
     .then(() => {
       buildStaffModule();
@@ -68,7 +69,8 @@ const editStaff = (e) => {
     staffLevel: $('#edit-level').val(),
     jobAssignment: $('#staff-rides').val(),
   };
-
+  addStaffToRide.deleteStaffFromRide(employeeId);
+  addStaffToRide.addEditedStaffToRide(updateStaffObj.jobAssignment, employeeId);
   staffData.updateStaff(employeeId, updateStaffObj)
     .then(() => buildStaffModule())
     .catch((err) => console.error('could not update staff', err));

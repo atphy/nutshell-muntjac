@@ -44,8 +44,11 @@ const showEditVendorForm = (fbVendorId, {
   </form> 
   </div>
   `;
-
-  utils.printToDom('#vendor-form', domString);
+  if (!$('#edit-vendor-form').length) {
+    utils.printToDom('#vendor-form', domString);
+  } else {
+    $('#vendor-form').toggleClass('hide');
+  }
 };
 
 export default {

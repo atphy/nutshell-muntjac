@@ -42,8 +42,11 @@ const buildEditForm = (employeeId) => {
           <button type="submit" class="btn btn-primary" id="update-staff">Submit</button>
       </form>
       `;
-
-      utils.printToDom('#staff-form', domString);
+      if (!$('.staff-updater').length) {
+        utils.printToDom('#staff-form', domString);
+      } else {
+        $('#staff-form').toggleClass('hide');
+      }
       addStaffToRide.rideList();
       addStaffToVendor.vendorList();
     })

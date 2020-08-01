@@ -5,7 +5,6 @@ import authData from '../../helpers/data/authData';
 const getVisitors = () => utils.readData('Visitor');
 const getVisitorLog = () => utils.readData('visitorLog');
 const allCost = [];
-const showLog = () => $('#visitor-activity').toggleClass('hide');
 
 const printVisitor = () => {
   getVisitors()
@@ -42,10 +41,10 @@ const printVisitor = () => {
       authData.checkLoginStatus();
     })
     .catch((err) => console.error('visitors broke', err));
-  // eslint-disable-next-line no-use-before-define
-  visitorLog();
-  // eslint-disable-next-line no-use-before-define
-  totalExpense();
+//   // eslint-disable-next-line no-use-before-define
+//   visitorLog();
+//   // eslint-disable-next-line no-use-before-define
+//   totalExpense();
 };
 
 const getExpenses = () => {
@@ -61,6 +60,7 @@ const getExpenses = () => {
 };
 
 const visitorLog = () => {
+  $('#visitor-activity').toggleClass('hide');
   getVisitorLog()
     .then((visitorActivity) => {
       let domString = '<div id="sum-counter"></div>';
@@ -68,10 +68,12 @@ const visitorLog = () => {
         domString += `<p>${activity.name}: ${activity.activity} - ${activity.cost}</p>`;
       });
       utils.printToDom('#visitor-activity', domString);
+      authData.checkLoginStatus();
     })
     .catch((err) => console.error('could not print log', err));
-  $('body').on('click', '#visitor-log-btn', showLog);
   getExpenses();
+  // eslint-disable-next-line no-use-before-define
+  totalExpense();
 };
 
 const totalExpense = () => {
@@ -83,9 +85,10 @@ const totalExpense = () => {
         allCost.push(expenseNum);
       });
       const addStuff = (accumulator, currentVal) => accumulator + currentVal;
-      const sum = allCost.reduce(addStuff);
+      const sum = allCost.reduce(addStuff, 0);
       domString += `<h5>Total Spent at the Park: ${sum}</h5>`;
       utils.printToDom('#sum-counter', domString);
+      authData.checkLoginStatus();
     })
     .catch((err) => console.error('could not add total cost', err));
 };

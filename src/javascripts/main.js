@@ -5,7 +5,6 @@ import authData from './helpers/data/authData';
 import listeners from './helpers/listeners';
 import homescreen from './components/homescreen/homescreen';
 import navbar from './components/navbar/navbar';
-
 import '../styles/main.scss';
 import 'bootstrap';
 

@@ -16,7 +16,9 @@ const addRandom = () => {
   getRides()
     .then((rides) => {
       rides.forEach((ride) => {
-        vendorsAndRides.push(ride);
+        if (ride.isAvailable) {
+          vendorsAndRides.push(ride);
+        }
       });
     })
     .catch((err) => console.error('could not add rides', err));

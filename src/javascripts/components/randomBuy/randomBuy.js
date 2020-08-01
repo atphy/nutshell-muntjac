@@ -1,7 +1,7 @@
 import axios from 'axios';
 import apiKeys from '../../helpers/apiKeys.json';
 import utils from '../../helpers/utils';
-import domVisitors from '../visitor/displayVisitor/visitor';
+import domVisitors from '../visitor/visitor';
 
 const baseUrl = apiKeys.firebaseConfig.databaseURL;
 
@@ -32,7 +32,9 @@ const addRandom = () => {
 
 const randomActivity = () => vendorsAndRides[Math.floor(Math.random() * vendorsAndRides.length)];
 
-const buySomething = () => {
+const buySomething = (e) => {
+  e.preventDefault();
+
   getVisitors()
     .then((visitors) => {
       visitors.forEach((visitor) => {

@@ -2,7 +2,7 @@ import './updateVisitor.scss';
 import utils from '../../../helpers/utils';
 import visitorData from '../../../helpers/data/visitorData';
 import auth from '../../../helpers/data/authData';
-import buildVisitors from '../displayVisitor/visitor';
+import buildVisitors from '../visitor';
 
 const updateVisForm = (visitorId) => {
   if (!auth.isAuthenticated()) return;
@@ -30,11 +30,6 @@ const updateVisForm = (visitorId) => {
           <input type="integer" class="form-control" id="edit-amountSpent-val" value="${visitor.amtSpent}">
           </input>
           </div>
-          <div class="col-sm-2">
-          <label>Number of Visits:</label>
-          <input type="integer" class="form-control" id="edit-numberOfVisits-val" value="${visitor.numberOfVisits}">
-          </input>
-          </div>
           <button class="btn btn-primary" id="visitorUpdate">Submit</button>
         </form>
     `;
@@ -49,6 +44,8 @@ const updateVisEvent = (e) => {
 };
 
 const updateVisitor = (e) => {
+  e.preventDefault();
+
   if (!auth.isAuthenticated()) return;
   const updateVisitorId = e.target.closest('#visitorUpdate').form.id;
   const editedVisitor = {

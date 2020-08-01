@@ -1,38 +1,29 @@
 import axios from 'axios';
 import apiKeys from '../../apiKeys.json';
+import utils from '../../utils';
 
 const baseUrl = apiKeys.firebaseConfig.databaseURL;
 
-const getVendors = () => new Promise((resolve, reject) => {
-  axios.get(`${baseUrl}/Vendor.json`)
-    .then((response) => {
-      const vendorObjects = response.data;
-      const vendors = [];
-
-      if (vendorObjects) {
-        Object.keys(vendorObjects).forEach((vendorId) => {
-          vendorObjects[vendorId].id = vendorId;
-          vendors.push(vendorObjects[vendorId]);
-        });
-      }
-
-      resolve(vendors);
-    })
-    .catch((err) => reject(err));
-});
-
-const addVendor = (newVendorObj) => axios.post(`${baseUrl}/Vendor.json`, newVendorObj);
+const getVendors = () => utils.readData('Vendor');
 
 const deleteVendor = (vendorId) => axios.delete(`${baseUrl}/Vendor/${vendorId}.json`);
 
 const getVendorById = (id) => axios.get(`${baseUrl}/Vendor/${id}.json`);
 
-const updateVendor = (id, updateVendorObj) => axios.put(`${baseUrl}/Vendor/${id}.json`, updateVendorObj);
+const updateVendor = (vendorId, updatedVendor) => axios.put(`${baseUrl}/Vendor/${vendorId}.json`, updatedVendor);
+
+const updateVendorStaff = (vendorId, updatedVendor) => axios.put(`${baseUrl}/Vendor/${vendorId}/staffAssigned.json`, updatedVendor);
+
+const updateVendorAvailable = (vendorId, updatedVendor) => axios.put(`${baseUrl}/Vendor/${vendorId}/isAvailable.json`, updatedVendor);
+
+const addNewVendor = (newVendorObj) => axios.post(`${baseUrl}/Vendor.json`, newVendorObj);
 
 export default {
-  addVendor,
+  addNewVendor,
   deleteVendor,
   getVendors,
   getVendorById,
   updateVendor,
+  updateVendorStaff,
+  updateVendorAvailable,
 };

@@ -6,14 +6,9 @@ const baseUrl = apiKeys.firebaseConfig.databaseURL;
 
 const getStaff = () => utils.readData('Staff');
 
-// const addStaff = (newStaffObj) => axios.post(`${baseUrl}/Staff.json`, newStaffObj);
-
 let newStaffId = '';
 
-const getNewStaffId = () => {
-  console.warn(newStaffId);
-  return newStaffId;
-};
+const getNewStaffId = () => newStaffId;
 
 const addStaff = (newStaffObj) => new Promise((resolve, reject) => {
   axios.post(`${baseUrl}/Staff.json`, newStaffObj)

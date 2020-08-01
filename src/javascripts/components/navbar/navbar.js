@@ -1,6 +1,6 @@
 import staffList from '../staff/staffList';
 import displayRides from '../ride/displayRides/displayRides';
-import visitor from '../visitor/displayVisitor/visitor';
+import visitor from '../visitor/visitor';
 import vendorList from '../vendor/vendorList';
 import randomBuy from '../randomBuy/randomBuy';
 import utils from '../../helpers/utils';

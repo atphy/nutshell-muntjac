@@ -42,10 +42,10 @@ const printVisitor = () => {
       authData.checkLoginStatus();
     })
     .catch((err) => console.error('visitors broke', err));
-  // eslint-disable-next-line no-use-before-define
-  visitorLog();
-  // eslint-disable-next-line no-use-before-define
-  totalExpense();
+//   // eslint-disable-next-line no-use-before-define
+//   visitorLog();
+//   // eslint-disable-next-line no-use-before-define
+//   totalExpense();
 };
 
 const getExpenses = () => {
@@ -68,10 +68,13 @@ const visitorLog = () => {
         domString += `<p>${activity.name}: ${activity.activity} - ${activity.cost}</p>`;
       });
       utils.printToDom('#visitor-activity', domString);
+      authData.checkLoginStatus();
     })
     .catch((err) => console.error('could not print log', err));
   $('body').on('click', '#visitor-log-btn', showLog);
   getExpenses();
+  // eslint-disable-next-line no-use-before-define
+  totalExpense();
 };
 
 const totalExpense = () => {
@@ -86,8 +89,13 @@ const totalExpense = () => {
       const sum = allCost.reduce(addStuff);
       domString += `<h5>Total Spent at the Park: ${sum}</h5>`;
       utils.printToDom('#sum-counter', domString);
+      authData.checkLoginStatus();
     })
     .catch((err) => console.error('could not add total cost', err));
 };
 
-export default { printVisitor, visitorLog };
+const callVisitors = () => {
+  visitorLog();
+};
+
+export default { printVisitor, callVisitors };

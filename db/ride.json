@@ -6,7 +6,7 @@
     "isAvailable" : false,
     "name" : "The Destructolator",
     "price" : 4.5,
-    "staffAssigned" : ""
+    "staffAssigned" : [ "" ]
   },
   "-MD7TN05TE2DUQ_gsmq2" : {
     "description" : "The ride never stops",
@@ -14,7 +14,7 @@
     "isAvailable" : false,
     "name" : "Mr. Bones' Wild Ride",
     "price" : 0.5,
-    "staffAssigned" : ""
+    "staffAssigned" : [ "" ]
   },
   "-MD7TwDJbACSC65EXYgD" : {
     "description" : "A blistering ride sure to give you a case of the goosebumps",
@@ -22,7 +22,7 @@
     "isAvailable" : false,
     "name" : "Horror Land Express",
     "price" : 2.5,
-    "staffAssigned" : ""
+    "staffAssigned" : [ "" ]
   },
   "ride4" : {
     "description" : "Top Thrill Dragster is a 400-foot-tall steel coaster in Whalom Park.",
@@ -30,6 +30,6 @@
     "isAvailable" : false,
     "name" : "Top Thrill Dragster",
     "price" : 4.0,
-    "staffAssigned" : ""
+    "staffAssigned" : [ "" ]
   }
 }

@@ -5,6 +5,8 @@ import editForm from './editStaffForm';
 import authData from '../../helpers/data/authData';
 import addStaffToRide from './addStaffToRide';
 
+import './staff.scss';
+
 const buildStaffModule = () => {
   staffData.getStaff()
     .then((staffMember) => {

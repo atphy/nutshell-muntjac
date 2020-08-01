@@ -7,11 +7,11 @@ const buildStaffForm = () => {
   <form class="check-auth" id="new-hire-form">
     <div class="form-group">
       <label for="first-name">First Name</label>
-      <input type="text" class="form-control" id="first-name" required>
+      <input type="text" class="form-control" id="first-name" required />
     </div>
     <div class="form-group">
       <label for="last-name">Last Name</label>
-      <input type="text" class="form-control" id="last-name" required>
+      <input type="text" class="form-control" id="last-name" required />
     </div>
     <div class="form-group">
       <label for="position">Position</label>
@@ -20,18 +20,26 @@ const buildStaffForm = () => {
         <option value="Senior">Senior</option>
       </select>
     </div>
-  <div class="form-group">
-  <label for="staff-rides">Assign to a ride:</label>
-  <select name="staff-rides" id="staff-rides"></select>
+    <div class="form-group">
+    <input type="radio" name="ride-vendor" value="ride"> Assign to a ride<br>
+    <input type="radio" name="ride-vendor" value="vendor"> Assign to a vendor<br>
+    </div>
+    <div class="form-group">
+    <label for="staff-rides">Assign to a ride:</label>
+    <select name="staff-rides" id="staff-rides"></select>
   </div>
   <div class="form-group">
-  <label for="staff-vendors">Assign to a vendor:</label>
-  <select name="staff-vendors" id="staff-vendors"></select>
+    <label for="staff-vendors">Assign to a vendor:</label>
+    <select name="staff-vendors" id="staff-vendors"></select>
   </div>
     <button type="submit" class="btn btn-primary submit-staff-form" id="new-employee">Submit</button>
   </form>
   `;
-  utils.printToDom('#staff-form', domString);
+  if (!$('#new-hire-form').length) {
+    utils.printToDom('#staff-form', domString);
+  } else {
+    $('#staff-form').toggleClass('hide');
+  }
   addStaffToRide.rideList();
   addStaffToVendors.vendorList();
 };

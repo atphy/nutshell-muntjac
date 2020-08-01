@@ -1,7 +1,7 @@
 import './addVisitor.scss';
 import utils from '../../../helpers/utils';
 import visitorData from '../../../helpers/data/visitorData';
-import buildVisitors from '../displayVisitor/visitor';
+import buildVisitors from '../visitor';
 import auth from '../../../helpers/data/authData';
 
 const showVisForm = () => {

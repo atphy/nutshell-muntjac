@@ -1,4 +1,4 @@
-import visitor from './displayVisitor/visitor';
+import visitor from './visitor';
 import visitorData from '../../helpers/data/visitorData';
 import auth from '../../helpers/data/authData';
 

@@ -13,7 +13,7 @@ const buildRideModule = () => {
         if (!ride.isAvailable) {
           domString += `
         <div class="alert alert-danger mb-1" role="alert">
-        <span class=rideName>${ride.name}</span> needs staff! ${ride.staffAssigned.length}/2 required staff assigned.`;
+        <span class=rideName>${ride.name}</span> needs staff! ${ride.staffAssigned.length - 1}/2 required staff assigned.`;
           if (authData.isAuthenticated()) {
             domString += `<button class="btn btn-danger ml-2 fixridebtn" data-brokenride="${ride.id}">Assign Staff<i class="fas fa-wrench btnwrench ml-1"></i></button>`;
           } else {

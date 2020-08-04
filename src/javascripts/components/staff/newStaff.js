@@ -1,6 +1,7 @@
 import utils from '../../helpers/utils';
-import addStaffToRide from './addStaffToRide';
-import addStaffToVendors from './addStafftoVendor';
+// import addStaffToRide from './addStaffToRide';
+// import addStaffToVendors from './addStafftoVendor';
+import addRideOrVendor from './addRideOrVendor';
 
 const buildStaffForm = () => {
   const domString = `
@@ -24,14 +25,8 @@ const buildStaffForm = () => {
     <input type="radio" name="ride-vendor" value="ride"> Assign to a ride<br>
     <input type="radio" name="ride-vendor" value="vendor"> Assign to a vendor<br>
     </div>
-    <div class="form-group">
-    <label for="staff-rides">Assign to a ride:</label>
-    <select name="staff-rides" id="staff-rides"></select>
-  </div>
-  <div class="form-group">
-    <label for="staff-vendors">Assign to a vendor:</label>
-    <select name="staff-vendors" id="staff-vendors"></select>
-  </div>
+    <div class="form-group" id="rides-group"></div>
+    <div class="form-group" id="vendors-group"></div>
     <button type="submit" class="btn btn-primary submit-staff-form" id="new-employee">Submit</button>
   </form>
   `;
@@ -40,8 +35,7 @@ const buildStaffForm = () => {
   } else {
     $('#staff-form').toggleClass('hide');
   }
-  addStaffToRide.rideList();
-  addStaffToVendors.vendorList();
+  addRideOrVendor.rideOrVendorClick();
 };
 
 export default { buildStaffForm };

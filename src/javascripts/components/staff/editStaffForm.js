@@ -1,7 +1,6 @@
 import staffData from '../../helpers/data/staff/staffData';
 import utils from '../../helpers/utils';
-import addStaffToRide from './addStaffToRide';
-import addStaffToVendor from './addStafftoVendor';
+import addRideOrVendor from './addRideOrVendor';
 
 const buildEditForm = (employeeId) => {
   staffData.getStaffById(employeeId)
@@ -25,20 +24,11 @@ const buildEditForm = (employeeId) => {
             <option value="Senior">Senior</option>
           </select>
         </div>
-        <div class="form-group">
-          <label for="staff-rides">Assign to a ride:</label>
-          <option value="${staff.jobAssignment}" selected>${staff.jobAssignment} (selected)</option>
-          <select name="staff-rides" id="staff-rides" value="${staff.jobAssignment}">
-          <option value="${staff.jobAssignment}">${staff.jobAssignment} (selected)</option>
-          </select>
+        <input type="radio" name="ride-vendor" value="ride"> Assign to a ride<br>
+        <input type="radio" name="ride-vendor" value="vendor"> Assign to a vendor<br>
         </div>
-        <div class="form-group">
-          <label for="staff-vendors">Assign to a vendor:</label>
-          <option value="${staff.vendorAssignment}" selected>${staff.vendorAssignment} (selected)</option>
-          <select name="staff-vendors" id="staff-vendors" value="${staff.vendorAssignment}">
-          <option value="${staff.vendorAssignment}" selected>${staff.vendorAssignment} (selected)</option>
-          </select>
-        </div>
+        <div class="form-group" id="rides-group"></div>
+        <div class="form-group" id="vendors-group"></div>
           <button type="submit" class="btn btn-primary" id="update-staff">Submit</button>
       </form>
       `;
@@ -47,8 +37,7 @@ const buildEditForm = (employeeId) => {
       } else {
         $('#staff-form').toggleClass('hide');
       }
-      addStaffToRide.rideList();
-      addStaffToVendor.vendorList();
+      addRideOrVendor.rideOrVendorClick();
     })
     .catch((err) => console.error(err));
 };

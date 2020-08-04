@@ -43,13 +43,17 @@ const deleteStaffFromRide = (staffId) => {
 };
 
 const rideList = () => {
-  let domString = '<option value="">No assignment</option>';
+  let domString = `
+  <label for="staff-rides">Assign to a ride:</label>
+  <select name="staff-rides" id="staff-rides">
+  <option value="">No assignment</option>`;
   rideData.getRides()
     .then((rides) => {
       rides.forEach((ride) => {
         domString += `<option value="${ride.id}">${ride.name}</option>`;
       });
-      utils.printToDom('#staff-rides', domString);
+      domString += '</select>';
+      utils.printToDom('#rides-group', domString);
     })
     .catch((err) => console.error('bork', err));
 };

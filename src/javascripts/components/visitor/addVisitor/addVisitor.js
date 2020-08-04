@@ -12,14 +12,6 @@ const showVisForm = () => {
         <label for="name">Name</label>
         <input type="text" class="form-control" id="name-val" placeholder="First & Last Name">
       </div>
-      <div class="col-sm-2">
-      <label>Amount Spent:</label>
-      <input type="integer" class="form-control" id="amt-spent" placeholder="Amount Spent">
-      </div>
-      <div class="col-sm-2">
-      <label>Number of Visits:</label>
-      <input type="integer" class="form-control" id="numberOfVisits" placeholder="Number of Visits">
-      </div>
       <button class="btn btn-primary" id="addVisitor">Submit</button>
     </form>
     `;
@@ -34,8 +26,7 @@ const addVisitorEvent = () => {
   if (!auth.isAuthenticated()) return;
   const newVisitor = {
     name: $('#name-val').val(),
-    amtSpent: $('#amtSpent').val() * 1,
-    numberOfVisits: $('#numberOfVisits').val() * 1,
+    amtSpent: 0,
   };
   visitorData.addVisitor(newVisitor)
     .then(() => {

@@ -1,56 +1,47 @@
 {
   "vendor1": {
-    "name": "name_vendor1",
+    "name": "Colder Stone",
     "address": "123 Vendor1 St",
     "phoneNumber": "123-456-7890",
     "product": "Ice Cream",
-    "price": 2.00,
-    "assignedStaff": 1,
-    "isAvailable": false
-  },
+    "price": 2.00
+
+    },
   "vendor2": {
-    "name": "name_vendor2",
+    "name": "Peppy Cola",
     "address": "222 Vendor2 St",
     "phoneNumber": "222-222-2222",
     "product": "Refreshments",
-    "price": 3.00,
-    "assignedStaff": 2,
-    "isAvailable": false
+    "price": 3.00
+
   },
   "vendor3": {
-    "name": "name_vendor3",
+    "name": "Sugar Rush",
     "address": "333 Vendor3 St",
     "phoneNumber": "333-333-3333",
     "product": "Cotton Candy",
-    "price": 1.00,
-    "assignedStaff": 3,
-    "isAvailable": false
+    "price": 1.00
+    
   },
   "vendor4": {
-    "name": "name_vendor4",
+    "name": "Back to the Moon",
     "address": "444 Vendor4 St",
     "phoneNumber": "444-444-4444",
     "product": "Arcade Games",
-    "price": 1.00,
-    "assignedStaff": 4,
-    "isAvailable": false
+    "price": 1.00
   },
   "vendor5": {
-    "name": "name_vendor5",
+    "name": "Baloon's Galore",
     "address": "5555 Vendor5 St",
     "phoneNumber": "555-555-5555",
     "product": "Baloon Animals",
-    "price": 1.00,
-    "assignedStaff": 5,
-    "isAvailable": false
+    "price": 1.00
   },
   "vendor6": {
-    "name": "name_vendor6",
+    "name": "Michaela's",
     "address": "667 Vendor6 St",
     "phoneNumber": "667-667-6677",
     "product": "Crafts",
-    "price": 3.00,
-    "assignedStaff": 6,
-    "isAvailable": false
+    "price": 3.00
   }
 }

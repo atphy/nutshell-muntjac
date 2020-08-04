@@ -73,12 +73,12 @@ const visitorLog = () => {
 
 const totalExpense = () => {
   getVisitorLog()
-    .then((expenses) => {
+    .then(() => {
       let domString = '';
-      expenses.forEach((expense) => {
+      /* expenses.forEach((expense) => {
         const expenseNum = expense.cost;
         allCost.push(expenseNum);
-      });
+      }); */
       const addStuff = (accumulator, currentVal) => accumulator + currentVal;
       const sum = allCost.reduce(addStuff, 0);
       domString += `<h5>Total Spent at the Park: ${sum}</h5>`;

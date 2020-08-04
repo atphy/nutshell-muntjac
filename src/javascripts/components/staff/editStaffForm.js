@@ -34,9 +34,9 @@ const buildEditForm = (employeeId) => {
         </div>
         <div class="form-group">
           <label for="staff-vendors">Assign to a vendor:</label>
-          <option value="${staff.jobAssignment}" selected>${staff.jobAssignment} (selected)</option>
-          <select name="staff-vendors" id="staff-vendors" value="${staff.jobAssignment}">
-          <option value="${staff.jobAssignment}" selected>${staff.jobAssignment} (selected)</option>
+          <option value="${staff.vendorAssignment}" selected>${staff.vendorAssignment} (selected)</option>
+          <select name="staff-vendors" id="staff-vendors" value="${staff.vendorAssignment}">
+          <option value="${staff.vendorAssignment}" selected>${staff.vendorAssignment} (selected)</option>
           </select>
         </div>
           <button type="submit" class="btn btn-primary" id="update-staff">Submit</button>

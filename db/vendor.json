@@ -5,7 +5,8 @@
     "phoneNumber": "123-456-7890",
     "product": "Ice Cream",
     "price": 2.00,
-    "assignedStaff": 1
+    "assignedStaff": 1,
+    "isAvailable": false
   },
   "vendor2": {
     "name": "name_vendor2",
@@ -13,7 +14,8 @@
     "phoneNumber": "222-222-2222",
     "product": "Refreshments",
     "price": 3.00,
-    "assignedStaff": 2
+    "assignedStaff": 2,
+    "isAvailable": false
   },
   "vendor3": {
     "name": "name_vendor3",
@@ -21,7 +23,8 @@
     "phoneNumber": "333-333-3333",
     "product": "Cotton Candy",
     "price": 1.00,
-    "assignedStaff": 3
+    "assignedStaff": 3,
+    "isAvailable": false
   },
   "vendor4": {
     "name": "name_vendor4",
@@ -29,7 +32,8 @@
     "phoneNumber": "444-444-4444",
     "product": "Arcade Games",
     "price": 1.00,
-    "assignedStaff": 4
+    "assignedStaff": 4,
+    "isAvailable": false
   },
   "vendor5": {
     "name": "name_vendor5",
@@ -37,7 +41,8 @@
     "phoneNumber": "555-555-5555",
     "product": "Baloon Animals",
     "price": 1.00,
-    "assignedStaff": 5
+    "assignedStaff": 5,
+    "isAvailable": false
   },
   "vendor6": {
     "name": "name_vendor6",
@@ -45,6 +50,7 @@
     "phoneNumber": "667-667-6677",
     "product": "Crafts",
     "price": 3.00,
-    "assignedStaff": 6
+    "assignedStaff": 6,
+    "isAvailable": false
   }
 }

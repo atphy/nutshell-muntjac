@@ -26,8 +26,7 @@ const addVisitorEvent = () => {
   if (!auth.isAuthenticated()) return;
   const newVisitor = {
     name: $('#name-val').val(),
-    amtSpent: $('#amtSpent').val() * 1,
-    numberOfVisits: $('#numberOfVisits').val() * 1,
+    amtSpent: 0,
   };
   visitorData.addVisitor(newVisitor)
     .then(() => {

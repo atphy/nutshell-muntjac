@@ -1,17 +1,22 @@
 {
   "visitor 1": {
-    "name": "Dick Grayson"
+    "name": "Dick Grayson",
+    "amtSpent" : 0
   },
   "visitor 2": {
-    "name": "Tim Drake"
+    "name": "Tim Drake",
+    "amtSpent" : 0
   },
   "visitor 3": {
-    "name": "Carrie Kelley"
+    "name": "Carrie Kelley",
+    "amtSpent" : 0
   },  
   "visitor 4": {
-    "name": "Jason Todd"
+    "name": "Jason Todd",
+    "amtSpent" : 0
   },
   "visitor 5": {
-    "name": "Damian Wayne"
+    "name": "Damian Wayne",
+    "amtSpent" : 0
   }
 }

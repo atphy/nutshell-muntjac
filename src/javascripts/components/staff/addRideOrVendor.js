@@ -6,8 +6,14 @@ const rideOrVendorRadio = () => $("input[name='ride-vendor']:checked").val();
 const rideOrVendor = () => {
   if (rideOrVendorRadio() === 'ride') {
     addStaffToRide.rideList();
+    $('#staff-vendors').value = '';
+    $('#vendors-group').addClass('hide');
+    $('#rides-group').removeClass('hide');
   } else if (rideOrVendorRadio() === 'vendor') {
     addStaffToVendor.vendorList();
+    $('#staff-rides').value = '';
+    $('#rides-group').addClass('hide');
+    $('#vendors-group').removeClass('hide');
   }
 };
 
@@ -16,5 +22,3 @@ const rideOrVendorClick = () => {
 };
 
 export default { rideOrVendorClick };
-
-// Currently not being used. Will implement once staff assign to ride and vendor are both done.

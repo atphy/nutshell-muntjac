@@ -54,7 +54,6 @@ const getExpenses = () => {
         const expenseNum = expense.cost;
         allCost.push(expenseNum);
       });
-      // const sum = allCost.reduce(addCosts);
     })
     .catch((err) => console.error('could not add total cost', err));
 };

@@ -1,13 +1,12 @@
 import vendorData from '../../helpers/data/vendor/vendorData';
 import utils from '../../helpers/utils';
 
-const vendorNameById = (StaffCard, jobAssignment) => {
-  vendorData.getVendorById(jobAssignment)
+const vendorNameById = (staffCard, vendorAssignment) => {
+  vendorData.getVendorById(vendorAssignment)
     .then((response) => {
       const vendor = response.data;
       const domString = vendor.name;
-      console.warn(domString);
-      utils.printToDom(StaffCard, domString);
+      utils.printToDom(staffCard, domString);
     })
     .catch((err) => console.error(err));
 };

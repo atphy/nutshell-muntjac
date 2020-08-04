@@ -8,7 +8,7 @@ const addStaffToVendor = (vendorId) => {
       const vendorToAddStaff = Array.from(response.data.staffAssigned);
       vendorToAddStaff.push(staffData.getNewStaffId());
       vendorData.updateVendorStaff(vendorId, vendorToAddStaff);
-      vendorData.updateVendorAvailable(vendorId, vendorToAddStaff.length > 1);
+      // vendorData.updateVendorAvailable(vendorId, vendorToAddStaff.length > 2);
     });
 };
 
@@ -17,7 +17,7 @@ const vendorList = () => {
   vendorData.getVendors()
     .then((vendors) => {
       vendors.forEach((vendor) => {
-        domString += `<option value="${vendor.id}>${vendor.name}</option>`;
+        domString += `<option value="${vendor.id}">${vendor.name}</option>`;
       });
       utils.printToDom('#staff-vendors', domString);
     })

@@ -13,7 +13,7 @@ const staffCardMaker = (staff) => {
         <h5 class="card-title">${staff.staffLevel}</h5>`;
   domString += `
   <h5 class="card-title" id="ride-assign${i}"></h5>
-  <h5 class="card-title" id="vendor-assign${i}></h5>
+  <h5 class="card-title" id="vendor-assign${i}"></h5>
           <div class="mod-buttons">
           </div>
           </div>
@@ -21,7 +21,7 @@ const staffCardMaker = (staff) => {
         </div>
         `;
   getRideData.rideNameById(`#ride-assign${i}`, staff.jobAssignment);
-  getVendorData.vendorNameById(`#vendor-assign${i}`, staff.jobAssignment);
+  getVendorData.vendorNameById(`#vendor-assign${i}`, staff.vendorAssignment);
   i += 1;
   authData.checkLoginStatus();
   return domString;

@@ -4,6 +4,7 @@ import utils from '../../helpers/utils';
 import editForm from './editStaffForm';
 import authData from '../../helpers/data/authData';
 import addStaffToRide from './addStaffToRide';
+import addStaffToVendor from './addStafftoVendor';
 
 const buildStaffModule = () => {
   staffData.getStaff()
@@ -44,10 +45,12 @@ const addStaff = (e) => {
     lastName: $('#last-name').val(),
     staffLevel: $('#staff-level').val(),
     jobAssignment: $('#staff-rides').val(),
+    vendorAssignment: $('#staff-vendors').val(),
   };
   staffData.addStaff(newStaffObj)
     .then(() => {
       addStaffToRide.addStaffToRide($('#staff-rides').val());
+      addStaffToVendor.addStaffToVendor($('#staff-vendors').val());
       utils.printToDom('#staff-form', '');
       buildStaffModule();
     })
@@ -68,6 +71,7 @@ const editStaff = (e) => {
     lastName: $('#edit-last-name').val(),
     staffLevel: $('#edit-level').val(),
     jobAssignment: $('#staff-rides').val(),
+    vendorAssignment: $('#staff-vendors').val(),
   };
   addStaffToRide.deleteStaffFromRide(employeeId);
   addStaffToRide.addEditedStaffToRide(updateStaffObj.jobAssignment, employeeId);

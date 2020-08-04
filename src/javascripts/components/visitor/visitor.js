@@ -15,7 +15,7 @@ const printVisitor = () => {
         <div class="text-center mb-3" id="add-button"></div>
         <button type="button" class="btn btn-success" id="buy-something"><i class="fas fa-dollar-sign"></i>Buy Something</button>
         <button type="button" class="btn btn-warning" id="visitor-log-btn"><i class="fas fa-clipboard-list"></i>Visitor Activity</button>
-        <div class="vis-form" id="new-vis-form"></div>
+        <div id="new-vis-form"></div>
         <div class="d-flex flex-wrap vis-container">`;
 
       visitors.forEach((visitor) => {
@@ -23,6 +23,7 @@ const printVisitor = () => {
         <div id="${visitor.id}" class="card visitor" style="width: 18rem;">
             <div class="vis-card-body">
               <h4 class="vis-card-title">${visitor.name}</h4>
+              <p class="attend">Total amount spent: $${visitor.amtSpent}</p>
               <div class="vis-card-buttons">
                 <a href="#" class="btn btn-warning update-visitor" id="update-visitor">Edit</a>
                 <a href="#" class="btn btn-danger remove-visitor" id="remove-visitor">Delete</a>

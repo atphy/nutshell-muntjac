@@ -23,7 +23,6 @@ const printVisitor = () => {
         <div id="${visitor.id}" class="card visitor" style="width: 18rem;">
             <div class="vis-card-body">
               <h4 class="vis-card-title">${visitor.name}</h4>
-              <p class="attend">Total amount spent: $${visitor.amtSpent}</p>
               <div class="vis-card-buttons">
                 <a href="#" class="btn btn-warning update-visitor" id="update-visitor">Edit</a>
                 <a href="#" class="btn btn-danger remove-visitor" id="remove-visitor">Delete</a>
@@ -41,10 +40,6 @@ const printVisitor = () => {
       authData.checkLoginStatus();
     })
     .catch((err) => console.error('visitors broke', err));
-//   // eslint-disable-next-line no-use-before-define
-//   visitorLog();
-//   // eslint-disable-next-line no-use-before-define
-//   totalExpense();
 };
 
 const getExpenses = () => {
@@ -54,7 +49,6 @@ const getExpenses = () => {
         const expenseNum = expense.cost;
         allCost.push(expenseNum);
       });
-      // const sum = allCost.reduce(addCosts);
     })
     .catch((err) => console.error('could not add total cost', err));
 };

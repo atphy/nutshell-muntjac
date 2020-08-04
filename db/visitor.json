@@ -1,27 +1,17 @@
 {
   "visitor 1": {
-    "name": "Dick Grayson",
-    "numberOfVisits": 3,
-    "amtSpent": 50.00
+    "name": "Dick Grayson"
   },
   "visitor 2": {
-    "name": "Tim Drake",
-    "numberOfVisits":2 ,
-    "amtSpent": 40.00
+    "name": "Tim Drake"
   },
   "visitor 3": {
-    "name": "Carrie Kelley",
-    "numberOfVisits": 7,
-    "amtSpent": 115.00
+    "name": "Carrie Kelley"
   },  
   "visitor 4": {
-    "name": "Jason Todd",
-    "numberOfVisits": 10 ,
-    "amtSpent": 20.00
+    "name": "Jason Todd"
   },
   "visitor 5": {
-    "name": "Damian Wayne",
-    "numberOfVisits": 6,
-    "amtSpent": 55.00
+    "name": "Damian Wayne"
   }
 }

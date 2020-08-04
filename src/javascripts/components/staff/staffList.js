@@ -4,7 +4,6 @@ import utils from '../../helpers/utils';
 import editForm from './editStaffForm';
 import authData from '../../helpers/data/authData';
 import addStaffToRide from './addStaffToRide';
-import addStaffToVendor from './addStafftoVendor';
 
 import './staff.scss';
 
@@ -52,7 +51,6 @@ const addStaff = (e) => {
   staffData.addStaff(newStaffObj)
     .then(() => {
       addStaffToRide.addStaffToRide($('#staff-rides').val());
-      addStaffToVendor.addStaffToVendor($('#staff-vendors').val());
       utils.printToDom('#staff-form', '');
       buildStaffModule();
     })
